@@ -1,3 +1,5 @@
+
+
 title:            Mildronize's Post
 description:      Writing everything which may be forgotten
 disqus_shortname: 
@@ -6,7 +8,7 @@ words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 
 url:             http://mildronize.github.io
-#url:              http://127.0.0.1:4000/blog
+baseurl:          /blog
 
 # Owner/author information
 owner:
@@ -52,7 +54,7 @@ highlighter: pygments
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   blog/:categories/:title/
+permalink:   /:categories/:title/
 
 # Amount of post to show on home page
 paginate: 5
