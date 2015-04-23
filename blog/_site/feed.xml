@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Mildronize's Post</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://mildronize.github.io/blog/feed.xml" />
-<link rel="alternate" type="text/html" href="http://mildronize.github.io/blog" />
-<updated>2015-04-23T10:45:52+00:00</updated>
-<id>http://mildronize.github.io/blog/</id>
+<link rel="self" type="application/atom+xml" href="http://mildronize.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://mildronize.github.io" />
+<updated>2015-04-23T10:52:08+00:00</updated>
+<id>http://mildronize.github.io/</id>
 <author>
   <name>Thada Wangthammang</name>
-  <uri>http://mildronize.github.io/blog/</uri>
+  <uri>http://mildronize.github.io/</uri>
   <email>mildronize@gmail.com</email>
 </author>
 
@@ -21,14 +21,14 @@
   <updated>2014-11-07T00:00:00+00:00</updated>
   <author>
     <name>Thada Wangthammang</name>
-    <uri>http://mildronize.github.io/blog</uri>
+    <uri>http://mildronize.github.io</uri>
     <email>mildronize@gmail.com</email>
   </author>
   <content type="html">&lt;h1 id=&quot;hello&quot;&gt;Hello&lt;/h1&gt;
 
 &lt;p&gt;This is my first post of mildronize.github.io&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://mildronize.github.io/blog/hello-my-blog/&quot;&gt;Hello My Blog&lt;/a&gt; was originally published by Thada Wangthammang at &lt;a href=&quot;http://mildronize.github.io/blog&quot;&gt;Mildronize's Post&lt;/a&gt; on November 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://mildronize.github.io/blog/hello-my-blog/&quot;&gt;Hello My Blog&lt;/a&gt; was originally published by Thada Wangthammang at &lt;a href=&quot;http://mildronize.github.io&quot;&gt;Mildronize's Post&lt;/a&gt; on November 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

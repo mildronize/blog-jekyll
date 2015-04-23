@@ -5,7 +5,8 @@ reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 
-url:             http://mildronize.github.io/blog
+url:             http://mildronize.github.io
+#url:              http://127.0.0.1:4000/blog
 
 # Owner/author information
 owner:
@@ -51,7 +52,7 @@ highlighter: pygments
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink:   blog/:categories/:title/
 
 # Amount of post to show on home page
 paginate: 5
