@@ -5,7 +5,7 @@ reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 
-url:             http://mildronize.github.io 
+url:             http://mildronize.github.io/blog
 
 # Owner/author information
 owner:
