@@ -8,7 +8,7 @@ I'm following [botbotbot 's blog](http://dev.im-bot.com/2014/06/16/how-to-set-up
 
 > "This blog created by Jekyll that is ruby scripts to transforms plain text into static html website and blogs and hosted on Github Page that free hosting support Jekyll.This blog use Lanyon theme that based on Poole a minimal style of Jekyll." botbotbot said.
 
-All of below steps are same as [botbotbot 's blog](http://dev.im-bot.com/2014/06/16/how-to-set-up-this-blog/), but I have used Hyde theme intead.
+All of below steps are same as [botbotbot 's blog](http://dev.im-bot.com/2014/06/16/how-to-set-up-this-blog/), but I have used [Hyde](http://hyde.getpoole.com/) theme intead.
 
 ## Set up github page:
 1. Follow setup guilde of Github page for more information about jekyll on github look at
@@ -41,3 +41,5 @@ All of below steps are same as [botbotbot 's blog](http://dev.im-bot.com/2014/06
 
 ### Note: 
 If you got the message from jekyll build(or serve) ```Liquid Exception: Failed to get header.```, try to check your python version that is python 2.7.
+
+See full instruction from [http://akenn.org/blog/Liquid-Exception-Jekyll/](http://akenn.org/blog/Liquid-Exception-Jekyll/)
