@@ -1,0 +1,56 @@
+/* This theme is modified by Mildronize.
+ * This theme is base on https://github.com/poole/hyde.
+ * Modified by Mildronize
+ */
+
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 19px;
+  }
+}
+
+.profile {
+  display: inline-block;
+}
+/*
+ * Themes
+ *
+ * As of v1.1, Hyde includes optional themes to color the sidebar and links
+ * within blog posts. To use, add the class of your choosing to the `body`.
+ */
+
+/* Base16 (http://chriskempson.github.io/base16/#default) */
+
+/* gray-orange */
+.theme-gray-orange .sidebar {
+  background-color: #202020;
+}
+.theme-gray-orange .content a,
+.theme-gray-orange .related-posts li a:hover {
+  color: #72240f;
+}

@@ -8,19 +8,20 @@ relative_permalinks: true
 
 # Setup
 title:            Mildronize's blog
-tagline:          'A Jekyll theme'
+tagline:          'mildronize-blog'
 description:      'My dev blog'
 url:              http://mildronize.github.io
 baseurl:          /
 
 author:
   name:           'Thada Wangthammang'
-  url:            https://www.facebook.com/mildronize
+  profile:        images/my-profile.jpg
 
 paginate:         5
 
 # Custom vars
 version:          2.1.0
+
 
 github:
   repo:           https://github.com/poole/hyde
