@@ -30,7 +30,7 @@ html {
 }
 @media (min-width: 58em) {
   html {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
@@ -43,10 +43,16 @@ html {
   border-radius: 3px;
   display: inline-block;
   font-size: 14px;
+  margin: 2px 0px;
 }
 
 .label a{
   color:white;
+}
+
+.description {
+  font-size: 1.0rem;
+  font-weight: 200;
 }
 
 .text-small{

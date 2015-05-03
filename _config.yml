@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Mildronize's blog
 tagline:          'mildronize-blog'
-description:      'My dev blog'
+description:      'My notes & interesting issues'
 url:              http://mildronize.github.io
 baseurl:          /
 
@@ -19,5 +19,3 @@ author:
 
 paginate:         5
 
-# Custom vars
-version:          2.1.0
