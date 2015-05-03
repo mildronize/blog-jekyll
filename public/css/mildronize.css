@@ -37,6 +37,22 @@ html {
 .profile {
   display: inline-block;
 }
+.label {
+  background-color: #999;
+  padding: 2px 4px;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.label a{
+  color:white;
+}
+
+.text-small{
+  font-size: 14px;
+}
+
 /*
  * Themes
  *

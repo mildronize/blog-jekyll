@@ -1,7 +1,8 @@
 ---
 layout: post
 title: How to setup this blog?
-tags: jekyll, blog, github-pages
+category: articles
+tags: [how-to, blog, github-page, jekyll]
 ---
 
 I'm following [botbotbot 's blog](http://dev.im-bot.com/2014/06/16/how-to-set-up-this-blog/) to setup this blog. Some contents of this post is original from him.
