@@ -51,6 +51,9 @@ html {
 .label a{
   color:white;
 }
+.space{
+  margin: 2px 2px;
+}
 
 .description {
   font-size: 1.0rem;

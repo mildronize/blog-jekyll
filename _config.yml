@@ -10,7 +10,7 @@ relative_permalinks: true
 title:            Mildronize's blog
 tagline:          'mildronize-blog'
 description:      'My notes & interesting issues'
-url:              http://mildronize.github.io
+url:              http://mildronize.github.io/
 baseurl:          /
 
 author:

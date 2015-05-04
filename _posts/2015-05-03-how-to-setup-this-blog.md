@@ -2,7 +2,7 @@
 layout: post
 title: How to setup this blog?
 category: articles
-tags: [how-to, blog, github-page, jekyll]
+tags: [how-to, blog, github-page, jekyll, guide, website, github, markdown]
 ---
 
 I'm following [botbotbot 's blog](http://dev.im-bot.com/2014/06/16/how-to-set-up-this-blog/) to setup this blog. Some contents of this post is original from him.
@@ -40,7 +40,30 @@ All of below steps are same as [botbotbot 's blog](http://dev.im-bot.com/2014/06
     ```
 5. Let blog it.
 
-### Note: 
+### Note:
 If you got the message from jekyll build(or serve) ```Liquid Exception: Failed to get header.```, try to check your python version that is python 2.7.
 
 See full instruction from [http://akenn.org/blog/Liquid-Exception-Jekyll/](http://akenn.org/blog/Liquid-Exception-Jekyll/)
+
+### Recommended Resources
+- [Creating and Hosting a Personal Site on GitHub from scratch (step by step)](http://jmcglone.com/guides/github-pages/)
+
+### Related Resources
+#### Git, GitHub, and GitHub Pages
+- [Git Documentation](http://git-scm.com/doc)
+- [Learn Git and GitHub in 15 minutes](https://try.github.io/levels/1/challenges/1)
+- [GitHub Glossary](https://help.github.com/articles/github-glossary)
+- [GitHub Help](https://help.github.com/)
+- [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet)
+- [GitHub For Academics](http://blogs.lse.ac.uk/impactofsocialsciences/2013/06/04/github-for-academics/)
+- [GitHub Pages Help](https://help.github.com/categories/20/articles)
+
+#### Jekyll
+- [Sites Using Jekyll](https://github.com/jekyll/jekyll/wiki/Sites)
+- [Blog Migrations to Jekyll](http://import.jekyllrb.com/docs/home/)
+
+#### Markdown
+- [Official Markdown Spec](http://daringfireball.net/projects/markdown/)
+- [Printable Markdown Cheatsheet](http://packetlife.net/media/library/16/Markdown.pdf)
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
