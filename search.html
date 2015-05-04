@@ -1,7 +1,6 @@
 ---
 layout: null
 title: Search
-add_menu: true
 ---
 <html ng-app="app">
 <head>
@@ -35,7 +34,7 @@ add_menu: true
             console.log($scope.query);
             $scope.posts = [
                 {% for post in site.posts %}
-                {name: '{{ post.title }}',link: '{{ site.url }}{{ post.url }}', date_view: '{{post.date | date_to_string}}', tags: [
+                {name: '{{ post.title }}',link: '{{ site.url }}{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
                     {% for tag in post.tags %}
                     '{{tag}}',
                     {% endfor %}
@@ -51,6 +50,9 @@ add_menu: true
                 processing_tags = element.tags.join(' ');
 
                 if(element.name.toLowerCase().search(processed_query.toLowerCase()) >= 0){
+                    return true;
+                }
+                if(element.category.toLowerCase().search(processed_query.toLowerCase()) >= 0){
                     return true;
                 }
                 for (var i = 0; i < tags_array.length;i++){
