@@ -1,7 +1,8 @@
 # mildronize.github.io
+my blog
 
 ## Page
-** Notes ** is a collection of post which is "notes" category
+**Notes** is a collection of post which is "notes" category
 
 ## Categories
 - articles
@@ -34,6 +35,7 @@
 **/_posts** collects 3 categories:
 - articles: quick post
 - templates: use showcase layout
+
     ```yaml
     ---
     layout: showcase
@@ -41,6 +43,7 @@
     ---
     ```
 - notes: flexible page, usually use *permalink* and *description*
+
     ```yaml
     ---
     layout: post
