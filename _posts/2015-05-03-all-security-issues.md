@@ -2,7 +2,7 @@
 layout: post
 title: All security issues
 description: All of security issues are discussed here!
-tags: security
+tags: [security, web]
 category: notes
 permalink: notes/security
 ---
