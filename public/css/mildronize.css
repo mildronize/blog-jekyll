@@ -34,8 +34,12 @@ html {
   }
 }
 
+.social-icons a i{
+  margin: 0px 2px; 
+}
 .profile {
   display: inline-block;
+  margin: 0px;
 }
 .label {
   background-color: #999;
