@@ -21,16 +21,33 @@
 html {
   font-family: "PT Sans", Boon, Arial, sans-serif;
 }
-@media (min-width: 48em) {
-  html {
-    font-size: 16px;
-  }
+@media (min-width: 64em) {
+    .search-bar{
+        width:22em;
+    }
 }
-@media (min-width: 58em) {
+
+@media (max-width: 58em) {
   html {
     font-size: 18px;
   }
+  .search-bar{
+      width:50%;
+  }
 }
+
+@media (max-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+  .search-bar{
+      width:95%;
+  }
+}
+/* mobile screen */
+/*.search-bar{
+    width:95%;
+}*/
 
 .social-icons a i{
   margin: 0px 2px;
@@ -68,6 +85,9 @@ html {
     margin: 5px 0 25px 0;
 }
 
+.search-container{
+    margin: 0px 10px 10px 0;
+}
 /*
 Button
 Original by: http://purecss.io/buttons/
@@ -116,6 +136,7 @@ Original by: http://purecss.io/buttons/
 .button-secondary {
     background: rgb(66, 184, 221); /* this is a light blue */
 }
+
 
 /*
  * Themes
