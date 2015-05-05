@@ -18,3 +18,10 @@ permalink: notes/my-blog-development
 
 ## Structure
 [see README.MD in this repository](https://github.com/mildronize/mildronize.github.io/blob/master/README.md)
+
+## Next Plans
+- Add html header for friendly with search engine such as keywords, description, etc`.
+- Build a tools for auto generate prototype of post (YAML header)
+  - Convert to title string to lowercase of string and dash.
+  - Generate simple YAML file.
+  - It's called 'Tools' page.
