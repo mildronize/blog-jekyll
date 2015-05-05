@@ -15,3 +15,6 @@ permalink: notes/my-blog-development
 ## Another Tools
 - [angularJS](https://angularjs.org/) for search page
 - [Expanding Search Bar](http://tympanus.net/Tutorials/ExpandingSearchBar/)
+
+## Structure
+[see README.MD in this repository](https://github.com/mildronize/mildronize.github.io/blob/master/README.md)
