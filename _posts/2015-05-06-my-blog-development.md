@@ -9,13 +9,13 @@ permalink: notes/my-blog-dev
 
 ## Main Tools
 - [GitHub Page](https://pages.github.com)
-- [Jekyll](jekyllrb.com)
+- [Jekyll](http://jekyllrb.com)
 - [Hyde](http://hyde.getpoole.com/)
 
 ## Tools
 - [angularJS](https://angularjs.org/) for search page
 - [Expanding Search Bar](http://tympanus.net/Tutorials/ExpandingSearchBar/)
-- [Font Awesome](fontawesome.io)
+- [Font Awesome](http://fontawesome.io)
 
 ## Structure
 [see README.MD in this repository](https://github.com/mildronize/mildronize.github.io/blob/master/README.md)
@@ -26,7 +26,7 @@ permalink: notes/my-blog-dev
 - [03 May 2015][t02] &raquo; Create a my [first post]({{site.url}}articles/2015/05/03/how-to-setup-this-blog/) and fill my profile
 - [03 May 2015][t03] &raquo; Add [Note page]({{site.url}}notes/), [read more](#structure)
 - [04 May 2015][t04] &raquo; Add social icons using [Font Awesome](fontawesome.io) at sidebar
-- [04 May 2015][t05] &raquo; Add [google analytics](www.google.com/analytics/) at header
+- [04 May 2015][t05] &raquo; Add [google analytics](http://www.google.com/analytics/) at header
 - [04 May 2015][t06] &raquo; Add showcase layout, [read more](#structure)
 - [05 May 2015][t07] &raquo; Add [Search page](({{site.url}}search/))
 - [05 May 2015][t08] &raquo; Add [search bar](#tools).
