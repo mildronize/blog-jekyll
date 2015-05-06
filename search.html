@@ -33,7 +33,6 @@ title: Search
             $interpolateProvider.endSymbol('//');
         });
         app.controller('ListController', function($scope, $location) {
-            //  $scope.location = $location;
 
             var value = $location.$$url;
             $scope.search_string = unescape(value.substring(1,value.length));
@@ -41,7 +40,7 @@ title: Search
 
             $scope.posts = [
                  {% for post in site.posts %}
-                 {name: '{{ post.title }}',link: '{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
+                 {name: '{{ post.title }}',description: '{{ post.description }}',link: '{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
                      {% for tag in post.tags %}
                      '{{tag}}',
                      {% endfor %}
@@ -49,8 +48,8 @@ title: Search
                  {% endfor %}
      			// {name: 'mango', tags: ['green', 'oval']},
      		];
+
             $scope.$watch('query', function(newValue, oldValue) {
-            //   scope.counter = scope.counter + 1;
                 $location.path(newValue);
             });
 
@@ -69,6 +68,9 @@ title: Search
                      return true;
                  }
                  if(element.category.toLowerCase().search(processed_query.toLowerCase()) >= 0){
+                     return true;
+                 }
+                 if(element.description.toLowerCase().search(processed_query.toLowerCase()) >= 0){
                      return true;
                  }
                  for (var i = 0; i < tags_array.length;i++){
