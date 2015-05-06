@@ -40,6 +40,9 @@ All of below steps are same as [botbotbot 's blog](http://dev.im-bot.com/2014/06
     ```
 5. Let blog it.
 
+### Next Step
+- [Add hover anchor links to header on GitHub Pages using Jekyll](http://milanaryal.com/2015/adding-hover-anchor-links-to-header-on-github-pages-using-jekyll)
+
 ### Note:
 If you got the message from jekyll build(or serve) ```Liquid Exception: Failed to get header.```, try to check your python version that is python 2.7.
 
