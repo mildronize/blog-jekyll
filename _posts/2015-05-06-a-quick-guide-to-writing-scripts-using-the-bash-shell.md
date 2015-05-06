@@ -1,7 +1,9 @@
 ---
 layout: post
 title: A quick guide to writing scripts using the bash shell
-description: This tutorial contents: basic syntax, variables conditionals, Loop, etc.
+
+description: This tutorial contents basic syntax, variables conditionals, loop, etc.
+
 category: articles
 tags: [bash, script, programming, shell, guide, tutorial, linux, unix]
 ---
