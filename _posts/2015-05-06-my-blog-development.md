@@ -23,13 +23,13 @@ permalink: notes/my-blog-dev
 ## Timeline
 - 01 Oct 2014 &raquo; Register [GitHub Page](https://pages.github.com)
 - [02 May 2015][t01] &raquo; Clone [Hyde](http://hyde.getpoole.com/) theme
-- [03 May 2015][t02] &raquo; Create a my [first post]({{site.url}}articles/2015/05/03/how-to-setup-this-blog/) and fill my profile
-- [03 May 2015][t03] &raquo; Add [Note page], [read more](#structure)
-- [04 May 2015][t04] &raquo; Add social icons using [Font Awesome](fontawesome.io) at sidebar
+- [03 May 2015][t02] &raquo; Create a my [first post]({{site.url}}/articles/2015/05/03/how-to-setup-this-blog/) and fill my profile
+- [03 May 2015][t03] &raquo; Add [Note page], [read more]({{site.url}}{{page.url}}#structure)
+- [04 May 2015][t04] &raquo; Add social icons using [Font Awesome](http://fontawesome.io) at sidebar
 - [04 May 2015][t05] &raquo; Add [google analytics](http://www.google.com/analytics/) at header
-- [04 May 2015][t06] &raquo; Add showcase layout, [read more](#structure)
+- [04 May 2015][t06] &raquo; Add showcase layout, [read more]({{site.url}}{{page.url}}#structure)
 - [05 May 2015][t07] &raquo; Add [Search page]
-- [05 May 2015][t08] &raquo; Add [search bar](#tools), and binding url and search bar on [Search page]
+- [05 May 2015][t08] &raquo; Add [search bar]({{site.url}}{{page.url}}#tools), and binding url and search bar on [Search page]
 - [06 May 2015][t09] &raquo; Add this note
 - [06 May 2015][t10] &raquo; [Add hover anchor links to header on GitHub Pages using Jekyll](http://milanaryal.com/2015/adding-hover-anchor-links-to-header-on-github-pages-using-jekyll)
 - [06 May 2015][t11] &raquo; Add html header for friendly with search engine such as keywords, description, etc.
@@ -46,8 +46,8 @@ permalink: notes/my-blog-dev
 [t10]: https://github.com/mildronize/mildronize.github.io/commit/ca7df4be719fd2b9891cbea53fce88722196f419
 [t11]: https://github.com/mildronize/mildronize.github.io/commit/7872d3039fd05e9b1b6f1581a13772b65c9c6b27
 
-[Search page]: {{site.url}}search/
-[Note page]: {{site.url}}notes/
+[Search page]: {{site.url}}/search/
+[Note page]: {{site.url}}/notes/
 
 ## Next Plans
 - Build a tools for auto generate prototype of post (YAML header)

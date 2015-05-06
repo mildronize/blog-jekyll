@@ -13,8 +13,9 @@ title:            Mildronize's blog
 tagline:          'mildronize-blog'
 description:      'My notes & interesting issues'
 keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
-url:              http://mildronize.github.io/
+url:              http://mildronize.github.io
 baseurl:          /
+comment:          true
 
 
 author:
