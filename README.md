@@ -8,6 +8,7 @@ my blog
 - articles
 - templates
 - notes
+- projects
 
 ## Layouts
 - **default**: the parent of other layouts

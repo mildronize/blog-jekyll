@@ -1,7 +1,7 @@
 ---
 layout: showcase
 title: Responsive expanding search bar
-category: articles
+category: projects
 tags: [css, javascript, js, html, project, jekyll, extension, plugin, responsive]
 
 image: /public/images/2015-05-06-responsive-expanding-search-bar.jpg
