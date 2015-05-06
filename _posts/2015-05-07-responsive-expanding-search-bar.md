@@ -4,7 +4,7 @@ title: Responsive expanding search bar
 category: articles
 tags: [css, javascript, js, html, project, jekyll, extension, plugin, responsive]
 
-image: /public/images/2015-06-06-responsive-expanding-search-bar.jpg
+image: /public/images/2015-05-06-responsive-expanding-search-bar.jpg
 home: https://github.com/mildronize/ExpandingSearchBar
 demo: /demo/responsive-expanding-search-bar/
 source: https://github.com/mildronize/ExpandingSearchBar/archive/master.zip
