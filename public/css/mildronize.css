@@ -25,11 +25,14 @@ html {
     .search-bar{
         width:22em;
     }
+    html {
+      font-size: 17px;
+    }
 }
 
 @media (max-width: 58em) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
   .search-bar{
       width:50%;
