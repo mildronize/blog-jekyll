@@ -14,7 +14,7 @@ permalink: notes/my-blog-dev
 
 ## Tools
 - [angularJS](https://angularjs.org/) for search page
-- [Expanding Search Bar](http://tympanus.net/Tutorials/ExpandingSearchBar/)
+- [My Expanding Search Bar](https://github.com/mildronize/ExpandingSearchBar), that is original from [Expanding Search Bar](http://tympanus.net/Tutorials/ExpandingSearchBar/)
 - [Font Awesome](http://fontawesome.io)
 
 ## Structure

@@ -47,10 +47,10 @@ html {
       width:95%;
   }
 }
-/* mobile screen */
-/*.search-bar{
-    width:95%;
-}*/
+.search-container{
+    margin: 0px 10px 0px 0px;
+    padding: 5px;
+}
 
 .social-icons a i{
   margin: 0px 2px;
@@ -88,9 +88,7 @@ html {
     margin: 5px 0 25px 0;
 }
 
-.search-container{
-    margin: 0px 10px 10px 0;
-}
+
 /*
 Button
 Original by: http://purecss.io/buttons/
@@ -113,31 +111,6 @@ Original by: http://purecss.io/buttons/
 
 .button-xlarge {
     font-size: 125%;
-}
-
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-    color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.button-success {
-    background: rgb(28, 184, 65); /* this is a green */
-}
-
-.button-error {
-    background: rgb(202, 60, 60); /* this is a maroon */
-}
-
-.button-warning {
-    background: rgb(223, 117, 20); /* this is an orange */
-}
-
-.button-secondary {
-    background: rgb(66, 184, 221); /* this is a light blue */
 }
 
 

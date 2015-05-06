@@ -1,0 +1,34 @@
+---
+layout: null
+title: Demo responsive expanding search bar
+permalink: demo/responsive-expanding-search-bar/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Expanding Search Bar Deconstructed</title>
+
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}public/css/font-awesome-4.3.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}public/css/expanding-search-bar.css" />
+
+	</head>
+	<body>
+      <h1 align="center">Expanding Search Bar</h1>
+      <div id="sb-search" class="sb-search">
+          <form>
+              <input class="sb-search-input search-bar" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+              <input class="sb-search-submit" type="submit" value="">
+              <span class="fa fa-search sb-icon-search"></span>
+          </form>
+      </div>
+      <script src="{{site.baseurl}}public/js/classie.js"></script>
+      <script src="{{site.baseurl}}public/js/uisearch.js"></script>
+      <script>
+          new UISearch( document.getElementById( 'sb-search' ) );
+      </script>
+	</body>
+</html>
