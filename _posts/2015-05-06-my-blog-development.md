@@ -25,3 +25,4 @@ permalink: notes/my-blog-development
   - Convert to title string to lowercase of string and dash.
   - Generate simple YAML file.
   - It's called 'Tools' page.
+- Fix Related post to show only the posts that have related tags
