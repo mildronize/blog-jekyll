@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-  {% include head.html %}
-  <script>
-      function search_keywords() {
-        var x = document.getElementById("search").value;
-        if (x == null || x == "") {
+      {% include head.html %}
+      <script>
+          function search_keywords() {
+            var x = document.getElementById("search").value;
+            if (x == null || x == "") {
+                return false;
+            }
+            window.location.href = "{{ site.baseurl}}search/#/"+x;
             return false;
         }
-        window.location.href = "{{ site.baseurl}}search/#/"+x;
-        return false;
-    }
-  </script>
+      </script>
   <body>
 
     {% include sidebar.html %}

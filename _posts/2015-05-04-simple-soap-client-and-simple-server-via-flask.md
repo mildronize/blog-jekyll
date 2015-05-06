@@ -1,17 +1,18 @@
 ---
 layout: post
 title: Simple soap client and simple server via flask
+description: Using python to get current oil price in Thailand via SOAP and response in JSON format.
 tags: [soap, soap-client, python, python3, flask, suds-jurko, script, programming]
 category: articles
 ---
 
-## Objective: 
+## Objective:
 To get current oil price in Thailand via SOAP and response in JSON format.
 SOAP Server URL for this scirpt: [http://www.pttplc.com/webservice/pttinfo.asmx?WSDL]
 
-## Prerequisite: 
+## Prerequisite:
 - Python 3.4
-- flask 
+- flask
 - flask-cors
 - suds-jurko
 - xmltodict

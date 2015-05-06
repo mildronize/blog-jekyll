@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A quick guide to writing scripts using the bash shell
+description: This tutorial contents: basic syntax, variables conditionals, Loop, etc.
 category: articles
 tags: [bash, script, programming, shell, guide, tutorial, linux, unix]
 ---
@@ -12,7 +13,7 @@ A shell script is little more than a list of commands that are run in sequence. 
 
 `#!/bin/bash`
 
-THis indicates that the script should be run in the bash shell regardless of which interactive shell the user has chosen. This is very important, since the syntax of different shells can vary greatly.
+This indicates that the script should be run in the bash shell regardless of which interactive shell the user has chosen. This is very important, since the syntax of different shells can vary greatly.
 
 ### A simple example
 
