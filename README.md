@@ -51,3 +51,28 @@ my blog
     permalink: notes/__note_name__
     ---
     ```
+
+## Public Directory
+### css
+- Theme
+    - hyde.css
+    - mildronize.css
+    - poole.css
+    - syntax.css
+- Font
+    - boon-font.css
+- Pure css
+    - forms-min.css
+    - buttons-min.css
+
+- Icon
+    - font-awesome-4.3.0.min.css
+- Extension
+    - expanding-search-bar.css
+
+### js
+- Expanding Search Bar
+    - uisearch.js
+    - classie.js
+- Seach page
+    - angular.min.js
