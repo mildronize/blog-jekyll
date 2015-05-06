@@ -54,3 +54,5 @@ permalink: notes/my-blog-dev
   - Generate simple YAML file.
   - It's called 'Tools' page.
 - Fix Related post to show only the posts that have related tags
+- Add Disqus comment
+- Auto complete search
