@@ -50,7 +50,6 @@ permalink: notes/my-blog-dev
 [Note page]: {{site.url}}notes/
 
 ## Next Plans
-- Add html header for friendly with search engine such as keywords, description, etc.
 - Build a tools for auto generate prototype of post (YAML header)
   - Convert to title string to lowercase of string and dash.
   - Generate simple YAML file.
