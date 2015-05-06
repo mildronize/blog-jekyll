@@ -28,4 +28,7 @@ layout: default
   </div>
 </article>
 
-{% include disqus.html %}
+{% if site.comment and page.comment == null %}
+    {% include disqus.html %}
+    {% include disqus_comment_count.html %}
+{% endif %}
