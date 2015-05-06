@@ -33,8 +33,8 @@ permalink: notes/my-blog-dev
 - [06 May 2015][t09] &raquo; Add this note
 - [06 May 2015][t10] &raquo; [Add hover anchor links to header on GitHub Pages using Jekyll](http://milanaryal.com/2015/adding-hover-anchor-links-to-header-on-github-pages-using-jekyll)
 - [06 May 2015][t11] &raquo; Add html header for friendly with search engine such as keywords, description, etc.
-- [07 May 2015][t12] &raquo; Add Disqus comment
-- 
+- [07 May 2015][t12] &raquo; [Add Disqus comment](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
+
 [t01]: https://github.com/mildronize/mildronize.github.io/commit/a48c4b03033496c16e1eeb6377f7a2fb6fa79586
 [t02]: https://github.com/mildronize/mildronize.github.io/commit/58f941a5a9d0066c5ea939aaab98f1adef291647
 [t03]: https://github.com/mildronize/mildronize.github.io/commit/5b51c7691acb01beec8df5f3704f57d3da272922
