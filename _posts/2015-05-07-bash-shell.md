@@ -2,54 +2,115 @@
 layout: post
 title: Bash Shell
 description: A collection of everything about bash shell
-tags: [bash, shell, syntax, loop, script, for, while, input]
+tags: [bash, shell, syntax, loop, for, while, input]
 category: notes
 permalink: notes/bash-shell
 ---
 
-## Looping & skipping
-**Objective**: To use loop to display only odd natural numbers from 1 to 99.
+## Hello bash wolrd!
 
-**Example output**
+**A quick introduction to 'Echo'**:
 
-```
-1
-3
-5
-.
-.
-.
-97
-99  
-```
+`Echo` is a common output in most programming language, as `printf` in C, `print` in Python ,etc.
 
-**While loop**
+*For Example:*
 
 ```bash
-#!/bin/bash
-X=1
-while [ $X -le 99 ]
-do
-    echo $X
-    X=$((X+2))
-done
+echo "Hello bash wolrd!"
+```
+
+*The output is:*
+
+```
+Hello bash wolrd!
+```
+
+---
+
+## Read input & output it
+
+Simple *input* for bash using `read`, and *output* or print string into console using `echo`.
+
+*For Example:*
+
+```bash
+read name
+echo "Hi, $name"
+```
+
+If I enter 'mild', *the output is:*
+
+```
+Hi, mild
+```
+
+### Read more
+
+- [Quite well handling input document]
+
+---
+
+## Looping & skipping
+**Objective**: To use loop to display only even natural numbers from 2 to 100.
+
+*Example output*
+
+```
+2
+4
+6
+.
+.
+.
+98
+100  
 ```
 
 **For loop**
 
 ```bash
 #!/bin/bash
-for i in {1..99..2}
+for i in {2..100..2}
 do
     echo "$i"
 done
 ```
 
+**While loop**
+
+```bash
+#!/bin/bash
+X=2
+while [ $X -le 100 ]
+do
+    echo $X
+    X=$((X+2))
+done
+```
+
+### Read more
+
+- [Different ways of using for loops may be used]
+
+---
 
 
 ## Recommended Resources
-- A quick but useful tutorial for bash starters is [here](http://mildronize.github.io/articles/2015/05/06/a-quick-guide-to-writing-scripts-using-the-bash-shell/).
-- Handling input is documented and explained quite well on [this page](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_08_02.html).
-- Different ways in which for loops may be used are explained with [examples here](http://www.cyberciti.biz/faq/bash-for-loop/).
 
-Inspiration from <https://www.hackerrank.com/challenges/bash-tutorials---looping-and-skipping>
+- [A quick tutorial for bash starters]
+- [Different ways of using for loops may be used]
+- [Quite well handling input document]
+
+[A quick tutorial for bash starters]: {% post_url 2015-05-06-a-quick-guide-to-writing-scripts-using-the-bash-shell %}
+[Quite well handling input document]: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_08_02.html
+[Different ways of using for loops may be used]: http://www.cyberciti.biz/faq/bash-for-loop/
+
+Inspiration from [Hackerrank](https://www.hackerrank.com):
+
+- 07 May 2015 &raquo; [Looping and Skipping]
+- 07 May 2015 &raquo; [Looping and Skipping]
+- 08 May 2015 &raquo; [A Personalized Echo]
+
+[Let's Echo]: https://www.hackerrank.com/challenges/bash-tutorials-lets-echo
+[Looping and Skipping]: https://www.hackerrank.com/challenges/bash-tutorials---looping-and-skipping
+[A Personalized Echo]: https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo
