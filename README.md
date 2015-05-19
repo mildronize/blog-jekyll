@@ -14,6 +14,10 @@ my blog
 - **default**: the parent of other layouts
 - **page**: page layout, it is located at root
 - **post**: regular post, quick post, everything to write
+    - Enable table of contents: add `toc` parameter into header
+    ```yaml
+    toc: true
+    ```
 
 - **showcase**: extra layout for displaying template, project script or anything want to show
     - There are 3 buttons: *Home*, *Demo*, *Source code*
@@ -51,6 +55,10 @@ my blog
     category: notes
     permalink: notes/__note_name__
     ---
+    ```
+    - Feature the note: add `featured` parameter into header
+    ```yaml
+    featured: true
     ```
 
 ## Public Directory
