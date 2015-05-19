@@ -6,6 +6,7 @@ tags: [jekyll, github-page, angularjs]
 category: notes
 permalink: notes/my-blog-dev
 featured: true
+toc: true
 ---
 
 ## Main Tools
@@ -13,10 +14,12 @@ featured: true
 - [Jekyll](http://jekyllrb.com)
 - [Hyde](http://hyde.getpoole.com/)
 
-## Tools
+## Other Tools
 - [angularJS](https://angularjs.org/) for search page
 - [My Expanding Search Bar](https://github.com/mildronize/ExpandingSearchBar), that is original from [Expanding Search Bar](http://tympanus.net/Tutorials/ExpandingSearchBar/)
 - [Font Awesome](http://fontawesome.io)
+- [Table of contents for Jekyll](https://github.com/ghiculescu/jekyll-table-of-contents)
+- [JQuery](https://jquery.com/) for using with table of contents
 
 ## Structure
 [see README.MD in this repository](https://github.com/mildronize/mildronize.github.io/blob/master/README.md)
