@@ -67,3 +67,4 @@ toc: true
   - It's called 'Tools' page.
 - Fix Related post to show only the posts that have related tags
 - Auto complete search
+- [Cloud tags](http://vvv.tobiassjosten.net/jekyll/jekyll-tag-cloud/)
