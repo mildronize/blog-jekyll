@@ -20,7 +20,6 @@ baseurl:          /
 image_url:        /public/images
 comment:          true
 
-
 author:
   codename:       mildronize
   name:           'Thada Wangthammang'
