@@ -2,7 +2,7 @@
 layout: post
 title: Bash Shell
 description: A collection of everything about bash shell
-tags: [bash, shell, syntax, loop, for, while, input]
+tags: [bash, shell, syntax, loop, for, while, input, tutorial, getting-started]
 category: notes
 permalink: notes/bash-shell
 ---
@@ -50,7 +50,46 @@ Hi, mild
 
 ---
 
-## Looping & skipping
+## Looping
+### Simple Looping
+**Objective**: To use loop to display numbers from 1 to 20
+
+*Example output*
+
+```
+1
+2
+3
+.
+.
+.
+19
+20
+```
+
+**For loop**
+
+```bash
+#!/bin/bash
+for i in {1..20}
+do
+    echo "$i"
+done
+```
+
+**While loop**
+
+```bash
+#!/bin/bash
+X=1
+while [ $X -le 20 ]
+do
+    echo $X
+    X=$((X+1))
+done
+```
+
+### Looping & Skipping
 **Objective**: To use loop to display only even natural numbers from 2 to 100.
 
 *Example output*
@@ -93,7 +132,6 @@ done
 - [Different ways of using for loops may be used]
 
 ---
-
 
 ## Recommended Resources
 

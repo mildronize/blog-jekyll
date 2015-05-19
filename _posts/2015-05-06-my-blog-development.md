@@ -35,6 +35,7 @@ featured: true
 - [06 May 2015][t10] &raquo; [Add hover anchor links to header on GitHub Pages using Jekyll](http://milanaryal.com/2015/adding-hover-anchor-links-to-header-on-github-pages-using-jekyll)
 - [06 May 2015][t11] &raquo; Add html header for friendly with search engine such as keywords, description, etc.
 - [07 May 2015][t12] &raquo; [Add Disqus comment](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
+- [19 May 2015][t13] &raquo; Add `featured notes` in [Note page]
 
 [t01]: https://github.com/mildronize/mildronize.github.io/commit/a48c4b03033496c16e1eeb6377f7a2fb6fa79586
 [t02]: https://github.com/mildronize/mildronize.github.io/commit/58f941a5a9d0066c5ea939aaab98f1adef291647
@@ -48,6 +49,7 @@ featured: true
 [t10]: https://github.com/mildronize/mildronize.github.io/commit/ca7df4be719fd2b9891cbea53fce88722196f419
 [t11]: https://github.com/mildronize/mildronize.github.io/commit/7872d3039fd05e9b1b6f1581a13772b65c9c6b27
 [t12]: https://github.com/mildronize/mildronize.github.io/commit/f8ff0a772521cf5b90cb0cd455bc9d8c85997ffb
+[t13]: https://github.com/mildronize/mildronize.github.io/commit/a5b53f372baa85f2657699addd3640e086188756
 
 [Search page]: {{site.baseurl}}/search/
 [Note page]: {{site.baseurl}}/notes/
