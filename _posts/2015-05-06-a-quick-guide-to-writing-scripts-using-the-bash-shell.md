@@ -6,6 +6,7 @@ description: This tutorial contents basic syntax, variables conditionals, loop, 
 
 category: articles
 tags: [bash, script, programming, shell, guide, tutorial, linux, unix, for, while, variable, syntax, if]
+toc: true
 ---
 This is a copied version of <http://www.panix.com/~elflord/unix/bash-tute.html> for easy reading.
 
