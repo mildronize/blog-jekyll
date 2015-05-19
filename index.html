@@ -7,11 +7,11 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
+      <a href="{% if site.baseurl != '/' %}{{ site.baseurl }}{% endif %}{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
-    {% if post.image != null %}<p><img src="{{ post.image }}"></p>{% endif %}
+    {% if post.image != null %}<p><img src="{% if site.baseurl != '/' %}{{ site.baseurl }}{% endif %}{{ post.image }}"></p>{% endif %}
     <p>
         {% if post.home != null %}<a class="pure-button button-small" href="{{ post.home }}"><i class="fa fa-home"></i>Home</a>{% endif %}
         {% if post.demo != null %}<a class="pure-button button-small" href="{{ post.demo }}"><i class="fa fa-play"></i>Demo</a>{% endif %}

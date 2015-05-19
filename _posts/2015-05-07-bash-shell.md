@@ -107,7 +107,7 @@ done
 
 Inspiration from [Hackerrank](https://www.hackerrank.com):
 
-- 07 May 2015 &raquo; [Looping and Skipping]
+- 07 May 2015 &raquo; [Let's Echo]
 - 07 May 2015 &raquo; [Looping and Skipping]
 - 08 May 2015 &raquo; [A Personalized Echo]
 

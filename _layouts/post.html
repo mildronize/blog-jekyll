@@ -15,7 +15,7 @@ layout: default
     <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
     <p class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</p>
     <p class="entry-tags">{% for tag in page.tags %}<div class="label"><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></div>{% unless forloop.last %} {% endunless %}{% endfor %}</p>
-    <!-- {% if site.comment and page.comment == null %}<p><a href="{{site.url}}{{page.url}}#disqus_thread">Comments</a></p>{% endif %} -->
+    <!-- {% if site.comment and page.comment == null %}<p><a href="{{site.url}}{{site.baseurl}}{{page.url}}#disqus_thread">Comments</a></p>{% endif %} -->
     {{ content }}
 <!--    {% if page.comments %}<div id="disqus_thread"></div>{% endif %}-->
   </div>
