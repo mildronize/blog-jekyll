@@ -9,12 +9,13 @@ featured: true
 toc: true
 ---
 
-## Main Tools
+## Tools
+### Main Tools
 - [GitHub Page](https://pages.github.com)
 - [Jekyll](http://jekyllrb.com)
 - [Hyde](http://hyde.getpoole.com/)
 
-## Other Tools
+### Other Tools
 - [angularJS](https://angularjs.org/) for search page
 - [My Expanding Search Bar](https://github.com/mildronize/ExpandingSearchBar), that is original from [Expanding Search Bar](http://tympanus.net/Tutorials/ExpandingSearchBar/)
 - [Font Awesome](http://fontawesome.io)
