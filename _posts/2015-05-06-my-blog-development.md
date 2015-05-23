@@ -68,3 +68,4 @@ toc: true
 - Fix Related post to show only the posts that have related tags
 - Auto complete search
 - [Cloud tags](http://vvv.tobiassjosten.net/jekyll/jekyll-tag-cloud/)
+- Build this blog to [multilanguage](http://nicoespeon.com/en/2013/04/building-a-multinlingual-jekyll-blog/) jekyll blog
