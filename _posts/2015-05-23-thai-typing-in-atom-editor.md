@@ -24,6 +24,25 @@ language: th
 
 เพื่อความเข้าใจมากยิ่งขึ้น สามารถอ่านคำอธิบาย [การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]({{site.baseurl}}articles/2015/05/24/thai-encoding/) เพิ่มเติมได้
 
+## วิธีการแก้ไขปัญหาเบื้องต้น
+
+หลังจากผมได้ทดสอบเปลี่ยนฟอนต์ภาษาไทยหลายๆ ฟอนต์ ใน Atom Editor บน Windows 8.1 พบว่า ฟอนต์ Umpush มีปัญหาน้อยที่สุด ซึ่งเท่าที่ผมพบ มีปัญหาแค่ตัวอักษร "สระอำ" แค่ตัวเดียว
+
+ถ้าใครมีวิธีการแก้ปัญหาที่ดีกว่านี้ ก็สามารถนำมาแบ่งปันได้นะครับ
+
+ซึ่งตอนนี้ใน Atom Editor ผมได้ตั้งค่าฟอนต์ใน ไฟล์ `config.cson` ซึ่งอยู่ใน root ของ setting ของ Atom ดังนี้ 
+
+`fontFamily: "Inconsolata, Umpush, Arial, sans-serif"`
+
+หรือสามารถตั้งค่าผ่าน GUI ของ Atom Editor ได้ ที่ File > Settings > Editor Settings (หัวข้อ)
+
+![]({{site.baseurl}}{{site.image_url}}2015-05-23-thai-typing-in-atom-editor-2.jpg)
+
+### คำอธิบาย
+- ใช้ฟอนต์ [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) เป็นฟอนต์ ภาษาอังกฤษหลักๆ
+- ใช้ฟอนต์ [Umpush](ftp://linux.thai.net/pub/thailinux/software/thai-ttf) สำหรับการแสดงผลภาษาไทย ([หน้าแรก](http://linux.thai.net/projects/thaifonts-scalable))
+
+
 ## คำที่เกี่ยวข้อง
 - [Error when I put my cursor to the text](https://github.com/atom/atom/issues/6413)
 - [Cursor positioning on certain Unicode characters](https://github.com/atom/atom/issues/3498)
