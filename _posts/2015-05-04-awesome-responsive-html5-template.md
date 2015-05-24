@@ -43,10 +43,8 @@ data: [
 <ul class="my-favorite-templates">
    {% for post in page.data %}{% if post.title != null %}
      <li itemscope>
-       <a href="{{ post.url }}">
-         {{ post.title }}
-       </a>
-       : {{post.description}}
+       <h3>{{ post.title }}</h3> 
+       {{post.description}}
        <img src="{{ post.image }}">
        <a class="pure-button button-small" href="{{ post.home }}"><i class="fa fa-home"></i>Home</a>
        <a class="pure-button button-small" href="{{ post.demo }}"><i class="fa fa-play"></i>Demo</a>
