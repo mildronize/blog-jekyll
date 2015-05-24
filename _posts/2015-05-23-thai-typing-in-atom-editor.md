@@ -22,7 +22,7 @@ language: th
 
 โดยภาษาไทยเป็นการเข้ารหัส เพื่อการแสดงผลแบบ Unicode ซึ่งจะใช้ข้อมูลหลายๆ byte ในการแทนตัวอักษรภาษาไทยหนึ่งตัว และด้วยเหตุนี้ Atom editor ไม่สามารถแยกแยะได้ว่าตัวอักษรภาษาไทยแต่ละตัวนั้น สิ้นสุดที่อักขระ(byte) ตัวไหนจึงทำให้การแสดงผลตำแหน่ง cursor มีการผิดพลาดเกิดขึ้น
 
-เพื่อความเข้าใจมากยิ่งขึ้น สามารถอ่านคำอธิบาย [การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]({{site.baseurl}}articles/2015/05/24/thai-encoding/) เพิ่มเติมได้
+เพื่อความเข้าใจมากยิ่งขึ้น สามารถอ่านคำอธิบาย [การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ] เพิ่มเติมได้
 
 ## วิธีการแก้ไขปัญหาเบื้องต้น
 
@@ -48,4 +48,10 @@ language: th
 - [Cursor positioning on certain Unicode characters](https://github.com/atom/atom/issues/3498)
 - [incorrect cursor placement on lines with accented characters](https://github.com/atom/atom/issues/5975)
 - [wrong cursor location with multi-byte characters](https://github.com/atom/atom/issues/4595)
+
+## อ่านเพิ่มเติม
+- [การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]
+
+[การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]: {{site.baseurl}}articles/2015/05/24/thai-encoding/
+
 
