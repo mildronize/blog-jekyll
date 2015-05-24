@@ -2,7 +2,7 @@
 layout: post
 title: การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ 
 
-description: 
+description: การแทนตัวอักษรภาษาไทย ระบบ ASCII, TIS-620, Windows-874, unicode(UTF-8, UTF-16) รวมถึงการอธิบายประวัติความเป็นมา ถึงการเข้ารหัสในแบบต่างๆ และคำแนะนำในการเลือกใช้ การเข้ารหัสที่เหมาะสมสำหรับภาษาไทย
 
 category: articles
 tags: [thai, unicode, ascii, tis-620, windows-874, encode, utf-8, utf-16]
