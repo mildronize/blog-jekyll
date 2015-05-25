@@ -42,6 +42,7 @@ language: th
 - ใช้ฟอนต์ [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) เป็นฟอนต์ ภาษาอังกฤษหลักๆ
 - ใช้ฟอนต์ [Umpush](ftp://linux.thai.net/pub/thailinux/software/thai-ttf) สำหรับการแสดงผลภาษาไทย ([หน้าแรก](http://linux.thai.net/projects/thaifonts-scalable))
 
+หรือเอาง่ายๆ เปลี่ยน Editor ไปเลย เปลี่ยนไปใช้ [Brackets](http://brackets.io/) แทน ไม่มีปัญหาเรื่องการพิมพ์ภาษาไทยแน่ๆ  เดี๋ยวในอนาคตผมอาจจะมารีวิวโปรแกรม Brackets กันครับ
 
 ## คำที่เกี่ยวข้อง
 - [Error when I put my cursor to the text](https://github.com/atom/atom/issues/6413)
