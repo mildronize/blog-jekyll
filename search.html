@@ -25,7 +25,7 @@ title: Search
             </li>
     	</ul>
 
-
+<!--      <div class="message" ng-hide="" align="center">Can't found the keywords. Please try other.</div>-->
     </span>
     <script type="text/javascript">
         var app = angular.module('app', ['ngRoute'], function($interpolateProvider) {
@@ -35,8 +35,11 @@ title: Search
         app.controller('ListController', function($scope, $location) {
 
             var value = $location.$$url;
-            $scope.search_string = unescape(value.substring(1,value.length));
-            console.log($scope.search_string);
+            console.log(value);
+            var str = value.substring(1,value.length);
+            console.log(str);
+            $scope.search_string = decodeURI(str);
+//            $scope.search_string = unescape(value.substring(1,value.length));
 
             $scope.posts = [
                  {% for post in site.posts %}
@@ -52,7 +55,6 @@ title: Search
             $scope.$watch('query', function(newValue, oldValue) {
                 $location.path(newValue);
             });
-
              $scope.searchMultiTags = function(element) {
                  if (typeof $scope.query === 'undefined'){
                      $scope.query = $scope.search_string;
@@ -73,6 +75,7 @@ title: Search
                  if(element.description.toLowerCase().search(processed_query.toLowerCase()) >= 0){
                      return true;
                  }
+                console.log(processed_query.toLowerCase());
                  for (var i = 0; i < tags_array.length;i++){
                      if( processing_tags.search(tags_array[i]) < 0 ) {
                          return false;
