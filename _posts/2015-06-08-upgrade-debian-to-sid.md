@@ -6,3 +6,11 @@ tags: ['upgrade', 'debian', 'linux', 'how-to', 'font-thai', 'firmware-linux', 's
 category: articles
 ---
 
+**Optional:** Add `sudo` into your user
+
+```
+su
+aptitude install sudo
+usermod -a -G sudo [USERNAME]
+exit
+```
