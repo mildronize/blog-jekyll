@@ -31,6 +31,8 @@ exit
     > [contrib](https://www.debian.org/doc/debian-policy/ch-archive.html#s-contrib), 
     > [non-free](https://www.debian.org/doc/debian-policy/ch-archive.html#s-non-free)
     
+    > Note: Replace `http://ftp.th.debian.org/debian/` to your nearest repository 
+    
 2. Update a list of repositories
 
     ```bash
