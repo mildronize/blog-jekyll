@@ -1,11 +1,12 @@
 ---
 layout: post
-description: 
-tags: []
+title: How to upgrade Debian to SID
+description: Instruction for upgrading debian from stable to SID, sudo command setup, installing non-free packages(non open source)
+tags: [upgrade, debian, linux, how-to, font-thai, firmware-linux, sudo, update, sorces.list]
 category: articles
 ---
 
-**Optional:** Setup `sudo` into your user
+**Optional:** Add `sudo` into your user
 
 ```
 su
@@ -23,7 +24,7 @@ exit
 
     deb http://ftp.th.debian.org/debian/ stable main contrib non-free
     deb http://ftp.th.debian.org/debian/ testing main contrib non-free
-    deb http://ftp.th.debian.org/debian/ experimental main contrib non-free
+    deb http://ftp.th.debian.org/debian/ experimenta l main contrib non-free
     ```
 2. Update a list of repositories
 
@@ -43,8 +44,15 @@ exit
 
 **Optional:** 
 
-- For installing some non-open-source code using: `sudo aptitude install firmware-linux`
+- For installing firmware for various drivers in consist of non-open-source packages or drivers using: 
+
+```
+sudo aptitude install firmware-linux
+```
 - For installing some thai font: 
-    `sudo aptitude install xfonts-thai`
+
+```
+sudo aptitude install xfonts-thai
+```
 
 
