@@ -17,3 +17,5 @@ He is a web technician and open source aficionado who specializes in `PHP` and `
 ## Thai writing
 ### [Somkiat](http://www.somkiat.cc/)
 ผมชอบบทความที่เค้าเขียน ไม่ใช่แค่เทคนิคการเขียนโปรแกรม แต่ยังมีแนวคิดต่างๆ ที่จำเป็นต่อการเขียนโปรแกรม
+### [Java Boom](https://javaboom.wordpress.com)
+พี่บูมเขียนบทความเกี่ยวกับ Cloud เยอะมาก เขียนไว้ค่อยข้างดีเลยครับ
