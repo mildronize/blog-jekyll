@@ -140,7 +140,7 @@ done
 - [Different ways of using for loops may be used]
 - [Quite well handling input document]
 
-[A quick tutorial for bash starters]: {% post_url 2015-05-06-a-quick-guide-to-writing-scripts-using-the-bash-shell %}
+[A quick tutorial for bash starters]: http://www.panix.com/~elflord/unix/bash-tute.html
 [Quite well handling input document]: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_08_02.html
 [Different ways of using for loops may be used]: http://www.cyberciti.biz/faq/bash-for-loop/
 
