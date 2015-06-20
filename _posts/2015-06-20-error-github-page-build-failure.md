@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 'Case Study: GitHub Page is build failure!'
+title: 'Case Study: GitHub Page build failure!'
+description: "(ClassNotFound: no lexer for alias 'shell' found.) Jekyll build failure problem in GitHub Page. I showed my solution for solving that. "
 tags: [jekyll, github-page, case-study, github-support, github , problem, solution]
 category: articlces
 ---
