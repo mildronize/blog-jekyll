@@ -1,7 +1,8 @@
 ---
 layout: post
-description: 
-tags: []
+title: How to Install Google Chrome on Debian
+description: Installation instuction by using Google repository, and troubleshooting a error of public key is not available.
+tags: [debian, chrome, repository, how-to, install, apt-key, chromium]
 category: articles
 ---
 
@@ -9,7 +10,7 @@ category: articles
 - chromium via `sudo aptitude install chromium`
 
 ## Installation
-1. Add Google Chrome Repository from [unofficial debian repository](https://wiki.debian.org/UnofficialRepositories) by add `deb http://dl.google.com/linux/chrome/deb/ stable main` into last line of `/etc/apt/source.list`
+1. Add Google Chrome repository from [unofficial debian repository](https://wiki.debian.org/UnofficialRepositories) by add `deb http://dl.google.com/linux/chrome/deb/ stable main` into last line of `/etc/apt/source.list`
     
     ```bash
     sudo echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/source.list
