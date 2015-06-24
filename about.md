@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: about/
 ---
 
 Hi, I'm Mildronize or Thada Wangthammang

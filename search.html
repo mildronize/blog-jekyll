@@ -1,11 +1,12 @@
 ---
 layout: null
 title: Search
+permalink: search/
 ---
 <!-- Written by Thada Wangthammang -->
 <html ng-app="app">
 <head>
-    <script type="text/javascript" src="{{ site.baseurl }}public/js/angular.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/public/js/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js"></script>
     {% include head.html %}
 	<title>Tags</title>
@@ -43,7 +44,7 @@ title: Search
 
             $scope.posts = [
                  {% for post in site.posts %}
-                 {name: '{{ post.title }}',description: '{{ post.description }}',link: '{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
+                 {name: '{{ post.title }}',description: '{{ post.description }}',link: '{{ site.baseurl }}{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
                      {% for tag in post.tags %}
                      '{{tag}}',
                      {% endfor %}
@@ -92,7 +93,7 @@ title: Search
         //     // console.log($routeParams);
         //     $scope.posts = [
         //         {% for post in site.posts %}
-        //         {name: '{{ post.title }}',link: '{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
+        //         {name: '{{ post.title }}',link: '{{ site.baseurl }}{{ post.url }}', category: '{{ post.category }}', date_view: '{{post.date | date_to_string}}', tags: [
         //             {% for tag in post.tags %}
         //             '{{tag}}',
         //             {% endfor %}

@@ -1,9 +1,9 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <img class="profile" src="{{ site.baseurl }}public/{{ site.author.profile }}" width="120px">
+      <img class="profile" src="{{ site.baseurl }}/public/{{ site.author.profile }}" width="120px">
       <h2>
-        <a href="{{ site.baseurl }}">
+        <a href="{{ site.baseurl }}/">
           {{ site.title }}
         </a>
       </h2>
@@ -11,7 +11,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -22,7 +22,7 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" | node.add_menu != null %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -31,10 +31,10 @@
     </nav>
 
     <p class="social-icons">
-      <!-- <a href="{{ site.baseurl }}search"><i class="fa fa-search fa-2x"></i></a> -->
+      <!-- <a href="{{ site.baseurl }}/search"><i class="fa fa-search fa-2x"></i></a> -->
       <a href="https://github.com/mildronize"><i class="fa fa-github fa-2x"></i></a>
       <a href="https://twitter.com/mildronize"><i class="fa fa-twitter fa-2x"></i></a>
-      <a href="/feed.xml"><i class="fa fa-rss fa-2x"></i></a>
+      <a href="{{ site.baseurl}}/feed.xml"><i class="fa fa-rss fa-2x"></i></a>
       <!-- <a href="bitbucket"><i class="fa fa-bitbucket fa-2x"></i></a> -->
       
 <!--      <a href="linkedin"><i class="fa fa-linkedin fa-2x"></i></a>-->
