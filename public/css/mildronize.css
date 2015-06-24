@@ -79,6 +79,11 @@ html {
   font-size: 1.0rem;
   font-weight: 200;
 }
+.line-sidebar{
+    height: 1px;
+    background-color: #555;
+    margin: 10px 0;
+}
 
 .text-small{
   font-size: 14px;

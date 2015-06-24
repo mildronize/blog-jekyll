@@ -20,6 +20,8 @@ url:              http://dev.mildronize.com
 #baseurl:          /en
 image_url:        public/images/
 comment:          true
+changelangurl:    th
+changelang:       อ่านแบบภาษาไทย
 
 author:
   codename:       mildronize
