@@ -28,7 +28,7 @@ toc: true
 ## Timeline
 - 01 Oct 2014 &raquo; Register [GitHub Page](https://pages.github.com)
 - [02 May 2015][t01] &raquo; Clone [Hyde](http://hyde.getpoole.com/) theme
-- [03 May 2015][t02] &raquo; Create a my [first post]({{site.baseurl}}articles/2015/05/03/how-to-setup-this-blog/) and fill my profile
+- [03 May 2015][t02] &raquo; Create a my [first post]({{site.baseurl}}{% post_url 2015-05-03-how-to-setup-this-blog %}) and fill my profile
 - [03 May 2015][t03] &raquo; Add [Note page], [read more]({{site.baseurl}}{{page.url}}#structure)
 - [04 May 2015][t04] &raquo; Add social icons using [Font Awesome](http://fontawesome.io) at sidebar
 - [04 May 2015][t05] &raquo; Add [google analytics](http://www.google.com/analytics/) at header
@@ -41,6 +41,7 @@ toc: true
 - [07 May 2015][t12] &raquo; [Add Disqus comment](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
 - [19 May 2015][t13] &raquo; Add `featured notes` in [Note page]
 - [19 May 2015][t14] &raquo; Add [Table of Contents for Jekyll](https://github.com/ghiculescu/jekyll-table-of-contents) in `post layout`
+- 24 Jun 2015 &raquo; Make this blog to multilanguage :D
 
 [t01]: https://github.com/mildronize/mildronize.github.io/commit/a48c4b03033496c16e1eeb6377f7a2fb6fa79586
 [t02]: https://github.com/mildronize/mildronize.github.io/commit/58f941a5a9d0066c5ea939aaab98f1adef291647
@@ -68,4 +69,4 @@ toc: true
 - Fix Related post to show only the posts that have related tags
 - Auto complete search
 - [Cloud tags](http://vvv.tobiassjosten.net/jekyll/jekyll-tag-cloud/)
-- Build this blog to [multilanguage](http://nicoespeon.com/en/2013/04/building-a-multinlingual-jekyll-blog/) jekyll blog
+- <s>Build this blog to [multilanguage](http://nicoespeon.com/en/2013/04/building-a-multinlingual-jekyll-blog/) jekyll blog</s>
