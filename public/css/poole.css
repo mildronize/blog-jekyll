@@ -54,7 +54,7 @@ html {
 }
 @media (min-width: 38em) {
   html {
-    font-size: 20px;
+/*    font-size: 20px;*/
   }
 }
 
@@ -215,6 +215,7 @@ blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
   color: #7a7a7a;
+  font-size: 85%;
   border-left: .25rem solid #e5e5e5;
 }
 blockquote p:last-child {

@@ -47,6 +47,17 @@ html {
       width:95%;
   }
 }
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 45rem;
+  }
+}
+
+blockquote {
+  font-size: 85%;
+}
+
 .search-container{
     margin: 0px 10px 0px 0px;
     padding: 8px;
