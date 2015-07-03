@@ -30,22 +30,22 @@ Okay, I can't wait to try it. Let's go to compile & install it!
     $ tar -Jxvf GNOME_BUILDER_3_16_3.tar.xz
     ```
     
-4. go to the directory which you extract
+4. go to the directory which you extracted
 
     ```bash
     $ cd GNOME_BUILDER_3_16_3
     ```
 
-5. Exxcute `autogen.sh` and run `make`
+5. Execute `autogen.sh` and run `make`
 
     ```bash
     $ ./autogen.sh
     $ make
     ```
     
-All done!, Let's enjoy the editor on our Gnome 
+All done!, Let's enjoy the editor on our Gnome
 
-Next post, I will post how I know the prerequisite package for compiling C source.
+Next post, I will post how I know the prerequisite packages for compiling C source.
 
 Bye.
 
