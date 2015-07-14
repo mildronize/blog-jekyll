@@ -110,7 +110,12 @@ Button
 Original by: http://purecss.io/buttons/
 */
 .pure-button i{
-    margin: 0 5px 0 0;
+    margin: 0px 5px 0 0;
+}
+
+.pure-button{
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .button-xsmall {
@@ -127,6 +132,17 @@ Original by: http://purecss.io/buttons/
 
 .button-xlarge {
     font-size: 125%;
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
 }
 
 
