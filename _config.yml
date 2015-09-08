@@ -18,7 +18,7 @@ url:              http://dev.mildronize.com
 # for dev
 #url:              http://127.0.0.1:4000
 #baseurl:          /en
-image_url:        public/images/
+image_url:        /public/images/
 comment:          true
 changelangurl:    th
 changelang:       อ่านแบบภาษาไทย
