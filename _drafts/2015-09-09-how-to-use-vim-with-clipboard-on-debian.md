@@ -33,3 +33,6 @@ Ex.
   - `"5p` means to paste from `5` register
 
 For more detail about Vim register, I will write a post later.
+
+## Links
+- [How to make vim paste from (and copy to) system's clipboard? from stackoverflow](http://stackoverflow.com/a/11489440)
