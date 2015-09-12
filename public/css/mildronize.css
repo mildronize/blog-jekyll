@@ -70,17 +70,23 @@ blockquote {
   display: inline-block;
   margin: 0px;
 }
+
+.icon{
+  margin: 0 0.5rem 0 0;;
+  padding: 0px;
+}
+
 .entry-tags{
   display: inline;
-  margin-left:7px;
+  /* margin-left:7px; */
 }
 
 .label {
   background-color: #999;
   padding: 2px 4px;
   border-radius: 3px;
-  display: inline-block;
-  font-size: 14px;
+  display: inline;
+  font-size: 12px;
   margin: 2px 0px;
 }
 

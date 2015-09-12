@@ -151,6 +151,8 @@ abbr[title] {
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 code {
   padding: .25em .5em;
@@ -167,9 +169,9 @@ pre {
   font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
+  /* white-space: pre-wrap; */
+  /* word-break: break-all; */
+  /* word-wrap: break-word; */
   background-color: #f9f9f9;
 }
 pre code {
@@ -347,10 +349,12 @@ tbody tr:nth-child(odd) th {
 
 /* Meta data line below post title */
 .post-date {
-  display: block;
+  /* display: block; */
   margin-top: -.5rem;
   margin-bottom: 1rem;
+  margin-right: 0.5rem;
   color: #9a9a9a;
+  font-size: 14px;
 }
 
 /* Related posts */

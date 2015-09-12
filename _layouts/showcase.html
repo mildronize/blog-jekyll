@@ -2,22 +2,15 @@
 layout: default
 ---
 
-<!--
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
--->
-
 <article itemscope itemtype="http://schema.org/Article">
   <div class="post">
     <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
-    <p class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</p>
-    <p class="entry-tags">{% for tag in page.tags %}<div class="label"><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></div>{% unless forloop.last %} {% endunless %}{% endfor %}</p>
+    <i class="icon fa fa-calendar-o"></i><span class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</span>
+    <i class="icon fa fa-tags"></i><p class="entry-tags">{% for tag in page.tags %}<span class="label"><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>{% unless forloop.last %} {% endunless %}{% endfor %}</p>
 <!--    {% if page.comments %}<p><a href="{{ site.url }}{{ page.url }}#disqus_thread">Comments</a></p>{% endif %}-->
     <!-- <p>{{ page.description }}</p> -->
-    {% if page.image != null %}<img src="{{ page.image }}">{% endif %}
+    {% if page.image != null %}<img src="{{ site.baseurl }}/{{ page.image }}">{% endif %}
+
     <p>
         {% if page.home != null %}<a class="pure-button button-small" href="{{ page.home }}"><i class="fa fa-home"></i>Home</a>{% endif %}
         {% if page.demo != null %}<a class="pure-button button-small" href="{{ page.demo }}"><i class="fa fa-play"></i>Demo</a>{% endif %}
