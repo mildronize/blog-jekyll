@@ -26,6 +26,7 @@ changelang:       อ่านแบบภาษาไทย
 author:
   codename:       mildronize
   name:           'Thada Wangthammang'
+  email:          mildronize@gmail.com
   profile:        images/my-profile.jpg
 
 paginate:         5

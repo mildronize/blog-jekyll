@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: about/
+add_menu: true
+
 ---
 
 Hi, I'm Mildronize or Thada Wangthammang
