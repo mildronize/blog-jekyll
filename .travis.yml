@@ -1,4 +1,4 @@
-isudo: false
+sudo: false
 language: ruby
 rvm:
 - 2.2
@@ -11,6 +11,7 @@ script:
 after_success:
 - mkdir tmp
 - cd tmp
+- git init
 - git config user.name "Travis-CI"
 - git config user.email ${EMAIL}
 - cp -R ../_site/* .
