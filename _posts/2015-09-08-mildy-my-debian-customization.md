@@ -25,7 +25,7 @@ making your Debian to good look Debian.
 
 This is my Linux desktop
 
-![]({{site.image_url}}2015-09-08-mildy-my-debian-customization.jpg)
+![mildy-my-debian-customizing-screenshot]({{site.image_url}}2015-09-08-mildy-my-debian-customization.jpg)
 
 ## My customizatioan
 - Desktop environment: [Xfce](http://www.xfce.org/)
