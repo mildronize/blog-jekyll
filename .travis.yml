@@ -9,14 +9,14 @@ script:
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable-external
 after_success:
-- git clone https://$GH_REF
-- cd $(basename ${GH_REF%.git})
+- mkdir tmp
+- cd tmp
 - git config user.name "Travis-CI"
 - git config user.email ${EMAIL}
 - cp -R ../_site/* .
 - git add -A .
 - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push -f "https://${DEPLOY_TOKEN}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
+- git push --force --quiet "https://${DEPLOY_TOKEN}@${GH_REF}" master:${TARGET_BRANCH} > /dev/null 2>&1
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
