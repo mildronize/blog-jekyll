@@ -16,7 +16,7 @@ after_success:
 - cp -R ../_site/* .
 - git add -A .
 - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push -f "https://${DEPLOY_TOKEN}@${GH_REF}" ${TARGET_BRANCH}
+- git push -f "https://${DEPLOY_TOKEN}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
