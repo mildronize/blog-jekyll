@@ -1,0 +1,64 @@
+---
+layout: default 
+title: Editor
+description: "An archive of posts sorted by tag."
+permalink: e/
+
+---
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<h1>Editor</h1> 
+<p>
+    <button class="pure-button" href="#" onclick="load_prototype('note')">
+        <i class="fa fa-sticky-note"></i>
+       Note 
+    </button>
+
+    <a class="pure-button" href="#" onclick="load_prototype('article')">
+        <i class="fa fa-newspaper-o"></i>
+       Article 
+    </a>
+</p>
+<textarea id="editor">
+</textarea>
+
+<script>
+var prototypes = {
+    note: "\
+---\n\
+layout: post\n\
+title: \n\
+description: \n\
+category: articles\n\
+tags: []\n\
+---\n\
+",
+    article: "\
+---\n\
+layout: post\n\
+title: \n\
+description: \n\
+tags: []\n\
+category: notes\n\
+permalink: notes/____place_permalink____\n\
+---\n\
+"
+};
+var load_prototype = function(type) {
+    simplemde.value(prototypes[type]);
+}
+var simplemde = new SimpleMDE({
+    element: document.getElementById("editor"),
+    autofocus: true,
+    autosave: {
+        enabled: true,
+        unique_id: "mildronize-editor",
+        delay: 1000,
+        }
+    });
+</script>
+
+
+
