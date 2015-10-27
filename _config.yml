@@ -1,0 +1,34 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+redcarpet:
+  extensions:    ["with_toc_data"]
+
+# Permalinks
+#permalink:        pretty
+permalink:          /:year/:month/:day/:title/
+relative_permalinks: true
+
+# Setup
+title:            Mildronize's blog
+tagline:          'mildronize-blog'
+description:      "My notes and interesting things"
+keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
+url:              http://dev.mildronize.com
+# for dev
+#url:              http://127.0.0.1:4000
+#baseurl:          /en
+image_url:        /public/images/
+comment:          true
+changelangurl:    th
+changelang:       อ่านแบบภาษาไทย
+
+author:
+  codename:       mildronize
+  name:           'Thada Wangthammang'
+  email:          mildronize@gmail.com
+  profile:        images/my-profile.jpg
+
+paginate:         5
+
+google_analytics_id:  UA-62565035-1

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+      {% include head.html %}
+      <script>
+          function search_keywords() {
+            var x = document.getElementById("search").value;
+            if (x == null || x == "") {
+                return false;
+            }
+            window.location.href = "{{ site.baseurl}}/search/#/"+x;
+            return false;
+        }
+      </script>
+  <body>
+
+    {% include sidebar.html %}
+    <!-- Thank search bar from http://tympanus.net/Tutorials/ExpandingSearchBar/ -->
+    <div class="search-container">
+        <div id="sb-search" class="sb-search">
+            <form method="GET" onsubmit="return search_keywords()">
+                <input class="sb-search-input pure-input-3 search-bar" placeholder="Search title or tags" type="text" value="" name="search" id="search">
+                <input class="sb-search-submit" type="button" value="">
+                <span class="fa fa-search sb-icon-search"></span>
+            </form>
+        </div>
+    </div>
+    <div class="content container">
+      {{ content }}
+    </div>
+    {% include tail.html %}
+
+  </body>
+</html>
