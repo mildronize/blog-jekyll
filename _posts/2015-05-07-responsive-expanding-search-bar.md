@@ -7,10 +7,10 @@ tags: [css, javascript, js, html, project, jekyll, extension, plugin, responsive
 
 image: public/images/2015-05-06-responsive-expanding-search-bar.jpg
 home: https://github.com/mildronize/ExpandingSearchBar
-demo: /demo/responsive-expanding-search-bar/
 source: https://github.com/mildronize/ExpandingSearchBar/archive/master.zip
 ---
 
+<!-- demo: /demo/responsive-expanding-search-bar/ -->
 **Expanding Search Bar** is an expanding search bar extension for any HTML page or Jekyll. This extension is a lightweight version of [Expanding Search Bar Deconstructed](http://tympanus.net/Tutorials/ExpandingSearchBar/) for using  in Jekyll or HTML. This extension is used in [my blog](http://mildronize.github.io).
 
 Because [my blog](http://mildronize.github.io) have used icon set from [Font Awesome](http://fontawesome.io). I change icon set from the [original project](#original-project-documentation) into [Font Awesome](http://fontawesome.io) as in [my blog](http://mildronize.github.io).
