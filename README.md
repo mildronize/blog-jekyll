@@ -3,6 +3,16 @@
 
 my blog
 
+### How to build with Docker
+```
+sudo docker build -t myblog .
+```
+
+### Simple run jekyll with Docker
+```
+sudo docker run --rm -v "$PWD:/src" -p 4000:4000 myblog jekyll serve
+```
+
 ## Page
 **Notes** is a collection of post which is "notes" category
 
