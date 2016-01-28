@@ -33,4 +33,5 @@ paginate:         5
 
 google_analytics_id:  UA-62565035-1
 
+# Fix a problem following https://github.com/jekyll/jekyll/issues/3525
 exclude: [vendor]
