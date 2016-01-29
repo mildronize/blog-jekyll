@@ -6,7 +6,7 @@ redcarpet:
 
 # Permalinks
 #permalink:        pretty
-permalink:          /:year/:month/:day/:title/
+permalink:          /blog/:title/
 relative_permalinks: true
 
 # Setup
@@ -14,14 +14,12 @@ title:            Mildronize's blog
 tagline:          'mildronize-blog'
 description:      "My notes and interesting things"
 keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
-url:              http://dev.mildronize.com
+# url:              http://dev.mildronize.com
 # for dev
-#url:              http://127.0.0.1:4000
+url:              http://127.0.0.1:4000
 #baseurl:          /en
 image_url:        /public/images/
 comment:          true
-changelangurl:    th
-changelang:       อ่านแบบภาษาไทย
 
 author:
   codename:       mildronize
