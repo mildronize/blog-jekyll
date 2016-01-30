@@ -6,7 +6,7 @@ redcarpet:
 
 # Permalinks
 #permalink:        pretty
-permalink:          /blog/:title/
+permalink:          /post/:title/
 relative_permalinks: true
 
 # Setup
@@ -27,7 +27,7 @@ author:
   email:          mildronize@gmail.com
   profile:        images/my-profile.jpg
 
-paginate:         5
+paginate:         10
 
 google_analytics_id:  UA-62565035-1
 
