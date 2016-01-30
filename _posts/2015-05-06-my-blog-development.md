@@ -42,6 +42,9 @@ toc: true
 - [19 May 2015][t13] &raquo; Add `featured notes` in [Note page]
 - [19 May 2015][t14] &raquo; Add [Table of Contents for Jekyll](https://github.com/ghiculescu/jekyll-table-of-contents) in `post layout`
 - 24 Jun 2015 &raquo; Make this blog to multilanguage :D
+- [28 Oct 2015][t15] &raquo; Move to [Travis-CI](https://travis-ci.org/mildronize/mildronize.github.io) (Build Jekyll site with Travis-CI)
+- [28 jan 2016][t16] &raquo; Use [Docker](https://www.docker.com/) instead Jekyll packages on Debian for development and writing a blog.
+- 30 jan 2016 &raquo; Combine Thai language into my main blog (This web includes with Thai and English posts).
 
 [t01]: https://github.com/mildronize/mildronize.github.io/commit/a48c4b03033496c16e1eeb6377f7a2fb6fa79586
 [t02]: https://github.com/mildronize/mildronize.github.io/commit/58f941a5a9d0066c5ea939aaab98f1adef291647
@@ -57,6 +60,8 @@ toc: true
 [t12]: https://github.com/mildronize/mildronize.github.io/commit/f8ff0a772521cf5b90cb0cd455bc9d8c85997ffb
 [t13]: https://github.com/mildronize/mildronize.github.io/commit/a5b53f372baa85f2657699addd3640e086188756
 [t14]: https://github.com/mildronize/mildronize.github.io/commit/0b30a3c10a593ee4aeeba400ec08efe531b09451
+[t15]: https://github.com/mildronize/mildronize.github.io/commit/c37ff03a3f6af823014bb2df4fdefa4809c90273
+[t16]: https://github.com/mildronize/mildronize.github.io/commit/ec636fc39654c82e3b5d2a0d295bbf5d659f9748
 
 [Search page]: {{site.baseurl}}/search/
 [Note page]: {{site.baseurl}}/notes/
@@ -69,4 +74,3 @@ toc: true
 - Fix Related post to show only the posts that have related tags
 - Auto complete search
 - [Cloud tags](http://vvv.tobiassjosten.net/jekyll/jekyll-tag-cloud/)
-- <s>Build this blog to [multilanguage](http://nicoespeon.com/en/2013/04/building-a-multinlingual-jekyll-blog/) jekyll blog</s>
