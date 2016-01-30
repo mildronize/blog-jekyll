@@ -10,15 +10,13 @@ language: th
 ---
 
 > อัพเดท 2015-07-05: [Atom Editor ออกรุ่น 1.0 แล้ว](https://www.blognone.com/node/69792) ผมได้ทดสอบแล้วแต่ก็ยังไม่สามารถใช้งานภาษาไทยได้
- 
-บทความนี้เป็น บทความแรกที่ผมเขียนเป็นภาษาไทย จริงๆ แล้วจะพยายามเขียนทั้งสอง ภาษา (ไทยและอังกฤษ) เพื่อเป็นการฝึกฝนเรื่องภาษาของตนเอง และเพื่อที่จะทดสอบการเขียนบทความเป็นภาษาไทย บน Jekyll ก่อนที่จะเปลี่ยนเว็บบล็อคนี้เป็น [แบบหลายภาษา (multi language)]({{site.baseurl}}notes/my-blog-dev/#next-plans)
 
 > หมายเหตุ: ถ้าใครยังไม่รู้จัก Atom Editor ลองอ่าน[บทความรีวิวจาก Blognone ดูนะครับ](https://www.blognone.com/node/56176)
 
 ## ปัญหาที่พบ
 ปัญหาที่ผมพบในการพิมพ์ภาษาไทยบน [Atom Editor](https://atom.io) คือ cursor ที่แสดงผลขณะกำลังพิมพ์นั้นไม่ตรงกับ สิ่งที่แสดงผลจริงๆ 
 
-![]({{site.baseurl}}/{{site.image_url}}2015-05-23-thai-typing-in-atom-editor.gif)
+![Problem while typing Thai in Atom editor]({{site.image_url}}2015-05-23-thai-typing-in-atom-editor.gif)
 
 หลังจากผมได้พบกับปัญหานี้ผมได้ ไปค้นหาปัญหานี้ใน google ผลปรากฏว่าได้มีคนที่ประสบปัญหาแบบเดียวกันกับผม ซึ่งตอนนี้ได้มีคนไปตั้งประเด็นนี้ไว้ใน Github ของ Atom Editor แล้ว ใน [Some unicode characters seem to confuse Atom #1849](https://github.com/atom/atom/issues/1849) ตั้งแต่ปี 2557 ซึ่งตอนนี้ (ณ วันที่เขียนบทความนี้) ยังไม่ได้แก้ไขปัญหานี้ได้
 
@@ -40,7 +38,7 @@ language: th
 
 หรือสามารถตั้งค่าผ่าน GUI ของ Atom Editor ได้ ที่ File > Settings > Editor Settings (หัวข้อ)
 
-![]({{site.baseurl}}/{{site.image_url}}2015-05-23-thai-typing-in-atom-editor-2.jpg)
+![config of Atom to solve such problem]({{site.image_url}}2015-05-23-thai-typing-in-atom-editor-2.jpg)
 
 ### คำอธิบาย
 - ใช้ฟอนต์ [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) เป็นฟอนต์ ภาษาอังกฤษหลักๆ
@@ -57,6 +55,5 @@ language: th
 ## อ่านเพิ่มเติม
 - [การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]
 
-[การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]: {{site.baseurl}}/articles/2015/05/24/thai-encoding/
-
+[การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]: {% post_url 2015-05-24-thai-encoding %}
 
