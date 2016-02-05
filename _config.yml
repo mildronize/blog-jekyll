@@ -6,7 +6,7 @@ redcarpet:
 
 # Permalinks
 #permalink:        pretty
-permalink:          /post/:title/
+permalink:          /:categories/:title/
 relative_permalinks: true
 
 # Setup

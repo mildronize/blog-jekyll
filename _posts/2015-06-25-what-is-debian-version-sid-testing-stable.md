@@ -3,7 +3,7 @@ layout: post
 title: เวอร์ชั่นแต่ละเวอร์ชั่นของ debian คืออะไร อะไรคือ sid, testing, stable โอ๊ยเยอะแยะไปหมด...
 description: อธิบายแต่ละเวอร์ชั่นของการพัฒนา debian ได้แก่ sid testing และก็ stable
 tags: ['sid', 'debian', 'linux', 'testing', 'stable']
-category: articles
+categories: [th]
 ---
 
 สวัสดีครับ คุณผู้อ่านทุกท่านที่สนใจใน Debian

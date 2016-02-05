@@ -3,7 +3,7 @@ layout: post
 title: How to Compile & Install Gnome Builder on Debian
 description: Instruction of Gnome Builder installation on Debian
 tags: [linux, debian, gnome, builder, how-to]
-category: articles
+categories: [en]
 ---
 
 > Note: This post is early access for using Gnome Builder. It may be including some bug or any error, please calm when you found some bug. So I think this is becoming the best editor for gnome user, Cheer!

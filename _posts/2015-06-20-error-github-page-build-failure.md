@@ -3,7 +3,7 @@ layout: post
 title: 'GitHub Page Build Failure Solution'
 description: '(ClassNotFound: no lexer for alias shell found.) Jekyll build failure problem in GitHub Page. I showed my solution for solving that. '
 tags: [jekyll, github-page, case-study, github-support, github , problem, solution]
-category: articlces
+categories: [en]
 ---
 > **Note:** This is a part of solutions for solving belowing problem message from GitHub Page. It may be other solutions for solving the problem.
 

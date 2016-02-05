@@ -4,7 +4,7 @@ title: "Mildy: My Debian customization"
 description: "Debian desktop customization for look good desktop in my
 style. It contains many applications such as Xfce, Plank and terminal
 customization."
-category: articles
+categories: [en]
 tags: [debian, xfce, plank, linux, customization, desktop-environment,
 terminal, theme, style]
 ---

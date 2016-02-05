@@ -3,7 +3,7 @@ layout: post
 title: วิธีการทำให้ Gnome Nautilus แสดง directory ก่อนไฟล์
 description: บอกวิธีการตั้งค่าให้โปรแกรมจัดการไฟล์บน Gnome แสดงผล directory (folder) ก่อนไฟล์
 tags: [linux, debian, gnome, nautilus]
-category: articles
+categories: [th]
 ---
 
 พอดีผมใช้ Windows มาก่อนแล้วถนัดให้ แสดง folder ก่อนแสดงไฟล์ เลยไปหาวิธีการมาจาก [เว็บนี้](http://gexperts.com/wp/gnome-3-12-filesnautilus-sort-folders-before-files-issues/) 

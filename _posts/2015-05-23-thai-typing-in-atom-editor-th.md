@@ -4,9 +4,8 @@ title: ปัญหาการพิมพ์ภาษาไทยบน Atom E
 
 description: อธิบายปัญหาของการพิมพ์ภาษาไทย หรือภาษาที่เป็นตัวอักษรแบบ Unicode หรือภาษาที่มีหลายตัว(Ascii code) ต่อตัวอักษรในภาษานั้นๆ ซึ่งก็คือ cursor นั้นไม่ตรงกับแสดงผล
 
-category: articles
+categories: [th]
 tags: [atom, editor, unicode, cursor, problem, positioning, multi-byte, incorrect, character, thai]
-language: th
 ---
 
 > อัพเดท 2015-07-05: [Atom Editor ออกรุ่น 1.0 แล้ว](https://www.blognone.com/node/69792) ผมได้ทดสอบแล้วแต่ก็ยังไม่สามารถใช้งานภาษาไทยได้
@@ -55,5 +54,5 @@ language: th
 ## อ่านเพิ่มเติม
 - [การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]
 
-[การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]: {% post_url 2015-05-24-thai-encoding %}
+[การแทนตัวอักษรภาษาไทยในระบบการเข้ารหัสแบบต่างๆ]: {% post_url 2015-05-24-thai-encoding-th %}
 

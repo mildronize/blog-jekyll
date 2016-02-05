@@ -2,7 +2,7 @@
 layout: post
 title: How to setup this blog?
 description: This blog created by Jekyll that is ruby scripts to transforms plain text into static html website and blogs and hosted on Github Page that free hosting support Jekyll.
-category: articles
+categories: [en]
 tags: [how-to, blog, github-page, jekyll, guide, website, github, markdown]
 ---
 

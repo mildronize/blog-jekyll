@@ -3,7 +3,7 @@ layout: post
 title: วิธีการติดตั้ง Google Chrome บน Debian
 description: วิธีการติดตั้งทีละขั้นตอนผ่าน Google repository และการแก้ปัญหาข้อผิดพลากของ public key ในการเพิ่ม repository ใหม่ 
 tags: [debian, chrome, repository, how-to, install, apt-key, chromium]
-category: articles
+categories: [th]
 ---
 
 

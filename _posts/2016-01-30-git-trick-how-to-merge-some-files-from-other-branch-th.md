@@ -2,7 +2,7 @@
 layout: post
 title: "ทริคการใช้ git: การ merge บางไฟล์ไปอีก branch"
 description: ทริคการใช้งาน git แบบง่ายสำหรับการ merge ไฟล์ไปอีก branch
-category: articles
+categories: [th]
 tags: [git, tip, how-to, branch, merge]
 language: th
 ---
