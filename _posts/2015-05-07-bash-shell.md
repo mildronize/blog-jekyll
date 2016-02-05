@@ -4,7 +4,7 @@ title: Bash Shell
 description: A collection of everything about bash shell
 tags: [bash, shell, syntax, loop, for, while, input, tutorial, getting-started]
 category: notes
-permalink: notes/bash-shell
+permalink: notes/bash-shell/
 toc: true
 ---
 

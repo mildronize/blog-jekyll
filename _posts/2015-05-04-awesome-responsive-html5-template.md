@@ -4,7 +4,7 @@ title: Awesome responsive HTML5 templates
 description: collection of beautiful responsive HTML5 templates
 tags: [web, design, template, html5, css3, responsive, photography, art, white, dark, black]
 category: notes
-permalink: notes/awesome-responsive-templates
+permalink: notes/awesome-responsive-templates/
 
 data: [
   {

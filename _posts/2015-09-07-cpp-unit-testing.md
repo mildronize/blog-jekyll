@@ -4,7 +4,7 @@ title: C++ Unit testing
 description: All about C++ Unit testing
 tags: [ c++, unit-test ]
 category: notes
-permalink: notes/cpp-unit-testing
+permalink: notes/cpp-unit-testing/
 ---
 
 There are many C++ frameworks for unit testing

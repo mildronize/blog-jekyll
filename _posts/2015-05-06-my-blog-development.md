@@ -4,7 +4,7 @@ title: My blog development
 description: Tools, structure, extension and everything for building this blog
 tags: [jekyll, github-page, angularjs]
 category: notes
-permalink: notes/my-blog-dev
+permalink: notes/my-blog-dev/
 featured: true
 toc: true
 ---

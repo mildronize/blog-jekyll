@@ -4,7 +4,7 @@ title: Regular Expression
 description: A collection of everything about regular expression
 tags: [regex, regexr, regular-expression]
 category: notes
-permalink: notes/regular-expression
+permalink: notes/regular-expression/
 ---
 
 ## Tools

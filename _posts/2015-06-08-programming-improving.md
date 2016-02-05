@@ -3,7 +3,7 @@ layout: post
 title: Programming Improving
 description: All things for improving programming skill
 category: notes
-permalink: notes/programming-improving
+permalink: notes/programming-improving/
 ---
 
 - [97 Things Every Programmer Should Know](https://www.gitbook.com/book/97-things-every-x-should-know/97-things-every-programmer-should-know/details)

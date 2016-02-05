@@ -4,7 +4,7 @@ title: 'Vim+Janus & TMUX'
 description: 'Usage & key reference for vim, janus, tmux'
 tags: [vim, janus, tmux, editor]
 category: notes
-permalink: notes/vim-janus-tmux
+permalink: notes/vim-janus-tmux/
 toc: true
 featured: true
 ---

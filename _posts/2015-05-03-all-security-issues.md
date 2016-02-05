@@ -4,7 +4,7 @@ title: All security issues
 description: All of security issues are discussed here!
 tags: [security, web, owasp-bwa, open-web-application-security-project, owasp-broken-web-applications , hack, penetrate, penetration, traceroute]
 category: notes
-permalink: notes/security
+permalink: notes/security/
 featured: true
 ---
 
