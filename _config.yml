@@ -1,13 +1,15 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown:         Kramdown
+gems: [jekyll-paginate, jekyll-gist, redcarpet]
+
+# highlighter:      rouge
 redcarpet:
   extensions:    ["with_toc_data"]
+
 
 # Permalinks
 #permalink:        pretty
 permalink:          /:categories/:title/
-relative_permalinks: true
 
 # Setup
 title:            Mildronize's blog
