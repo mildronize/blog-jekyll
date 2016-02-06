@@ -9,7 +9,7 @@ redcarpet:
 
 # Permalinks
 #permalink:        pretty
-permalink:        /:categories/:title
+permalink:        /:categories/:title/
 
 # Setup
 title:            Mildronize's blog
