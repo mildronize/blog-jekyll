@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Guideline for Upgrading Jekyll from 2.x to 3.x
-description: ""
+description: "If you are a Jekyll user. You may be heard some news about announcement Jekyll 3. Then, GitHub announced to use the Jekyll 3. So, there are many changes for Jekyll 3. It describes in the Jekyll Official page."
 categories: [en]
 tags: [jekyll,jekyll-3,guideline]
 ---
@@ -11,12 +11,12 @@ tags: [jekyll,jekyll-3,guideline]
 If you are a Jekyll user. You may be heard some news about announcement Jekyll 3.
 Then, [GitHub announced to use the Jekyll 3](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0).
 So, there are many changes for Jekyll 3.
-It describes in the [Jekyll Official page](http://jekyllrb.com/docs/upgrading/2-to-3/)
+It describes in the [Jekyll Official page](http://jekyllrb.com/docs/upgrading/2-to-3/).
 
 ## Notices
 
 - This article doesn't directly use to upgrade your Jekyll site, but it has some useful guidelines for upgrading by yourself.
-- This article is following my site upgrading. You can see all changes in my commits ([1][commit1], [2][commit2], [3][commit3], [4][commit4])
+- This article is following my site upgrading. You can see all changes in my commits ([1][commit1], [2][commit2], [3][commit3], [4][commit4]).
 
 ## Here is some instructions
 
