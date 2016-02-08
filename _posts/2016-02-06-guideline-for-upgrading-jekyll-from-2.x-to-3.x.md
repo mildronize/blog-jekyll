@@ -77,4 +77,3 @@ Bye.
 [commit3]: https://github.com/mildronize/mildronize.github.io/commit/61e2bb7446d241de040d3e0d2cdfaef7cfdb9a8d
 [commit4]: https://github.com/mildronize/mildronize.github.io/commit/34556c1fd5c4e9f12a86f762dd4d1654ebbcdf63
 
-
