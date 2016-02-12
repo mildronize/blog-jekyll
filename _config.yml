@@ -1,37 +1,39 @@
 # Dependencies
-markdown:        redcarpet
-gems:            [jekyll-paginate, jekyll-gist, redcarpet]
+markdown                        : redcarpet
+gems                            : [jekyll-paginate, jekyll-gist, redcarpet]
 
-# highlighter:      rouge
-redcarpet:
-  extensions:    ["with_toc_data"]
-
+# highlighter                   : rouge
+redcarpet                       :
+  extensions                    : ["with_toc_data"]
 
 # Permalinks
-#permalink:        pretty
-permalink:        /:categories/:title/
+permalink                       : /:categories/:title/
 
 # Setup
-title:            Mildronize's blog
-tagline:          'mildronize-blog'
-description:      "My notes and interesting things"
-keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
-url:              http://dev.mildronize.com
+title                           : Mildronize's blog
+tagline                         : 'mildronize-blog'
+description                     : "My notes and interesting things"
+keywords                        : [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
+url                             : http://dev.mildronize.com
 # for dev
-# url:              http://127.0.0.1:4000
-#baseurl:          /en
-image_url:        /public/images/
-comment:          true
+# url                           : http://127.0.0.1:4000
+#baseurl                        : /en
+image_url                       : /public/images/
+comment                         : true
 
-author:
-  codename:       mildronize
-  name:           'Thada Wangthammang'
-  email:          mildronize@gmail.com
-  profile:        images/my-profile.jpg
+author                          :
+  codename                      : mildronize
+  name                          : 'Thada Wangthammang'
+  email                         : mildronize@gmail.com
+  profile                       : images/my-profile.jpg
+  facebook                      : mildronize
+  twitter                       : mildronize
+  google_plus                   : mildronize
 
-paginate:         10
+icon                            : /public/images/my-profile.jpg
+paginate                        : 10
 
-google_analytics_id:  UA-62565035-1
+google_analytics_id             : UA-62565035-1
 
-# Fix a problem following https://github.com/jekyll/jekyll/issues/3525
-exclude: [vendor]
+# Fix a problem following https : //github.com/jekyll/jekyll/issues/3525
+exclude                         : [vendor]

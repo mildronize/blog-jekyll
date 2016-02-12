@@ -5,6 +5,7 @@ description: Expanding search bar extension for any HTML page or Jekyll. This ex
 categories: [en]
 tags: [css, javascript, js, html, project, jekyll, extension, plugin, responsive]
 
+featured_image: 2015-05-06-responsive-expanding-search-bar.jpg
 image: public/images/2015-05-06-responsive-expanding-search-bar.jpg
 home: https://github.com/mildronize/ExpandingSearchBar
 source: https://github.com/mildronize/ExpandingSearchBar/archive/master.zip
