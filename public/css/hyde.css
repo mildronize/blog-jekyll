@@ -59,7 +59,7 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -105,7 +105,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -126,7 +126,7 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .content {
     max-width: 38rem;
     margin-left: 20rem;
@@ -134,7 +134,7 @@ a.sidebar-nav-item:focus {
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 70em) {
   .content {
     margin-left: 22rem;
     margin-right: 4rem;
@@ -148,7 +148,9 @@ a.sidebar-nav-item:focus {
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 48em) {
+@media (min-width: 58em) {
+
+
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
