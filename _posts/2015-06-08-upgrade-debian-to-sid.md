@@ -4,6 +4,7 @@ title: How to upgrade Debian to SID
 description: Instruction for upgrading debian from stable to SID, sudo command setup, installing non-free packages(non open source)
 tags: ['upgrade', 'debian', 'linux', 'how-to', 'font-thai', 'firmware-linux', 'sudo', 'update', 'sorces.list', 'non-free', 'archive-area']
 categories: [en]
+last_modified_at: 2016-02-16
 ---
 
 **Optional:** Add `sudo` into your user
@@ -15,8 +16,10 @@ $ su
 # exit
 ```
 
-1. Replace the belowing text into `/etc/apt/sorces.list` with your favorite editor. In my case I use 
-`$ sudo vi /etc/apt/sorces.list`
+> Note: If `sudo` don't work, try logout and login again.
+
+1. Replace the belowing text into `/etc/apt/sources.list` with your favorite editor. In my case I use 
+`$ sudo vi /etc/apt/sources.list`
 
     ```bash
     deb http://ftp.th.debian.org/debian/ sid main contrib non-free
