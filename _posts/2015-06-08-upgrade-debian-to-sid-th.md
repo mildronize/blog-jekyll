@@ -4,6 +4,7 @@ title: มาอัพเดท Debian จากเวอร์ชั่น stab
 description: ขั้นตอนการอัพเกรดระบบ Debian จาก stable sid, การทำให้ user สามารถใช้สิทธิผู้ดูแลระบบได้(root) และการติดตั้ง non-free packages(non open source)
 tags: ['upgrade', 'debian', 'linux', 'how-to', 'font-thai', 'firmware-linux', 'sudo', 'update', 'sorces.list', 'non-free', 'archive-area']
 categories: [th]
+last_modified_at: 2016-02-16
 ---
 
 โดยปกติแล้ว เวลาลง Debian ใหม่ๆ จะไม่สามารถใช้ คำสั่ง sudo ได้ ไม่เหมือนกับ Ubuntu ที่ตอนติดตั้งจะให้ user แรกที่สร้างตอนติดตั้งสามารถใช้ คำสั่ง sudo ได้เลย 
@@ -21,7 +22,7 @@ $ su
 
 ## ขั้นตอน
 
-1. ให้คัดลอกข้อความด้านล่างนี้แทนที่ ของเดิมไปเลย โดยไปไว้ที่ `/etc/apt/sorces.list` กับโปรแกรมแก้ไขข้อความตัวไหนก็ได้ที่คุณชอบ โดยในที่นี้ผมจะใช้ vi `$ sudo vi /etc/apt/sorces.list` และคัดลอกข้อมูลด้านล่างลงไปแล้วก็บันทึก
+1. ให้คัดลอกข้อความด้านล่างนี้แทนที่ ของเดิมไปเลย โดยไปไว้ที่ `/etc/apt/sorces.list` กับโปรแกรมแก้ไขข้อความตัวไหนก็ได้ที่คุณชอบ โดยในที่นี้ผมจะใช้ vi โดยใช้ `$ sudo vi /etc/apt/sources.list` และคัดลอกข้อมูลด้านล่างลงไปแล้วก็บันทึก
 
     ```bash
     deb http://ftp.th.debian.org/debian/ sid main contrib non-free
@@ -70,5 +71,3 @@ $ su
     ```
     $ sudo aptitude install xfonts-thai
     ```
-
-
