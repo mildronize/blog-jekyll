@@ -2,16 +2,29 @@
 [![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)
 
 my blog
+## Docker Things
+- How to build with Docker
+    ```
+    sudo docker build -t myblog .
+    ```
 
-### How to build with Docker
-```
-sudo docker build -t myblog .
-```
+- Simple run jekyll with Docker
+    ```
+    sudo docker run --rm -v "$PWD:/src" -p 4000:4000 myblog jekyll serve
+    ```
 
-### Simple run jekyll with Docker
-```
-sudo docker run --rm -v "$PWD:/src" -p 4000:4000 myblog jekyll serve
-```
+- Problem on docker-machine can't use auto generation
+    - Solution: <https://github.com/jekyll/docker/issues/14>
+
+- Enable Debug mode on Docker
+    ```
+    docker run --rm --label=jekyll -v "$PWD:/src" -it -e DEBUG=true -p 4000:4000 mildronize/mildronize.github.io jekyll serve --force_polling
+    ```
+    
+- Run on Windows
+    ```
+    docker run --rm -it -v "//c/Users/Mildronize/git-projects/mildronize.github.io:/src" -p $(docker-machine ip `docker-machine active`):4000:4000 mildronize/mildronize.github.io jekyll serve --force_polling --host 0.0.0.0
+    ```
 
 ## Page
 **Notes** is a collection of post which is "notes" category
