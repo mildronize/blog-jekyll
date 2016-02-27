@@ -4,6 +4,7 @@ title: ทำไม mount volume ของ Docker บน Windows แล้วม
 description: "จะแก้ปัญหาอย่างไร เมื่อมองไม่เห็นไฟล์ หลังจาก mount volume บน Docker แล้ว"
 categories: [th]
 tags: [docker, windows, boot2docker, docker-machine, virtualbox, vm, virtual-machine, mount-volume]
+featured_image: logo/docker.png
 ---
 
 ## เกริ่นนำ สักนิด...
