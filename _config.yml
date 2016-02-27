@@ -19,6 +19,7 @@ url                             : http://dev.mildronize.com
 # url                           : http://127.0.0.1:4000
 #baseurl                        : /en
 image_url                       : /public/images/
+featured_image_url              : /public/images/featured_image/
 comment                         : true
 
 author                          :
