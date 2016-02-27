@@ -32,7 +32,7 @@ Folder Name: c/Users
 ```
 
 ดังรูป
-![]({{site.image_url}}2016-02-27-why-mounting-volume-on-docker-can't-work-on-windows.png)
+![this figure show default of mounting path of docker vm on windows]({{site.image_url}}2016-02-27-why-mounting-volume-on-docker-can't-work-on-windows.png)
 
 
 **สรุปคำสั่ง Docker โดยทำการ mount volume**
