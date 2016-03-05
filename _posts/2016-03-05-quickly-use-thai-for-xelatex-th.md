@@ -48,7 +48,7 @@ featured_image: logo/latex.png
 
 เมื่อแปลงโดยใช้ `XeLaTeX` จะได้ผลลัพธ์แบบนี้
 
-![result of xelatex in PDF]({{site.image_url}}2016-03-06-quickly-use-thai-for-xelatex-th.png)
+![result of xelatex in PDF]({{site.image_url}}2016-03-05-quickly-use-thai-for-xelatex-th.png)
 
 ## วิธีตั้งค่าให้สามารถพิมพ์ภาษาไทยได้
 เราจะใช้ฟอนต์ `TH Sarabun New` สำหรับเป็นตัวอย่าง และต้องติดตั้งฟอนต์ไว้ในเครื่องแล้ว
