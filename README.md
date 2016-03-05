@@ -23,7 +23,7 @@ my blog
     
 - Run on Windows
     ```
-    docker run --rm -it -v "//c/Users/Mildronize/git-projects/mildronize.github.io:/src" -p $(docker-machine ip `docker-machine active`):4000:4000 mildronize/mildronize.github.io jekyll serve --force_polling --host 0.0.0.0
+     docker run --rm -it -v "//c/Users/Mildronize/git-projects/mildronize.github.io:/src" -p $(docker-machine ip `docker-machine active`):4000:4000 -e TZ=Asia/Bangkok mildronize/mildronize.github.io jekyll serve --force_polling --host 0.0.0.
     ```
 
 ## Page
