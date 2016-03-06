@@ -5,6 +5,9 @@ rvm:
 branches:
   only:
   - jekyll
+before_script:
+  - echo 'Asia/Bangkok' | sudo tee /etc/timezone
+  - sudo dpkg-reconfigure --frontend noninteractive tzdata
 script:
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable-external
