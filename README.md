@@ -2,31 +2,26 @@
 [![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)
 
 my blog
-## Docker Things
+## Dockerize Jekyll for my blog.
 - How to build with Docker
     ```
-    sudo docker build -t myblog .
+    sudo docker build -t mildronize/mildronize.github.io .
     ```
 
 - Simple run jekyll with Docker
     ```
-    sudo docker run --rm -v "$PWD:/src" -p 4000:4000 myblog jekyll serve
+    docker run --rm --label=jekyll -v "$PWD:/src" -it -e DEBUG=true -p 4000:4000 mildronize/mildronize.github.io jekyll serve --host 0.0.0.0
     ```
 
-- Problem on docker-machine can't use auto generation
-    - Solution: <https://github.com/jekyll/docker/issues/14>
-
-- Enable Debug mode on Docker
-    ```
-    docker run --rm --label=jekyll -v "$PWD:/src" -it -e DEBUG=true -p 4000:4000 mildronize/mildronize.github.io jekyll serve --force_polling
-    ```
-    
+- Enable Debug mode on Docker `-e DEBUG=true`
 - Run on Windows
     ```
-     docker run --rm -it -v "//c/Users/Mildronize/git-projects/mildronize.github.io:/src" -p $(docker-machine ip `docker-machine active`):4000:4000  mildronize/mildronize.github.io jekyll serve --force_polling --host 0.0.0.
+     docker run --rm -it -v "//c/Users/Mildronize/git-projects/mildronize.github.io:/src" -p $(docker-machine ip `docker-machine active`):4000:4000  mildronize/mildronize.github.io jekyll serve --force_polling --host 0.0.0.0
     ```
-    
     add this `-e TZ=Asia/Bangkok` when change timzone
+
+- Problem: Run Jekyll with docker-machine can't use auto generation ( on Windows)
+    - Solution: add `--force_polling` at the end of Jekyll command. [Read more](https://github.com/jekyll/docker/issues/14)
 
 ## Page
 **Notes** is a collection of post which is "notes" category
