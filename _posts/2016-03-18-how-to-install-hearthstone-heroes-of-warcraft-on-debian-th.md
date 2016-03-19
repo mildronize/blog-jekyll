@@ -24,7 +24,7 @@ featured_image: logo/hearthstone.jpg
 1. อันดับแรก ติดตั้ง `wine` ซึ่งเป็นโปรแกรมบน Linux สำหรับทำให้โปรแกรมบน Windows สามารถทำงานบน Linux ได้ครับ
 
     ```
-    # aptitude install wine wine:i386
+    # aptitude install wine
     ```
     
 1. ทำการสำรองข้อมูลของ `wine` ก่อน ถ้ามี
@@ -36,7 +36,7 @@ featured_image: logo/hearthstone.jpg
 1. สร้างสภาพแวดล้อมแบบ 32 bit หรือ i386 โดย
 
     ```
-    $ env WINEARCH=win32 WINEPREFIX=~/.wine wineboot -u
+    $ env WINEARCH=win32 WINEPREFIX=$HOME/.wine wineboot -u
     ```
     
 1. กำหนดไลบรารี่ที่จำเป็นเพิ่มเติม โดยมี `dbghelp` และ `msvcp100` โดยการ
