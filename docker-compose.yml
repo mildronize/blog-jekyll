@@ -1,0 +1,12 @@
+version: '2'
+services:
+  jekyll:
+    image: mildronize/mildronize.github.io
+    volumes:
+      - .:/src
+    ports:
+      - "4000:4000"
+    command: jekyll serve --host 0.0.0.0
+    container_name: jekyll
+    environment:
+        TIMEZONE: Asia/Bangkok

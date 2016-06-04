@@ -26,19 +26,19 @@ featured_image: logo/hearthstone.jpg
     ```
     # aptitude install wine
     ```
-    
+
 1. ทำการสำรองข้อมูลของ `wine` ก่อน ถ้ามี
 
     ```
     $ mv ~/.wine ~/.wine-old
     ```
-    
+
 1. สร้างสภาพแวดล้อมแบบ 32 bit หรือ i386 โดย
 
     ```
     $ env WINEARCH=win32 WINEPREFIX=$HOME/.wine wineboot -u
     ```
-    
+
 1. กำหนดไลบรารี่ที่จำเป็นเพิ่มเติม โดยมี `dbghelp` และ `msvcp100` โดยการ
 
     1. สั่งให้คำสั่ง `winecfg` เพื่อทำการตั้งค่า
@@ -47,9 +47,9 @@ featured_image: logo/hearthstone.jpg
     1. **สุดท้ายต้องมั่นใจว่า** ตั้งค่าสภาพแวดล้อมเป็น `Windows XP` แล้ว ไม่อย่างนั้น จะเจออาการจอขาวเวลาเข้าเกม
 
 1. ดาวโหลดจากหน้าเว็บได้[ที่นี่](http://eu.battle.net/hearthstone/en/)
-1. จากนั้นให้กดติดตั้งเกม hearthstone 
+1. จากนั้นให้กดติดตั้งเกม hearthstone
 1. สุดท้ายขอให้สนุกกับการเล่นเกม Hearthstone นะครับ
- 
+
 ## แหล่งข้อมูลเพิ่มเติม และอ้างอิง
 - [ขั้นตอนการติดตั้งแบบวิดิโอผ่าน Youtube เป็นภาษาอังกฤษ](https://www.youtube.com/watch?v=WZyEu2OrgzU)
 - [ผลการทดสอบของผู้เล่นคนอื่นๆ โดยติดตั้ง Hearthstone ผ่าน wine รวมถึงวิธีการแก้ปัญหา เวลาเจอบัคต่างๆ](https://appdb.winehq.org/objectManager.php?sClass=version&iId=30038)

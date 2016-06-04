@@ -2,6 +2,10 @@
 [![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)
 
 my blog
+## Serve Jekyll with Docker Compose
+```
+docker-compose up
+```
 ## Dockerize Jekyll for my blog.
 - How to build with Docker
     ```
