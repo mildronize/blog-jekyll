@@ -21,5 +21,5 @@ EXPOSE 4000
 
 # Setup timezone
 ENV TIMEZONE Asia/Bangkok
-CMD cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
+RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
     echo "${TIMEZONE}" > /etc/timezone
