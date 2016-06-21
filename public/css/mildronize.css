@@ -19,8 +19,12 @@
  */
 
 html {
-  font-family: "PT Sans", Boon, Arial, sans-serif;
+  font-family: Pridi, serif;
 }
+h1{
+  font-family: Pattaya, serif;
+}
+
 @media (min-width: 64em) {
     .search-bar{
         width:22em;
