@@ -6,7 +6,7 @@ services:
       - .:/src
     ports:
       - "4000:4000"
-    command: jekyll serve --force_polling --host 0.0.0.0
+    command: jekyll serve --host 0.0.0.0
     container_name: jekyll
     environment:
         TIMEZONE: Asia/Bangkok
