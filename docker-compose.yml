@@ -1,12 +1,20 @@
 version: '2'
 services:
-  jekyll:
+  live-server:
+    image: mildronize/live-server-docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      - jekyll-build
+    volumes:
+      - ./_site:/www
+    container_name: jekyll-server
+
+  jekyll-build:
     image: mildronize/mildronize.github.io
     volumes:
       - .:/src
-    ports:
-      - "4000:4000"
-    command: jekyll serve --host 0.0.0.0
-    container_name: jekyll
+    command: jekyll build --watch --incremental
+    container_name: jekyll-builder
     environment:
         TIMEZONE: Asia/Bangkok

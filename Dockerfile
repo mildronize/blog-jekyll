@@ -2,7 +2,7 @@
 # Modify from https://github.com/ibotdotout/ibotdotout.github.io/blob/jekyll/Dockerfile
 
 FROM ruby:2.2
-MAINTAINER Thad Wangthammang <mildronize@gmail.com>
+MAINTAINER Thada Wangthammang <mildronize@gmail.com>
 
 RUN apt-get update -y && \
     apt-get install -y nodejs python-pygments && \
