@@ -3,7 +3,7 @@ services:
   live-server:
     image: mildronize/live-server-docker
     ports:
-      - "8080:8080"
+      - "4000:8080"
     depends_on:
       - jekyll-build
     volumes:
