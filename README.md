@@ -1,12 +1,22 @@
-# mildronize.github.io
+# mildronize.github.io (http://dev.mildronize.com)
 [![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)
 
 my blog
-## Serve Jekyll with Docker Compose
+## Serving Jekyll
+
+Serve Jekyll in [live preview] mode with fast build  by Docker Compose.
 ```
 docker-compose up
 ```
-## Dockerize Jekyll for my blog.
+
+This command uses `--incremental` option for faster preview when the `jekyll build` command is called. It can be going wrong in _a case of creating a new post_. [Read more detail](https://jekyllrb.com/docs/configuration/#build-command-options)
+
+Use this command to fix such problem.
+```
+docker-compose exec jekyll-build jekyll build
+```
+
+## Dockerize Jekyll for my blog ( Uncomfortable way)
 - How to build with Docker
     ```
     sudo docker build -t mildronize/mildronize.github.io .
