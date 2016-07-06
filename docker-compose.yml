@@ -1,14 +1,17 @@
 version: '2'
 services:
   live-server:
-    image: mildronize/live-server-docker
+    image: mildronize/dockerfiles:node-live-server
+    expose:
+      - "4000"
     ports:
-      - "4000:8080"
+      - "4000:4000"
     depends_on:
       - jekyll-build
     volumes:
       - ./_site:/www
     container_name: jekyll-server
+    command: live-server --port=4000
 
   jekyll-build:
     image: mildronize/mildronize.github.io
