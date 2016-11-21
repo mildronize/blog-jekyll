@@ -6,6 +6,11 @@ tags: [debian, chrome, repository, how-to, install, apt-key, chromium]
 categories: [th]
 ---
 
+# *Deprecated post!
+
+Please go to [my new post]({{site.baseurl}}{% post_url 2016-11-21-a-very-short-ubuntu-debian-packages-installation %}/#google-chrome). 
+
+<hr>
 
 ## สิ่งที่จำเป็นต่อการติดตั้ง
 - ควรจะลง `Chromium` ก่อน เพราะว่าใน Chromium มี package ที่จำเป็นต่อการลง `Google Chrome` โดยใช้

@@ -6,6 +6,12 @@ tags: [debian, chrome, repository, how-to, install, apt-key, chromium]
 categories: [en]
 ---
 
+# *Deprecated post!
+
+Please go to [my new post]({{site.baseurl}}{% post_url 2016-11-21-a-very-short-ubuntu-debian-packages-installation %}/#google-chrome). 
+
+<hr>
+
 ## Prerequisite
 - chromium via `$ sudo aptitude install chromium`
 

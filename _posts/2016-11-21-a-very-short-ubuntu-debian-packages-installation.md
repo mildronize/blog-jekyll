@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "A List of Ubuntu/Debian packages installation via a repository or PPA"
+title: "A very short Ubuntu/Debian packages installation sheet"
 categories: [en]
-tags: [ubuntu, debian, ppa]
+tags: [ubuntu, debian, ppa, chrome, docker, vscode, zotero]
+featured: true
 toc: true
 ---
 
