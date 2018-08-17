@@ -14,6 +14,7 @@ services:
     command: live-server --port=4000
 
   jekyll-build:
+    build: .
     image: mildronize/mildronize.github.io
     volumes:
       - .:/src

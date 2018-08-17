@@ -1,7 +1,7 @@
 # Custom from https://hub.docker.com/r/grahamc/jekyll/
 # Modify from https://github.com/ibotdotout/ibotdotout.github.io/blob/jekyll/Dockerfile
 
-FROM ruby:2.2
+FROM ruby:2.3
 MAINTAINER Thada Wangthammang <mildronize@gmail.com>
 
 RUN apt-get update -y && \

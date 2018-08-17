@@ -1,8 +1,8 @@
 # Dependencies
 markdown                        : redcarpet
-gems                            : [jekyll-paginate, jekyll-gist, redcarpet]
+plugins                         : [jekyll-paginate, jekyll-gist, redcarpet]
 
-# highlighter                   : rouge
+# highlighter                     : rouge
 redcarpet                       :
   extensions                    : ["with_toc_data"]
 
