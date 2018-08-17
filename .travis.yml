@@ -8,20 +8,12 @@ branches:
 script:
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable-external
-after_success:
-- mkdir tmp
-- cd tmp
-- git init
-- git config user.name "Travis-CI"
-- git config user.email ${EMAIL}
-- cp -R ../_site/* .
-- git add -A .
-- git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push --force --quiet "https://${DEPLOY_TOKEN}@${GH_REF}" master:${TARGET_BRANCH} > /dev/null 2>&1
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GH_REF: github.com/mildronize/mildronize.github.io.git
-  - TARGET_BRANCH: master
-  - secure: J2FWDhKhd9+jIOjmaY8pzR+o1vDVPRBEfbNvfmNob1m8B5ojEkhvfSJ27DQ//AYoGHj1p6eW6cITTsYDw2RWNG06Gsf4WaeE450xh0/TqHV4SQRcuhVcorNSGX2QZSSHnl35uNyXJ/AddP33gfVdj8aFGpepjhV5StJLKkjOx83l2OUjbfMrJLGvZaji/QEh8eQulyXEzUa7dW7HXWLwTiLrzZf1hgcoDwHnSqfcg8RdXbx/1beLGWYi2cCHba/LdYcrgOEuLIA5bImVFI93GpbPE2zvNyXWGY4xVNCSulmuKf42HG4IZkHzzjl2BYYzMOtRhbaYbRYeyHuc5qhAJduJkNUnm2GYPmaRS5jXdU0taQdVf4+TM1/t42Qq9Pwgld3imcAwJbe09ECtB5w2UE05/20wMhoLxyBfI8ncJ+DyNP8YEExcJGb5UYsu318MlhUwrJQIz0Nb2R38fkxXmx2wByPELpcos268JPkaJeWsdgmAvds7DBgZOuoJe0gylaTSkMOzZFtSKSWy4WEMmhGcAbyfiJq5E9KulsWGwd+Q6FfANJqFl10ZTm4yDNfD8/rXX00YtzpeHzZv7hMugEdQrc5B9UUcCwd2xt9Hm599cdEIKp19PJwFt4Uvrt5LQM73ygo81nOdQi7Ooc8Oe2TOJEb9K1XlfNFtB19iYrY=
-  - secure: WsRZ2maQ5GQZeWtslc1Hl9fvaxdL0GEagxFaFA5/tP3ZXTt5Ej1pBLpVysJfVD7deyawmc70BkwAyHF5cUaCo68gO8bPe0ZFdL6U1f63nvx+BgeBPpEPogceqoLFfnFYhnATpT0kw6m4KJwmaBm273nBBNRdFCBA9O/kSBATBneL5xBjgm2RTafUk3phuGNEDWT96TlP9qmvTJv+8tarzS6qmtwHZIaX6U6njw2PMwP0WXjEK0tYd+sIPJwcw+eGvTQ7Fn1EzWZvbOdEGxeDO1KtIvTXB3H9SxorWW/heJ2jU29XZSbwvFoSkRstrgZMTjD8vx4klZ0OkO+fKn03muOKfYcLA3OlGA7xeXaGZYZuFSN907cKsaBEOXX7gjLihJ6bYZSieb9peZZJIafBVAnKA2m78B5X3G+OwRHRObsMr20OTlWyM3M6H86rknLcRBpvSCEEVcubuHcvwAjpW/jaTD1MQjlgox9lDf8yGutxO7AmNnJliki/zvof2/hMUVMuroQhigoXKhT5pTyUYHJZEb2Zzt3JkKz6idt5Hmz+zIjHyG97o1pWt/uO83uVs2k2jtV64ar1NzkJ+WME56z+xiQrQABpGjg7DEI/o2OvmoXOI8+oPyMbiHmyE+NQAofyRJPDtHbqbtjVBE6k7YoguWLxjbZ5e7zCgy3mX0E=
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: _site
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: jekyll
+  target_branch: master
