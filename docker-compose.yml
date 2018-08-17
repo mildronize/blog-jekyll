@@ -39,9 +39,9 @@ services:
   unison:
     image: 'leighmcculloch/unison:latest'
     environment:
-      - UNISON_WORKING_DIR=/src
+      - UNISON_WORKING_DIR=/src/jekyll
     volumes:
-      - /src
+      - /src/jekyll
     ports:
       - '5000:5000'
       
