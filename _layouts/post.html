@@ -6,11 +6,12 @@ layout: default
   <div class="post">
     <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
     <i class="icon fa fa-calendar-o"></i><span class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</span>
-    <i class="icon fa fa-tags"></i><p class="entry-tags">
+    <i class="icon fa fa-tags"></i><span class="entry-tags">
       {% for tag in page.tags %}
-        <span class="label"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
+        <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
         {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}
       {% endfor %}
+      </span>
     <!-- {% if site.comment and page.comment == null %}<p><a href="{{site.baseurl}}{{page.url}}#disqus_thread">Comments</a></p>{% endif %} -->
     {% if page.toc == true %}
       <div id="toc"></div>
@@ -20,7 +21,7 @@ layout: default
 <!--    {% if page.comments %}<div id="disqus_thread"></div>{% endif %}-->
   </div>
 </article>
-
+<hr>
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -36,7 +37,9 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
 {% if site.comment and page.comment == null %}
+  <hr>
     {% include disqus.html %}
     <!-- {% include disqus_comment_count.html %} -->
 {% endif %}

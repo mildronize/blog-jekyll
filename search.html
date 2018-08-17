@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: default
 title: Search
 permalink: search/
 ---
@@ -12,7 +12,7 @@ permalink: search/
 	<title>Tags</title>
 </head>
 <body ng-controller="ListController">
-{% include sidebar.html %}
+
 <div class="content container">
     <form class="pure-form">
       <input ng-value="search_string" ng-model="query" type="text" class="pure-input-rounded pure-input-1" style="font-size: 1.10em;"
