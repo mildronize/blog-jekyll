@@ -38,4 +38,11 @@ paginate                        : 10
 google_analytics_id             : UA-62565035-1
 
 # Fix a problem following https : //github.com/jekyll/jekyll/issues/3525
-exclude                         : [vendor]
+exclude                         : [vendor, node_modules]
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed

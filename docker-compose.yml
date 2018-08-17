@@ -1,24 +1,48 @@
 version: '2'
 services:
-  live-server:
-    image: mildronize/dockerfiles:node-live-server
-    expose:
-      - "4000"
-    ports:
-      - "4000:4000"
-    depends_on:
-      - jekyll-build
-    volumes:
-      - ./_site:/www
-    container_name: jekyll-server
-    command: live-server --port=4000
-
+  # live-server:
+  #   image: mildronize/dockerfiles:node-live-server
+  #   expose:
+  #     - "4000"
+  #   ports:
+  #     - "4000:4000"
+  #   depends_on:
+  #     - jekyll-build
+  #   volumes:
+  #     - ./_site:/www
+  #   container_name: jekyll-server
+  #   command: live-server --port=4000
   jekyll-build:
     build: .
     image: mildronize/mildronize.github.io
     volumes:
       - .:/src
-    command: jekyll build --watch --incremental
+    command: jekyll build
     container_name: jekyll-builder
     environment:
         TIMEZONE: Asia/Bangkok
+
+  jekyll:
+    build: .
+    image: mildronize/mildronize.github.io
+    command: sleep infinity
+    ports:
+      - 3000:3000
+    container_name: jekyll
+    environment:
+        TIMEZONE: Asia/Bangkok
+    volumes_from:
+      - unison
+    depends_on:
+      - unison
+
+  unison:
+    image: 'leighmcculloch/unison:latest'
+    environment:
+      - UNISON_WORKING_DIR=/src
+    volumes:
+      - /src
+    ports:
+      - '5000:5000'
+      
+

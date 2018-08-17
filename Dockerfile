@@ -4,8 +4,10 @@
 FROM ruby:2.3
 MAINTAINER Thada Wangthammang <mildronize@gmail.com>
 
+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update -y && \
-    apt-get install -y nodejs python-pygments locales && \
+    apt-get install -y nodejs npm python-pygments locales build-essential && \
     apt-get clean
 
 # for html-proofer
@@ -19,6 +21,13 @@ ADD Gemfile.lock /src/Gemfile.lock
 # Fix a problem following http://stackoverflow.com/questions/29020478/error-installing-nokogiri-on-bundle-install-but-already-installed
 RUN bundle config build.nokogiri --use-system-libraries && \
     bundle install
+
+# nvm install
+# RUN ln -s /usr/bin/nodejs /usr/bin/node;
+RUN npm install -g yarn
+ADD package.json /src/package.json
+ADD yarn.lock /src/yarn.lock
+RUN yarn
 
 VOLUME /src
 EXPOSE 4000

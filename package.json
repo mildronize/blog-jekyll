@@ -1,0 +1,33 @@
+{
+  "name": "mildronize.github.io",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jekyll-build": "bundle exec jekyll build --watch",
+    "open-preview": "start http://192.168.99.100:3000",
+    "docker-restart": "docker-compose stop jekyll && docker-compose start jekyll",
+    "init": "docker-compose up -d && docker exec -i jekyll yarn",
+    "docker-dev": "npm run sync-unison && npm run docker-restart && npm run open-preview && concurrently -k -n \"SYNC,DOCKER\" -c \"bgRed.bold,bgCyan.bold\" \"npm run watch-sync\" \"docker exec -i jekyll npm run dev\"",
+    "watch-sync": "chokidar -i \"_site/**\" \"**/*\" -c \"npm run sync-unison\"",
+    "sync-unison": "unison . socket://192.168.99.100:5000/ -follow \"Regex .*\" -ignore \"Path .git\" -ignore \"Path node_modules\" -auto -batch",
+    "dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run jekyll-build\" \"browser-sync start -s _site -f _site --extensions html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mildronize/mildronize.github.io.git"
+  },
+  "author": "Thada Wangthammang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mildronize/mildronize.github.io/issues"
+  },
+  "homepage": "https://github.com/mildronize/mildronize.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.6.1"
+  }
+}
