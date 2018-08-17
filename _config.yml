@@ -1,3 +1,4 @@
+encoding                        : utf-8
 # Dependencies
 markdown                        : redcarpet
 plugins                         : [jekyll-paginate, jekyll-gist, redcarpet]
