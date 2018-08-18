@@ -79,6 +79,10 @@ h1,h2,h3, .title, .logo{
   color: $grey-light;
 }
 
+.subtitle .description{
+  font-size: 2pt;
+}
+
 .post-list a, .title a {
   color: $grey-dark;
 }

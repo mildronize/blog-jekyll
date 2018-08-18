@@ -17,6 +17,7 @@ title: Blog
             {% endif %} {{ post.title }}
           </a>
         </h2>
+        <!-- <div style="subtitle description">{{ post.content | strip_html | truncate: 100  }}</div> -->
 
         <p style="subtitle is-size-6 is-size-7-mobile">
           <i class="icon far fa-calendar"></i>
@@ -42,7 +43,6 @@ title: Blog
           <a class="pure-button button-small" href="{{ post.source }}">
             <i class="fa fa-code"></i>Source code</a>{% endif %} {% comment %} </p>
         {% endcomment %}
-        <!-- <p>{{ post.description }}</p> -->
       </div>
       
     </div>
