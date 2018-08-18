@@ -26,13 +26,6 @@ tags:
 - การ Query มี syntax เป็นของตัวเองผ่าน HTTP API
 - สามารถทำ post processing ได้เช่น downsampling, rate, interoperation
 
-**บทความนี้จะพูดถึง**
-
-- อนุกรมเวลาคืออะไร
-- ทำไมถึงมีฐานข้อมูลอนุกรมเวลาเกิดขึ้น
-- ฐานข้อมูลอนุกรมเวลาคืออะไร
-- แนะนำฐานข้อมูล OpenTSDB เบื้องต้น
-
 ---
 
 ## OpenTSDB (Open Time series database)
