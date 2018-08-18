@@ -34,6 +34,7 @@ author                          :
 
 icon                            : /public/images/my-profile.jpg
 paginate                        : 10
+paginate_path                   : "/page/:num/"
 
 google_analytics_id             : UA-62565035-1
 

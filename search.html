@@ -20,27 +20,37 @@ permalink: search/
     </form>
 
     <span>
-    	<ul ng-repeat="post in posts | filter:searchMultiTags | orderBy: 'name'">
-            <li>//post.date_view// &raquo; <a href="//post.link//">//post.name//</a>
-                <!-- <span ng-repeat="tag in post.tags" class="label space" ng-show="mouseover"><a href="#" title="Pages tagged {{ tag }}" rel="tag">#//tag//</a></span></p> -->
-            </li>
-    	</ul>
+        
+    	<div ng-repeat="post in posts | filter:searchMultiTags | orderBy: 'name'">
+            <div class="card">
+                <div class="card-content">
+                    <!-- //post.date_view// &raquo;  -->
+                    <a href="((post.link))">((post.name))</a>
+                <!-- <footer class="card-footer"> -->
+                    <div class="tags">
+                        <span class="tag is-size-7" ng-repeat="tag in post.tags" id="((tag))">((tag))</span>
+                    </div>
+                <!-- </footer> -->
+            </div>
+            </div>
+        </div>
 
 <!--      <div class="message" ng-hide="" align="center">Can't found the keywords. Please try other.</div>-->
     </span>
     <script type="text/javascript">
         var app = angular.module('app', ['ngRoute'], function($interpolateProvider) {
-            $interpolateProvider.startSymbol('//');
-            $interpolateProvider.endSymbol('//');
+            $interpolateProvider.startSymbol('((');
+            $interpolateProvider.endSymbol('))');
         });
-        app.controller('ListController', function($scope, $location) {
 
+        app.controller('ListController', function($scope, $location) {
             var value = $location.$$url;
             console.log(value);
             var str = value.substring(1,value.length);
             console.log(str);
             $scope.search_string = decodeURI(str);
 //            $scope.search_string = unescape(value.substring(1,value.length));
+        
 
             $scope.posts = [
                  {% for post in site.posts %}
@@ -59,11 +69,13 @@ permalink: search/
              $scope.searchMultiTags = function(element) {
                  if (typeof $scope.query === 'undefined'){
                      $scope.query = $scope.search_string;
-
-                     return true;
+                     return false;
                  }
-                 console.log($scope.query);
+
+                //  console.log($scope.query);
                  processed_query = $scope.query.toLowerCase().trim();
+                 if(processed_query == "")
+                    return false;
                  tags_array = processed_query.split(' ');
                  processing_tags = element.tags.join(' ');
 
@@ -76,15 +88,17 @@ permalink: search/
                  if(element.description.toLowerCase().search(processed_query.toLowerCase()) >= 0){
                      return true;
                  }
-                console.log(processed_query.toLowerCase());
+                // console.log(processed_query.toLowerCase());
                  for (var i = 0; i < tags_array.length;i++){
-                     if( processing_tags.search(tags_array[i]) < 0 ) {
+                     if( processing_tags.toLowerCase().search(tags_array[i].toLowerCase()) < 0 ) {
                          return false;
                      }
                  }
 
-                 return true;
-             };
+                
+            };
+
+
          })
 
 

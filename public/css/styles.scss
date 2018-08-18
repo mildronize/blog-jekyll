@@ -43,9 +43,22 @@ html {
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 10px;
 }
 
+.highlighted {
+  background-color: yellow; 
+ }
+
+.card{
+  margin:1rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.card-content{
+  padding: 0.7rem;
+}
 
 h1,h2,h3, .title, .logo{
     font-family: 'Trirong', sans-serif;
@@ -82,6 +95,10 @@ h1,h2,h3, .title, .logo{
 .menu-link a{
   color: $grey-dark;
   margin-right:1rem;
+  text-transform: lowercase;
+}
+.active {
+  font-weight: bold;
 }
 .menu-link a:hover{
   color: $blue;
