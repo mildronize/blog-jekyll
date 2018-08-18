@@ -25,10 +25,10 @@ permalink: search/
             <div class="card">
                 <div class="card-content">
                     <!-- //post.date_view// &raquo;  -->
-                    <a href="((post.link))">((post.name))</a>
+                    <a href="//post.link//">//post.name//</a>
                 <!-- <footer class="card-footer"> -->
                     <div class="tags">
-                        <span class="tag is-size-7" ng-repeat="tag in post.tags" id="((tag))">((tag))</span>
+                        <span class="tag is-size-7" ng-repeat="tag in post.tags" id="//tag//">//tag//</span>
                     </div>
                 <!-- </footer> -->
             </div>
@@ -39,8 +39,8 @@ permalink: search/
     </span>
     <script type="text/javascript">
         var app = angular.module('app', ['ngRoute'], function($interpolateProvider) {
-            $interpolateProvider.startSymbol('((');
-            $interpolateProvider.endSymbol('))');
+            $interpolateProvider.startSymbol('//');
+            $interpolateProvider.endSymbol('//');
         });
 
         app.controller('ListController', function($scope, $location) {
@@ -49,7 +49,7 @@ permalink: search/
             var str = value.substring(1,value.length);
             console.log(str);
             $scope.search_string = decodeURI(str);
-//            $scope.search_string = unescape(value.substring(1,value.length));
+//            $scope.search_string = unescape(value.substring(1,value.length//;
         
 
             $scope.posts = [
@@ -82,15 +82,15 @@ permalink: search/
                  if(element.name.toLowerCase().search(processed_query.toLowerCase()) >= 0){
                      return true;
                  }
-                 if(element.category.toLowerCase().search(processed_query.toLowerCase()) >= 0){
+                 if(element.category.toLowerCase().search(processed_query.toLowerCase())  >= 0){
                      return true;
                  }
-                 if(element.description.toLowerCase().search(processed_query.toLowerCase()) >= 0){
+                 if(element.description.toLowerCase().search(processed_query.toLowerCase())  >= 0){
                      return true;
                  }
-                // console.log(processed_query.toLowerCase());
+                // console.log(processed_query.toLowerCase()) ;
                  for (var i = 0; i < tags_array.length;i++){
-                     if( processing_tags.toLowerCase().search(tags_array[i].toLowerCase()) < 0 ) {
+                     if( processing_tags.toLowerCase().search(tags_array[i].toLowerCase())  < 0 ) {
                          return false;
                      }
                  }
