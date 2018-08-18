@@ -1,5 +1,5 @@
 ---
-layout: showcase
+layout: post
 title: Responsive expanding search bar
 description: Expanding search bar extension for any HTML page or Jekyll. This extension is a lightweight version of http://tympanus.net/Tutorials/ExpandingSearchBar/ for using  in Jekyll or HTML. This extension is used in my blog.
 categories: [en]
@@ -10,6 +10,8 @@ image: public/images/2015-05-06-responsive-expanding-search-bar.jpg
 home: https://github.com/mildronize/ExpandingSearchBar
 source: https://github.com/mildronize/ExpandingSearchBar/archive/master.zip
 ---
+
+![](/public/images/2015-05-06-responsive-expanding-search-bar.jpg)
 
 <!-- demo: /demo/responsive-expanding-search-bar/ -->
 **Expanding Search Bar** is an expanding search bar extension for any HTML page or Jekyll. This extension is a lightweight version of [Expanding Search Bar Deconstructed](http://tympanus.net/Tutorials/ExpandingSearchBar/) for using  in Jekyll or HTML. This extension is used in [my blog](http://mildronize.github.io).
@@ -54,6 +56,10 @@ Because [my blog](http://mildronize.github.io) have used icon set from [Font Awe
       new UISearch( document.getElementById( 'sb-search' ) );
     </script>
     ```
+
+## Source
+- [Github](https://github.com/mildronize/ExpandingSearchBar)
+- [Download](https://github.com/mildronize/ExpandingSearchBar/archive/master.zip)
 
 ## Original project documentation
 A tutorial on how to create a mobile-friendly and responsive expanding search bar.
