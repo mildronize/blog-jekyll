@@ -8,6 +8,11 @@
 // Font
 @import url("Trirong.css");
 
+.user-link{
+  color: #4a4a4a;
+  margin: 8px;
+}
+
 @mixin word-wrap() {
     overflow-wrap: break-word;
     word-wrap: break-word;
