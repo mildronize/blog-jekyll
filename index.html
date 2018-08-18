@@ -3,18 +3,20 @@ layout: default
 title: Blog 
 ---
 
+
+
 <div class="box">
   {% for post in paginator.posts %}
   <div class="content">
     <div class="columns">
       <div class="column">
-        <h1 class="title is-size-4 is-size-5-mobile">
+        <h2 class="post-list is-size-5 is-size-5-mobile">
           <a href="{{ site.baseurl }}{{ post.url }}">
             {% if post.category == "notes" %}
             <i class="fa fa-sticky-note"></i>
             {% endif %} {{ post.title }}
           </a>
-        </h1>
+        </h2>
 
         <p style="subtitle is-size-6 is-size-7-mobile">
           <i class="icon far fa-calendar"></i>
@@ -45,8 +47,8 @@ title: Blog
       
     </div>
   </div>
-  <hr>
   {% endfor %}
+  <hr>
   <div class="pagination">
       {% if paginator.next_page %}
       <a class="pagination-item older" href="{{ site.baseurl }}/page/{{paginator.next_page}}">Older</a>

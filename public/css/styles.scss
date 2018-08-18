@@ -43,7 +43,7 @@ html {
 
 body {
     margin: 0;
-    padding: 10px;
+    padding: 15px;
 }
 
 .highlighted {
@@ -79,11 +79,11 @@ h1,h2,h3, .title, .logo{
   color: $grey-light;
 }
 
-.title a {
+.post-list a, .title a {
   color: $grey-dark;
 }
 
-.title a:hover {
+.post-list a:hover, .title a:hover {
   color: $blue;
 }
 
