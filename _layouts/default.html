@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
       {% include head.html %}
-      <script>
+      <!-- <script>
           function search_keywords() {
             var x = document.getElementById("search").value;
             if (x == null || x == "") {
@@ -10,11 +10,11 @@
             window.location.href = "{{ site.baseurl}}/search/#/"+x;
             return false;
         }
-      </script>
+      </script> -->
   <body>
 
     <!-- Thank search bar from http://tympanus.net/Tutorials/ExpandingSearchBar/ -->
-    <div class="search-container">
+    <!-- <div class="search-container">
         <div id="sb-search" class="sb-search">
             <form method="GET" onsubmit="return search_keywords()">
                 <input class="sb-search-input pure-input-3 search-bar" placeholder="Search title or tags" type="text" value="" name="search" id="search">
@@ -22,7 +22,7 @@
                 <span class="fa fa-search sb-icon-search"></span>
             </form>
         </div>
-    </div>
+    </div> -->
     {% include header.html %}
     <div class="container">
         <div class="columns">
