@@ -13,7 +13,7 @@ tags:
 
 > ถ้าใครยังไม่รู้จักกับฐานข้อมูลอนุกรมเวลา (Time Series Database) หรือยังใหม่สำหรับเรื่องนี้ หรือสามารถตามอ่านได้ในบทความก่อนหน้านี้ครับ 
 
-> [ทำไมเราถึงควรใช้ฐานข้อมูลอนุกรมเวลาสำหรับ "ข้อมูลอนุกรมเวลา" (Time Series Database)](/th/introduction-to-open-time-series-database-th/)
+> [ทำไมเราถึงควรใช้ฐานข้อมูลอนุกรมเวลาสำหรับ "ข้อมูลอนุกรมเวลา" (Time Series Database)](/th/introduction-to-time-series-database-th/)
 
 ## TL;DR (ยาวไปไม่อ่าน):
 [OpenTSDB](http://opentsdb.net) คือฐานข้อมูลอนุกรมเวลา Open Source บนฐานข้อมูล [HBase](https://hbase.apache.org) 
