@@ -24,7 +24,10 @@ dev live preview by browsersync
 yarn dev
 ```
 
-
+## dev with docker
+```
+yarn docker-dev
+```
 
 > build manually
 
@@ -32,6 +35,9 @@ yarn dev
 docker-compose up jekyll-build
 ```
 
+
+## TODO
+- add webpack 4
 
 ## Page
 **Notes** is a collection of post which is "notes" category
