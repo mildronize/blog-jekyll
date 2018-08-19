@@ -8,7 +8,7 @@
     "docker-jekyll-build": "cd jekyll && bundle exec jekyll build --watch",
     "open-preview": "start http://192.168.99.100:3000",
     "docker-restart": "docker-compose stop jekyll && docker-compose start jekyll",
-    "docker-init": "docker-compose up -d && docker cp package.json jekyll:/src && docker exec -i jekyll yarn",
+    "docker-init": "docker-compose up -d && docker cp package.json jekyll:/src && docker exec -i jekyll yarn && docker exec -i jekyll bundle install",
     "docker-dev": "npm run sync-unison && npm run docker-restart && npm run open-preview && concurrently -k -n \"SYNC,DOCKER\" -c \"bgRed.bold,bgCyan.bold\" \"npm run watch-sync\" \"docker exec -i jekyll npm run in-docker-dev\"",
     "watch-sync": "chokidar -i \"_site/**\" \"**/*\" -c \"npm run sync-unison\"",
     "sync-unison": "unison . socket://192.168.99.100:5000/ -follow \"Regex .*\" -ignore \"Path node_modules\" -ignore \"Path .git\" -ignore \"Path yarn.lock\" -auto -batch",

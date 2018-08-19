@@ -9,23 +9,20 @@ stacks
 
 - browsersync
 - docker
-- jekyll
-- unison
+- jekyll 
+- unison (for docker)
  
 prerequisites: `unison`, `docker`, `docker-compose`, `yarn`
 
-Init project
-```
-yarn init
-```
 
-dev live preview by browsersync
+## dev live preview by browsersync
 ```
 yarn dev
 ```
 
 ## dev with docker
 ```
+yarn docker-init
 yarn docker-dev
 ```
 
