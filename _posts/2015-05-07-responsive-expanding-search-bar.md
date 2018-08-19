@@ -11,7 +11,7 @@ home: https://github.com/mildronize/ExpandingSearchBar
 source: https://github.com/mildronize/ExpandingSearchBar/archive/master.zip
 ---
 
-![](/public/images/2015-05-06-responsive-expanding-search-bar.jpg)
+![responsive-expanding-search-bar](/public/images/2015-05-06-responsive-expanding-search-bar.jpg)
 
 <!-- demo: /demo/responsive-expanding-search-bar/ -->
 **Expanding Search Bar** is an expanding search bar extension for any HTML page or Jekyll. This extension is a lightweight version of [Expanding Search Bar Deconstructed](http://tympanus.net/Tutorials/ExpandingSearchBar/) for using  in Jekyll or HTML. This extension is used in [my blog](http://mildronize.github.io).
