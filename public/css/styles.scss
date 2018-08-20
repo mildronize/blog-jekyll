@@ -97,8 +97,9 @@ h1,h2,h3, .title, .logo{
 
 // header
 .menu-link a{
-  color: $grey-dark;
+  color: $grey-dark;  
   margin-right:1rem;
+  line-height: 1.9;
   text-transform: lowercase;
 }
 .active {
