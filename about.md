@@ -28,7 +28,7 @@ add_menu: true
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
     <p>I'm a master student at Department of Computer Engineering, Prince of
     Songkla University (PSU). I also received B.Eng. in 2015 from PSU. 
-    He is enthusiastic to learn about and conduct some research
+    I'm enthusiastic to learn about and conduct some research
     in the areas of cloud technology and distributed and
     parallel computing, especially, in the area of web technology and game development.</p>
     <p>I also love to be healthy. <a href="https://connect.garmin.com/modern/profile/6bbc2036-215a-42b6-b8ab-179c7672fabc">Running</a> is my currently exercise. Another happiness is <a href="#photography">photography</a> </p>
