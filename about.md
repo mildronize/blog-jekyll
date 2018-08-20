@@ -22,7 +22,7 @@ add_menu: true
 
 <div class="columns">
   <div class="column is-3 has-text-centered-mobile">
-    <img alt="my profile" class="profile" src="\public\images\my-profile.jpg">
+    <img alt="my profile" class="profile" src="/public/images/my-profile.jpg">
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
