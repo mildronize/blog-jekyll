@@ -23,7 +23,7 @@ image_url                       : /public/images/
 featured_image_url              : /public/images/featured_image/
 comment                         : true
 
-author                          :
+author                          : 
   codename                      : mildronize
   name                          : 'Thada Wangthammang'
   email                         : mildronize@gmail.com
@@ -47,3 +47,7 @@ exclude                         : [vendor, node_modules]
 sass:
   sass_dir:          _sass
   style:            :compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
