@@ -22,7 +22,7 @@ add_menu: true
 
 <div class="columns">
   <div class="column is-3 has-text-centered-mobile">
-    <img class="profile" src="\public\images\my-profile.jpg">
+    <img alt="my profile" class="profile" src="\public\images\my-profile.jpg">
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
@@ -61,18 +61,18 @@ add_menu: true
 ### Photography
 <div class="columns">
   <div class="column img-column">
-    <img class="image" src="/public/images/about/1.jpg">
-    <img class="image" src="/public/images/about/2.jpg">
-    <img class="image" src="/public/images/about/3.jpg">
-    <img class="image" src="/public/images/about/4.jpg">
-    <img class="image" src="/public/images/about/5.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/1.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/2.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/3.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/4.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/5.jpg">
   </div>
   <div class="column img-column">
-    <img class="image" src="/public/images/about/6.jpg">
-    <img class="image" src="/public/images/about/7.jpg">
-    <img class="image" src="/public/images/about/8.jpg">
-    <img class="image" src="/public/images/about/9.jpg">
-    <img class="image" src="/public/images/about/10.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/6.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/7.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/8.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/9.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/10.jpg">
   </div>
 </div>
 
