@@ -70,3 +70,16 @@ social:
     - https://www.linkedin.com/in/thada-wangthammang-281894a6
     - https://plus.google.com/u/0/+MildronizeWangth
     - https://github.com/mildronize
+
+
+# Html compress
+# https://github.com/penibelst/jekyll-compress-html
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
