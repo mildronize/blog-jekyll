@@ -56,7 +56,13 @@
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
     <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/forms-min.css"> -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles.css">
+    <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles.css"> -->
+
+    <!-- <link rel="preload" href="{{ site.baseurl }}/public/css/styles.css" as="style"> -->
+    <link rel="preload" href="{{ site.baseurl }}/public/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles.css"></noscript>
+    <script type="text/javascript" src="{{ site.baseurl }}/public/js/loadCSS.min.js"></script>
+    <script>loadCSS("{{ site.baseurl }}/public/css/styles.css");</script>
 
     <!-- Icons -->
     <!-- <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico"> -->
