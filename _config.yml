@@ -3,6 +3,8 @@ encoding                        : utf-8
 markdown                        : redcarpet
 plugins                         : [jekyll-paginate, jekyll-gist, redcarpet]
 
+source: src
+
 # highlighter                     : rouge
 redcarpet                       :
   extensions                    : ["with_toc_data"]
