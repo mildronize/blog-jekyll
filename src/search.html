@@ -6,8 +6,8 @@ permalink: search/
 <!-- Written by Thada Wangthammang -->
 <html ng-app="app">
 <head>
-    <script async type="text/javascript" src="{{ site.baseurl }}/public/js/angular.min.js"></script>
-    <script async src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/public/js/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js"></script>
     {% include head.html %}
 	<title>Tags</title>
 </head>
@@ -37,7 +37,8 @@ permalink: search/
 
 <!--      <div class="message" ng-hide="" align="center">Can't found the keywords. Please try other.</div>-->
     </span>
-    <script type="text/javascript">
+<script type="text/javascript">
+// <pre>
         var app = angular.module('app', ['ngRoute'], function($interpolateProvider) {
             $interpolateProvider.startSymbol('//');
             $interpolateProvider.endSymbol('//');
@@ -100,9 +101,8 @@ permalink: search/
 
 
          })
-
-
-    </script>
+// </pre>
+</script>
 
 </div>
 </body>
