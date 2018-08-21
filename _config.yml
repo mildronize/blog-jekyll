@@ -76,10 +76,10 @@ social:
 # https://github.com/penibelst/jekyll-compress-html
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments: all
   endings: all
   ignore:
     envs: [local]
   blanklines: false
   profile: false
-  startings: [html, head, body]
+  startings: [head, body]
