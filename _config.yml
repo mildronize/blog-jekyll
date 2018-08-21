@@ -12,8 +12,8 @@ permalink                       : /:categories/:title/
 
 # Setup
 title                           : Mildronize's blog
-tagline                         : 'mildronize-blog'
-description                     : "My notes and interesting things"
+tagline                         : mildronize-blog
+description                     : My notes and interesting things
 keywords                        : [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
 url                             : https://mildronize.com
 # for dev
@@ -25,7 +25,7 @@ comment                         : true
 
 author                          : 
   codename                      : mildronize
-  name                          : 'Thada Wangthammang'
+  name                          : Thada Wangthammang
   email                         : mildronize@gmail.com
   profile                       : images/my-profile.jpg
   facebook                      : mildronize
@@ -51,3 +51,20 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
+
+# SEO
+twitter:
+  username: mildronize
+  card: summary
+
+logo                            : /public/favicon.jpg
+
+social:
+  name: Thada Wangthammang
+  links:
+    - https://twitter.com/mildronize
+    - https://www.facebook.com/mildronize
+    - https://www.linkedin.com/in/thada-wangthammang-281894a6
+    - https://plus.google.com/u/0/+MildronizeWangth
+    - https://github.com/mildronize

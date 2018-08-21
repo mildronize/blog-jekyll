@@ -3,18 +3,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="en-us" />
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" content="{% if page.title == "Home" %}{% for tag in site.keywords %}{{ tag }}, {% endfor %}{% else %}{% for tag in page.tags %}{{ tag }}, {% endfor %}{% endif %}">
     <meta name="author" content="{{site.author.name}}">
-
-    <!-- open graph meta  -->
-    <!-- https://milanaryal.com/2015/integrating-social-meta-tags-into-jekyll/ -->
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
-    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.featured_image_url |  prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.icon | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:site_name" content="{{ site.name }}">
+    {% seo %}
 
     {% if page.date %}
       <meta property="article:modified_time" content="{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
@@ -35,21 +30,21 @@
       {% for tag in page.tags %}
       <meta property="article:tag" content="{{ tag }}">
       {% endfor %}
-      {% endif %}
-
+    {% endif %}
+<!-- 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.author.twitter }}">
     <meta name="twitter:creator" content="@{{ site.author.twitter }}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.icon | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> -->
 
     {% if page.robots %}
       <meta name="robots" content="{{ page.robots }}">
     {% endif %}
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> -->
 
     {% if page.next.url %}
       <link rel="next" href="{{ page.next.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" title="{{ page.next.title }}">
@@ -58,16 +53,6 @@
     {% if page.previous.url %}
       <link rel="prev" href="{{ page.previous.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" title="{{ page.previous.title }}">
     {% endif %}
-    <!-- Enable responsiveness on mobile devices-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-    <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-    </title>
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/font-awesome-4.4.0.min.css"> -->
