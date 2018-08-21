@@ -38,6 +38,10 @@
   <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/forms-min.css"> -->
   <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles.css"> -->
 
+  <style>
+      {% include css/preload_styles.css %}
+    </style>
+
   <!-- <link rel="preload" href="{{ site.baseurl }}/public/css/styles.css" as="style"> -->
   <link rel="preload" href="{{ site.baseurl }}/public/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -52,9 +56,6 @@
     })();
   </script>
 
-  <style>
-    {% include css/preload_styles.css %}
-  </style>
 
   <!-- Icons -->
   <!-- <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico"> -->

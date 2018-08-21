@@ -4,3 +4,95 @@
 
 // Import Sass Bulma.io CSS Framework
 @import 'bulma_preload';
+
+
+.user-link{
+  color: #4a4a4a;
+  margin: 8px;
+}
+
+@mixin word-wrap() {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+.word-wrap {
+    @include word-wrap();
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.pagination-item{
+  margin-right:1rem;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+}
+
+.highlighted {
+  background-color: yellow; 
+  }
+
+
+.subtitle{
+  color: $grey-light;
+}
+
+.subtitle .description{
+  font-size: 2pt;
+}
+
+.post-list a, .title a {
+  color: $grey-dark;
+}
+
+.post-list a:hover, .title a:hover {
+  color: $blue;
+}
+
+.tag a{
+  color: $grey-dark;
+}
+
+// header
+.menu-link a{
+  color: $grey-dark;  
+  margin-right:1rem;
+  line-height: 1.7;
+  text-transform: lowercase;
+}
+.active {
+  font-weight: bold;
+}
+.menu-link a:hover{
+  color: $blue;
+}
+
+
+img[class=post-cover]{
+  max-height: 300px; 
+  width: 100%;
+  object-fit: cover ;
+}
+
+img[class=post-list]{
+  max-height: 200px; 
+  max-width: 100%;
+
+}
+

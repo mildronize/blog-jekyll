@@ -10,19 +10,19 @@
             </div>
 
           </div>
-          <div class="column has-text-right has-text-centered-mobile is-size-5">
+          <div class="column has-text-right has-text-centered-mobile">
               {% assign pages_list = site.pages %}
               {% for node in pages_list %}
                 {% if node.title != null %}
                   {% if node.add_menu != null %}
-                    <span class="menu-link{% if page.url == node.url %} active{% endif %}"><a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></span>
+                    <span class="is-size-5 menu-link{% if page.url == node.url %} active{% endif %}"><a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></span>
                   {% endif %}
                 {% endif %}
               {% endfor %}
               <!-- <span class="menu-link"><a href="/about" >about</a></span>
               <span class="menu-link"><a href="/project" >project</a></span>
               <span class="menu-link"><a href="/" >blog</a></span> -->
-              <span class="menu-link is-size-5 is-size-7-mobile"><a href="/search"><i class="fas fa-search 2x"></i></a></span>
+              <span class="menu-link is-size-4 is-size-6-mobile"><a href="/search"><i class="fas fa-search 2x"></i></a></span>
           </div>
           <!-- <div class="column"><a href="#"><i class="fas fa-search"></i></a></div> -->
 
