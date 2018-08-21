@@ -26,6 +26,11 @@ yarn docker-init
 yarn docker-dev
 ```
 
+## build js
+```
+yarn webpack-build
+```
+
 > build manually
 
 ```

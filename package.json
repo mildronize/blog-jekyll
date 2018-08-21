@@ -13,9 +13,10 @@
     "watch-sync": "chokidar -i \"_site/**\" \"**/*\" -c \"npm run sync-unison\"",
     "sync-unison": "unison . socket://192.168.99.100:5000/ -follow \"Regex .*\" -ignore \"Path node_modules\" -ignore \"Path .git\" -ignore \"Path yarn.lock\" -auto -batch",
     "in-docker-dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run docker-jekyll-build\" \"browser-sync start -s jekyll/_site -f jekyll/_site --extensions html\"",
-
     "build": "bundle exec jekyll build --watch --incremental",
-    "dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run build\" \"browser-sync start -s _site -f _site --extensions html\""
+    "dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run build\" \"browser-sync start -s _site -f _site --extensions html\"",
+    "webpack-dev": "webpack --mode development",
+    "webpack-build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,18 @@
   },
   "homepage": "https://github.com/mildronize/mildronize.github.io#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
     "bulma": "^0.7.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.6",
     "chokidar-cli": "^1.2.0",
-    "concurrently": "^3.6.1"
+    "concurrently": "^3.6.1",
+    "jquery": "1.11.3",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }
