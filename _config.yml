@@ -1,7 +1,12 @@
 encoding                        : utf-8
 # Dependencies
 markdown                        : redcarpet
-plugins                         : [jekyll-paginate, jekyll-gist, redcarpet]
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-gist
+  - redcarpet
 
 source: src
 
@@ -50,10 +55,6 @@ sass:
   sass_dir:          _sass
   style:            :compressed
 
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
 
 # SEO
 twitter:

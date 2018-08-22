@@ -8,16 +8,16 @@
     "docker-jekyll-build": "cd jekyll && bundle exec jekyll build --watch",
     "open-preview": "start http://192.168.99.100:3000",
     "docker-restart": "docker-compose stop jekyll && docker-compose start jekyll",
-    "docker-init": "docker-compose up -d && docker cp package.json jekyll:/src && docker exec -i jekyll yarn && docker exec -i jekyll bundle install",
-    "docker-dev": "npm run sync-unison && npm run docker-restart && npm run open-preview && concurrently -k -n \"SYNC,DOCKER\" -c \"bgRed.bold,bgCyan.bold\" \"npm run watch-sync\" \"docker exec -i jekyll npm run in-docker-dev\"",
+    "dev:docker-init": "docker-compose up -d && docker cp package.json jekyll:/src && docker exec -i jekyll yarn && docker exec -i jekyll bundle install",
+    "dev:docker": "npm run sync-unison && npm run docker-restart && npm run open-preview && concurrently -k -n \"SYNC,DOCKER\" -c \"bgRed.bold,bgCyan.bold\" \"npm run watch-sync\" \"docker exec -i jekyll npm run in-docker-dev\"",
     "watch-sync": "chokidar -i \"_site/**\" \"**/*\" -c \"npm run sync-unison\"",
     "sync-unison": "unison . socket://192.168.99.100:5000/ -follow \"Regex .*\" -ignore \"Path node_modules\" -ignore \"Path .git\" -ignore \"Path yarn.lock\" -auto -batch",
     "in-docker-dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run docker-jekyll-build\" \"browser-sync start -s jekyll/_site -f jekyll/_site --extensions html\"",
     "copy-preload-css": "cp _site/public/css/preload_styles.css src/_includes/css",
-    "build": "bundle exec jekyll build --watch --incremental  --trace ",
+    "build": "bundle exec jekyll build --watch  --incremental --trace ",
     "dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run build\" \"browser-sync start -s _site -f _site --extensions html\"",
-    "webpack-dev": "webpack --mode development",
-    "webpack-build": "webpack --mode production"
+    "dev:webpack": "webpack --mode development",
+    "build:webpack": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,10 @@
   "homepage": "https://github.com/mildronize/mildronize.github.io#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",
-    "bulma": "^0.7.1"
+    "bulma": "^0.7.1",
+    "cheerio": "^1.0.0-rc.2",
+    "recursive-readdir": "^2.2.2",
+    "sync": "^0.2.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -41,6 +44,7 @@
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.6.1",
     "jquery": "1.11.3",
+    "vanilla-lazyload": "8.15.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   }

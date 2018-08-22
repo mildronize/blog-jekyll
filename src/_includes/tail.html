@@ -1,6 +1,11 @@
 <!-- Everthing is under content -->
-<!-- <script src="{{ site.baseurl }}/public/js/classie.js"></script>
-<script src="{{ site.baseurl }}/public/js/uisearch.js"></script>
 <script>
-	new UISearch( document.getElementById( 'sb-search' ) );
-</script> -->
+    window.lazyLoadOptions = {
+        threshold: 50
+    };
+    window.addEventListener('LazyLoad::Initialized', function (e) {
+        console.log(e.detail.instance);
+    }, false);
+</script>
+<script async type="text/javascript" src="{{ site.baseurl }}/public/js/lazyload.min.js"></script>
+

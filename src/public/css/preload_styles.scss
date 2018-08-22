@@ -6,6 +6,23 @@
 @import 'bulma_preload';
 {% include css/pace-theme-flash.css %}
 
+// https://github.com/verlok/lazyload/issues/210#issuecomment-397878327
+img {
+  opacity: 0;
+  &:not([src]) {
+    visibility: hidden;
+  }
+  &:not(.initial) {
+    transition: opacity 1s;
+  }
+  &.initial,
+  &.loaded,
+  &.error {
+    opacity: 1;
+  }
+}
+
+
 .user-link{
   color: #4a4a4a;
   margin: 8px;
