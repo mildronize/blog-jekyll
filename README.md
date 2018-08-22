@@ -22,13 +22,13 @@ yarn dev
 
 ## dev with docker
 ```
-yarn docker-init
-yarn docker-dev
+yarn dev:docker-init
+yarn dev:docker
 ```
 
 ## build js
 ```
-yarn webpack-build
+yarn build:webpack
 ```
 
 > build manually

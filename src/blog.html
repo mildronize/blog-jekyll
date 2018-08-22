@@ -1,6 +1,9 @@
 --- 
 layout: default 
 title: Blog 
+permalink: blog/
+pagination:
+  enabled: true
 ---
 
 <div class="box">
@@ -47,17 +50,35 @@ title: Blog
   </div>
   {% endfor %}
   <hr>
+  <!-- {% assign blog_page = "blog" %}
+  {{paginator.next_page_path}}
   <div class="pagination">
       {% if paginator.next_page %}
-      <a class="pagination-item older" href="{{ site.baseurl }}/page/{{paginator.next_page}}">Older</a>
+      <a class="pagination-item older" href="{{ site.baseurl }}/{{ blog_page }}/page/{{paginator.next_page}}">Older</a>
       {% else %}
       <span class="pagination-item older">Older</span>
       {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/{{ blog_page }}/">Newer</a>
       {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page/{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/{{ blog_page }}/page/{{paginator.previous_page}}">Newer</a>
       {% endif %} {% else %}
       <span class="pagination-item newer">Newer</span>
       {% endif %}
-    </div>
+    </div> -->
+
+    {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+          {% if paginator.next_page %}
+          <span class="pagination-item older">
+            <a class="pagination-item older" href="{{ site.baseurl }}/{{ paginator.next_page_path }}">Older</a>
+          </span>
+          {% endif %}
+          {% if paginator.previous_page %}
+          <span class="pagination-item newer">
+            <a class="pagination-item newer" href="{{ site.baseurl }}/{{ paginator.previous_page_path }}">Newer</a>
+          </span>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %}
 </div>

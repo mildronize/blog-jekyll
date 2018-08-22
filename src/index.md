@@ -1,8 +1,6 @@
 ---
 layout: default
-title: About
-permalink: about/
-add_menu: true
+title: Home
 ---
 
 <style>
