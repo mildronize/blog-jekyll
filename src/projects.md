@@ -2,7 +2,6 @@
 layout: page
 title: Projects
 permalink: project/
-add_menu: true
 ---
 
 - Registration Assistant Application using Local-Search  

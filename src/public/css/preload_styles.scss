@@ -1,11 +1,42 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
 ---
 
 // Import Sass Bulma.io CSS Framework
 @import 'bulma_preload';
-{% include css/pace-theme-flash.css %}
+{% include css/pace-theme-minimal.css %}
 
+// header
+.hr-header{
+  margin-top: 0rem;
+}
+
+// first page
+
+.recent-posts{
+  background-color: #333; 
+  height:20rem; 
+  padding:0rem;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.recent-posts-overlay{
+  position: relative;
+  height: 100%; 
+  padding:1.3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.recent-post a, .recent-post{ 
+  color: $white;
+  margin-bottom: 0.3rem;
+}
+
+// end first page
 
 .user-link{
   color: #4a4a4a;

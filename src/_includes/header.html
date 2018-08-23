@@ -11,7 +11,7 @@
 
           </div>
           <div class="column has-text-right has-text-centered-mobile">
-              <span class="is-size-5 menu-link{% if page.url == '/' %} active{% endif %}"><a href="/">about</a></span>
+              <span class="is-size-5 menu-link{% if page.url == '/' %} active{% endif %}"><a href="/">home</a></span>
               {% assign pages_list = site.pages %}
               {% for node in pages_list %}
                 {% if node.title != null %}
@@ -30,7 +30,7 @@
           <!-- <div class="column"><a href="#"><i class="fas fa-search"></i></a></div> -->
 
         </div>
-        <hr>
+        <hr class="hr-header">
       </div>
     </div>
   </div>
