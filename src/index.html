@@ -3,6 +3,29 @@ layout: default
 title: Home 
 ---
 
+<!-- <h2>Featured post</h2>
+<div class="box">
+    <div class="content">
+  
+
+        {% for post in site.posts %}
+          {% if post.first_page == true %}
+            <div class="recent-posts" style='background-image: url({{ post.image }})'>
+              <div class="recent-posts-overlay">
+                <h2 class="recent-post is-size-4 is-size-3-desktop">
+                  <a href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+                  </a>
+                </h2>
+                <div class="recent-post is-size-6">{{ post.date | date: "%e %B" }}</div>
+              </div>
+            </div>
+          {% endif %}
+      {% endfor %}
+
+  </div>
+</div> -->
+
 <h2>Recent posts</h2>
 
 <div class="box">
@@ -12,20 +35,44 @@ title: Home
       {% for post in site.posts limit:2 %}
       <div class="column">
         <div class="recent-posts" style='background-image: url({{ post.image }})'>
-
           <div class="recent-posts-overlay">
             <h2 class="recent-post is-size-4 is-size-3-desktop">
               <a href="{{ site.baseurl }}{{ post.url }}">
                 {{ post.title }}
               </a>
             </h2>
-            <div class="recent-post is-size-6">{{ post.date | date_to_string }}</div>
+            <div class="recent-post is-size-6">{{ post.date | date: "%e %B" }}</div>
           </div>
-      
         </div>
     </div>
     {% endfor %}
   </div>
+
+  <div style="margin:3rem"></div>
+  {% for post in site.posts offset:2 limit:3 %}
+    <div class="columns">
+      <div class="column">
+
+          <div class="columns is-mobile">
+            <div class="column is-one-fifth">
+              <span class="is-size-6">{{ post.date | date: "%Y, %b %e" }}</span>
+            </div>
+            <div class="column">
+              <span class="title post-list is-size-5 is-size-6-mobile">
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </span>
+            </div>
+
+          </div>
+        
+      </div>
+    </div>
+  {% endfor %}
+
+  <center><a href="/blog">Read more</a></center>
+
 </div>
 <hr>
 
