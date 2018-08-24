@@ -9,3 +9,37 @@
 </script>
 <script async type="text/javascript" src="{{ site.baseurl }}/public/js/lazyload.min.js"></script>
 
+<script>
+        // <pre>
+        
+        // Origin code from: https://jmperezperez.com/medium-image-progressive-loading-placeholder/
+        
+        document.querySelectorAll(".placeholder").forEach(function (placeholder) {
+          // 1: load small image and show it
+          placeholder.querySelectorAll("img").forEach(function (smallImage) {
+            var img = new Image();
+            img.src = smallImage.src;
+            img.onload = function () {
+                smallImage.classList.add('loaded');
+                // estimate ratio with thumbnail size
+                var ratio = img.height * 100  / img.width;
+                placeholder.querySelector(".placeholder-ratio").setAttribute("style", "padding-bottom: " + ratio + "%;");
+            };
+          });
+        
+          // 2: load large image
+          var imgLarge = new Image();
+            imgLarge.src = placeholder.dataset.large;
+            imgLarge.setAttribute("data-src", placeholder.dataset.large);
+            imgLarge.onload = function () {
+                imgLarge.classList.add('loaded');
+                // Recorrect ratio with actual size
+                var ratio = imgLarge.height  * 100 / imgLarge.width;
+                placeholder.querySelector(".placeholder-ratio").setAttribute("style", "padding-bottom: " + ratio + "%;");
+            };
+            placeholder.appendChild(imgLarge);
+        
+          });
+        // </pre>
+        </script>
+        

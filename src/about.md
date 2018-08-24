@@ -17,32 +17,6 @@ add_menu: true
     width:160px;
 }
 
-.placeholder {
-  background-color: #f6f6f6;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-}
-
-.placeholder img {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: opacity 1s linear;
-}
-
-.placeholder img.loaded {
-  opacity: 1;
-}
-
-.placeholder-img-small {
-  filter: blur(20px);
-  /* this is needed so Safari keeps sharp edges */
-  transform: scale(1);
-}
 </style>
 
 
@@ -123,36 +97,3 @@ add_menu: true
 </div>
 
 <center>See more at my [Flickr](https://www.flickr.com/photos/mildronize)</center>
-
-<script>
-// <pre>
-
-// Origin code from: https://jmperezperez.com/medium-image-progressive-loading-placeholder/
-
-document.querySelectorAll(".placeholder").forEach(function (placeholder) {
-  // 1: load small image and show it
-  placeholder.querySelectorAll("img").forEach(function (smallImage) {
-    var img = new Image();
-    img.src = smallImage.src;
-    img.onload = function () {
-        smallImage.classList.add('loaded');
-        // estimate ratio with thumbnail size
-        var ratio = img.height * 100  / img.width;
-        placeholder.querySelector(".placeholder-ratio").setAttribute("style", "padding-bottom: " + ratio + "%;");
-    };
-  });
-
-  // 2: load large image
-  var imgLarge = new Image();
-    imgLarge.src = placeholder.dataset.large;
-    imgLarge.onload = function () {
-        imgLarge.classList.add('loaded');
-        // Recorrect ratio with actual size
-        var ratio = imgLarge.height  * 100 / imgLarge.width;
-        placeholder.querySelector(".placeholder-ratio").setAttribute("style", "padding-bottom: " + ratio + "%;");
-    };
-    placeholder.appendChild(imgLarge);
-
-  });
-// </pre>
-</script>
