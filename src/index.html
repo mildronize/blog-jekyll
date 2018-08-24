@@ -34,16 +34,22 @@ title: Home
     <div class="columns">
       {% for post in site.posts limit:2 %}
       <div class="column">
-        <div class="recent-posts" style='background-image: url({{ post.image }})'>
-          <div class="recent-posts-overlay">
-            <h2 class="recent-post is-size-4 is-size-3-desktop">
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-              </a>
-            </h2>
-            <div class="recent-post is-size-6">{{ post.date | date: "%e %B" }}</div>
+
+          <div class="recent-posts image-load-placeholder" style='height:20rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
+            <div class="image-cover" style='height:20rem; background-image: url({{ post.image }})'>         
+            <div class="recent-posts-overlay">
+
+              <h2 class="recent-post is-size-4 is-size-3-desktop">
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h2>
+              <div class="recent-post is-size-6">{{ post.date | date: "%e %B" }}</div>
+
+            </div>
           </div>
         </div>
+
     </div>
     {% endfor %}
   </div>

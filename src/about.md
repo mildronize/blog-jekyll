@@ -16,12 +16,44 @@ add_menu: true
     border-radius: 50%;
     width:160px;
 }
+
+.placeholder {
+  background-color: #f6f6f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+
+.placeholder img.loaded {
+  opacity: 1;
+}
+
+.placeholder-img-small {
+  filter: blur(20px);
+  /* this is needed so Safari keeps sharp edges */
+  transform: scale(1);
+}
 </style>
 
 
 <div class="columns">
   <div class="column is-3 has-text-centered-mobile">
-    <img alt="my profile" class="profile" src="/public/images/my-profile.jpg">
+    <!-- <img alt="my profile" class="profile" src=""> -->
+    <div class="profile placeholder" data-large="{{site.url}}/public/images/my-profile.jpg">
+      <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/my-profile.jpg" class="placeholder-img-small">
+      <noscript><img src="{{site.url}}/public/images/my-profile.jpg"/></noscript>
+      <div class="placeholder-ratio"></div>
+    </div>
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
@@ -61,19 +93,66 @@ add_menu: true
 ### Photography
 <div class="columns">
   <div class="column img-column">
-    <img alt="my photo" class="image" src="/public/images/about/1.jpg">
+    <!-- <img alt="my photo" class="image" src="/public/images/about/1.jpg">
     <img alt="my photo" class="image" src="/public/images/about/2.jpg">
     <img alt="my photo" class="image" src="/public/images/about/3.jpg">
     <img alt="my photo" class="image" src="/public/images/about/4.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/5.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/5.jpg"> -->
+    {% for i in (1..5) %}
+      <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+        <div class="placeholder-ratio"></div>
+      </div>
+    {% endfor %}
   </div>
   <div class="column img-column">
-    <img alt="my photo" class="image" src="/public/images/about/6.jpg">
+    <!-- <img alt="my photo" class="image" src="/public/images/about/6.jpg">
     <img alt="my photo" class="image" src="/public/images/about/7.jpg">
     <img alt="my photo" class="image" src="/public/images/about/8.jpg">
     <img alt="my photo" class="image" src="/public/images/about/9.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/10.jpg">
+    <img alt="my photo" class="image" src="/public/images/about/10.jpg"> -->
+    {% for i in (6..10) %}
+      <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+        <div class="placeholder-ratio"></div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
 <center>See more at my [Flickr](https://www.flickr.com/photos/mildronize)</center>
+
+<script>
+// <pre>
+
+// Origin code from: https://jmperezperez.com/medium-image-progressive-loading-placeholder/
+
+document.querySelectorAll(".placeholder").forEach(function (placeholder) {
+  // 1: load small image and show it
+  placeholder.querySelectorAll("img").forEach(function (smallImage) {
+    var img = new Image();
+    img.src = smallImage.src;
+    img.onload = function () {
+        smallImage.classList.add('loaded');
+        // estimate ratio with thumbnail size
+        var ratio = img.height * 100  / img.width;
+        placeholder.querySelector(".placeholder-ratio").setAttribute("style", "padding-bottom: " + ratio + "%;");
+    };
+  });
+
+  // 2: load large image
+  var imgLarge = new Image();
+    imgLarge.src = placeholder.dataset.large;
+    imgLarge.onload = function () {
+        imgLarge.classList.add('loaded');
+        // Recorrect ratio with actual size
+        var ratio = imgLarge.height  * 100 / imgLarge.width;
+        placeholder.querySelector(".placeholder-ratio").setAttribute("style", "padding-bottom: " + ratio + "%;");
+    };
+    placeholder.appendChild(imgLarge);
+
+  });
+// </pre>
+</script>
