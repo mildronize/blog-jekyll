@@ -32,7 +32,7 @@ permalink: en/
         </p>
         {% if post.image != null %}
         <p>
-          <img alt="{{ post.title }}" src="{{ site.baseurl }}/{{ post.image }}">
+          <img alt="{{ post.title }}" src="{{ post.image }}">
         </p>{% endif %} {% comment %}
         <p> {% endcomment %} {% if post.home != null %}
           <a class="pure-button button-small" href="{{ post.home }}">
