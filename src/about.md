@@ -67,32 +67,32 @@ add_menu: true
 ### Photography
 <div class="columns">
   <div class="column img-column">
-    <!-- <img alt="my photo" class="image" src="/public/images/about/1.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/2.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/3.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/4.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/5.jpg"> -->
-    {% for i in (1..5) %}
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/1.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/2.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/3.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/4.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/5.jpg">
+<!--    {% for i in (1..5) %}
       <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
         <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
         <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
         <div class="placeholder-ratio"></div>
       </div>
-    {% endfor %}
+    {% endfor %} -->
   </div>
   <div class="column img-column">
-    <!-- <img alt="my photo" class="image" src="/public/images/about/6.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/7.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/8.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/9.jpg">
-    <img alt="my photo" class="image" src="/public/images/about/10.jpg"> -->
-    {% for i in (6..10) %}
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/6.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/7.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/8.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/9.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/10.jpg">
+  <!--  {% for i in (6..10) %}
       <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
         <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
         <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
         <div class="placeholder-ratio"></div>
       </div>
-    {% endfor %}
+    {% endfor %} -->
   </div>
 </div>
 
