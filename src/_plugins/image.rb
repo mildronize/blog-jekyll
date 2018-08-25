@@ -21,18 +21,14 @@ module Jekyll
       fragment.css('img').each { |node| 
         src = node['src']
         alt = node['alt']
-        # node.remove
-        node.add_next_sibling "
-          <div class=\"placeholder\" data-large=\"" + src + "\">
-            <img src=\"https://ce8be7dec.cloudimg.io/bound/100x100/q20/" + src + "\" class=\"placeholder-img-small\">
-            <div class=\"placeholder-ratio\"></div>
-          </div>"
-        node.remove
-      #   <div class="placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
-      #   <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
-      #   <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
-      #   <div class="placeholder-ratio"></div>
-      # </div>
+        if node['data-convert'] != "disable"
+          node.add_next_sibling "
+            <div class=\"placeholder\" data-large=\"" + src + "\">
+              <img src=\"https://ce8be7dec.cloudimg.io/bound/100x100/q20/" + src + "\" class=\"placeholder-img-small\">
+              <div class=\"placeholder-ratio\"></div>
+            </div>"
+          node.remove
+        end
       }
       # Stop if we could't parse with HTML
       return content unless doc
