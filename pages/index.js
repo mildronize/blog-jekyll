@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-unfetch'
 import React from 'react'
+import ReactHtmlParser from 'react-html-parser';
 
 export default class extends React.Component {
 
@@ -16,9 +17,8 @@ export default class extends React.Component {
 
   render() {
 
-    return (
-        <div dangerouslySetInnerHTML={{ __html: this.props.html }} />
-    )
+    return ReactHtmlParser(this.props.html);
+
   }
 }
 
