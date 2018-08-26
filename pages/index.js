@@ -8,6 +8,7 @@ const Index = (props) => (
     <Base
         html={props.html}
         title="test"
+        path={props.path}
       />
   </div>
 )
@@ -19,7 +20,7 @@ Index.getInitialProps = async function (context) {
   console.log(fetch_url)
   const res = await fetch(fetch_url)
   const data = await res.text()
-  return { html: data }
+  return { html: data, path: path}
 }
 
 export default Index

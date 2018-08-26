@@ -37,7 +37,8 @@ module.exports = withSass({
     return config
   },
   sassLoaderOptions: {
-    includePaths: ["./node_modules", "./styles"]
+    includePaths: ["./node_modules", "./styles"],
+    outputStyle: 'compressed'
   }
 });
 

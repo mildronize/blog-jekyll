@@ -14,7 +14,8 @@
     "sync-unison": "unison . socket://192.168.99.100:5000/ -follow \"Regex .*\" -ignore \"Path node_modules\" -ignore \"Path .git\" -ignore \"Path yarn.lock\" -auto -batch",
     "in-docker-dev": "concurrently -k -n \"JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run docker-jekyll-build\" \"browser-sync start -s jekyll/_site -f jekyll/_site --extensions html\"",
     "copy-preload-css": "cp _site/static/css/preload_styles.css src/_includes/css",
-    "build": "bundle exec jekyll build --trace ",
+    "build:jekyll": "bundle exec jekyll build --trace ",
+    "build": "next build",
     "watch:build:inc": "bundle exec jekyll build --watch --incremental --trace ",
     "dev": "concurrently -k -n \"NEXT,JEKYLL,BROWSER-SYNC\" -c \"bgRed.bold,bgBlue.bold,bgGreen.bold\" \"npm run dev:next\" \"npm run watch:build:inc\" \"npm run serve\"",
     "serve": "live-server _site",
@@ -23,11 +24,11 @@
     "export": "next build && next export",
     "analyze": "cross-env ANALYZE=1 next build",
     "dev:next": "node server.js",
-    "deploy": "npm run deploy:only && npm run now:alias && npm run now:clean",
-    "deploy:only": "now --public --npm",
+    "deploy": "npm run export && npm run deploy:only && npm run now:alias && npm run now:clean",
+    "deploy:only": "cp now.json out && cd out && now --public --static",
     "now:alias": "now alias",
-    "now:clean": "now rm --safe --yes technukrom",
-    "now:status": "now ls technukrom && now alias ls"
+    "now:clean": "now rm --safe --yes mildronize",
+    "now:status": "now ls mildronize && now alias ls"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "next": "^6.1.1",
     "node-sass": "^4.9.3",
     "node-sass-chokidar": "^1.3.3",
+    "nprogress": "^0.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",

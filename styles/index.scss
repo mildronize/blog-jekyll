@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Set your brand colors
 // $purple: #8A4D76;
@@ -26,18 +26,45 @@
 // $input-shadow: none;
 
 // Import only what you need from Bulma
-// @import "bulma/sass/utilities/_all";
-// @import "bulma/sass/base/_all";
-// @import "bulma/sass/elements/button";
-// @import "bulma/sass/elements/container";
-// @import "bulma/sass/elements/form";
-// @import "bulma/sass/elements/title";
+@import 'bulma/sass/utilities/_all';
+@import 'bulma/sass/base/_all';
+@import "bulma/sass/grid/columns";
+// @import "bulma/sass/grid/tiles";
+@import "bulma/sass/layout/section";
+@import "bulma/sass/layout/footer";
 // @import "bulma/sass/layout/hero";
-// @import "bulma/sass/layout/section";
 
-@import "bulma/bulma";
+// @import "bulma/sass/components/breadcrumb";
+@import "bulma/sass/components/card";
+// @import "bulma/sass/components/dropdown";
+// @import "bulma/sass/components/level";
+// @import "bulma/sass/components/media";
+// @import "bulma/sass/components/menu";
+// @import "bulma/sass/components/message";
+// @import "bulma/sass/components/modal";
+// @import "bulma/sass/components/navbar";
+// @import "bulma/sass/components/pagination";
+// @import "bulma/sass/components/panel";
+// @import "bulma/sass/components/tabs";
+
+@import "bulma/sass/elements/box";
+// @import "bulma/sass/elements/button";
+@import "bulma/sass/elements/container";
+@import "bulma/sass/elements/content";
+// @import "bulma/sass/elements/form";
+// @import "bulma/sass/elements/icon";
+@import "bulma/sass/elements/image";
+// @import "bulma/sass/elements/notification";
+// @import "bulma/sass/elements/progress";
+// @import "bulma/sass/elements/table";
+@import "bulma/sass/elements/tag";
+// @import "bulma/sass/elements/title";
+// @import "bulma/sass/elements/other";
+
+
+
+// @import "bulma/bulma";
 
 @import "./my_styles";
-@import "./Trirong.css";
-// for fix this issue: https://github.com/FortAwesome/react-fontawesome/issues/134
-@import "@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "./Trirong.css";
+

@@ -14,11 +14,12 @@ const Header = (props) =>
 
             </div>
             <div class="column has-text-right has-text-centered-mobile">
-              <span class="is-size-5 menu-link active"><a href="/">home</a></span>
-              <span class="is-size-5 menu-link ">
+            
+              <span className={"is-size-5 menu-link " + (props.path =='/'?'active':'') }><a href="/">home</a></span>
+              <span class={"is-size-5 menu-link " + (props.path =='/about'?'active':'') }>
                 <Link href="/about"><a>about</a></Link>
               </span>
-              <span class="is-size-5 menu-link "><Link href="/blog"><a>blog</a></Link></span>
+              <span class={"is-size-5 menu-link " + (props.path =='/blog'?'active':'') }><Link href="/blog"><a>blog</a></Link></span>
               <span class="menu-link is-size-6"><a href="/"><FaSearch/></a></span>
             </div>
 

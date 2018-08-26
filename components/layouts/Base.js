@@ -9,7 +9,7 @@ const Base = (props) =>
       <title>{`${props.title}`}</title>
     </Head>
 
-    <Header />
+    <Header path={props.path} />
     <main className="main">
       <div class="container">
         <div class="columns">

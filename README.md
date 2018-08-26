@@ -1,5 +1,6 @@
-# mildronize.github.io (http://dev.mildronize.com)
-[![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)
+# Currently Blog Develop with Next.js wrapper on Jekyll
+
+next version of my blog: [https://mildronize.now.sh](https://mildronize.now.sh)
 
 my blog
 
