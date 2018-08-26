@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+// $purple: #8A4D76;
+// $pink: #FA7C91;
+// $brown: #757763;
+// $beige-light: #D0D1CD;
+// $beige-lighter: #EFF0EB;
+
+// // Update Bulma's global variables
+// $family-sans-serif: "Nunito", sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+// // Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+// Import only what you need from Bulma
+// @import "bulma/sass/utilities/_all";
+// @import "bulma/sass/base/_all";
+// @import "bulma/sass/elements/button";
+// @import "bulma/sass/elements/container";
+// @import "bulma/sass/elements/form";
+// @import "bulma/sass/elements/title";
+// @import "bulma/sass/layout/hero";
+// @import "bulma/sass/layout/section";
+
+@import "bulma/bulma";
+
+@import "./my_styles";
+@import "./Trirong.css";
+// for fix this issue: https://github.com/FortAwesome/react-fontawesome/issues/134
+@import "@fortawesome/fontawesome-free/scss/fontawesome";

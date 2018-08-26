@@ -21,9 +21,9 @@ pagination:
         <!-- <div style="subtitle description">{{ post.content | strip_html | truncate: 100  }}</div> -->
 
         <p style="subtitle is-size-6 is-size-7-mobile">
-          <i class="icon far fa-calendar"></i>
+          
           <span class="is-size-7">{{ post.date | date: "%Y, %b %e" }}</span>
-          <i class="icon fa fa-tags"></i>
+          
           {% comment %}
           <div class="entry-tags"> {% endcomment %} {% for tag in post.tags %}
             <span class="tag is-light is-size-7">

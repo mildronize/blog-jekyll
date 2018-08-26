@@ -1,18 +1,7 @@
 const promise_paths = require('./scripts/getAllHTMLPath');
-
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { ANALYZE } = process.env
-
-// module.exports = {
-
-//   exportPathMap: function () {
-//     return {
-//       '/': { page: '/' },
-//       '/th/introduction-to-open-time-series-database-th/': { page: '/' , query: { path: "/th/introduction-to-open-time-series-database-th/" } },
-//       '/about/': { page: '/' , query: { path: "/about/"}}
-//     }
-//   }
-// };
+const withSass = require('@zeit/next-sass')
 
 const getParams = (page, path) => ({
   page: `${page}`,
@@ -35,7 +24,7 @@ const buildPagePaths = (
     }, defaultRoutes)
   );
 
-module.exports = {
+module.exports = withSass({
   exportPathMap : () => buildPagePaths(promise_paths),
   webpack: config => {
     if (ANALYZE) {
@@ -46,6 +35,19 @@ module.exports = {
       }))
     }
     return config
+  },
+  sassLoaderOptions: {
+    includePaths: ["./node_modules", "./styles"]
   }
-  
-};
+});
+
+// module.exports = {
+
+//   exportPathMap: function () {
+//     return {
+//       '/': { page: '/' },
+//       '/th/introduction-to-open-time-series-database-th/': { page: '/' , query: { path: "/th/introduction-to-open-time-series-database-th/" } },
+//       '/about/': { page: '/' , query: { path: "/about/"}}
+//     }
+//   }
+// };

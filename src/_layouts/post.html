@@ -5,8 +5,8 @@ layout: none
 <article itemscope itemtype="http://schema.org/Article">
   <div class="post">
     <h1 class="post-title ">{{ page.title }}</h1>
-    <i class="icon far fa-calendar"></i><span class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y, %b %e" }}</span>
-    <i class="icon fa fa-tags"></i><span class="entry-tags">
+    <span class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y, %b %e" }}</span>
+    <span class="entry-tags">
       {% for tag in page.tags %}
         <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
         {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}

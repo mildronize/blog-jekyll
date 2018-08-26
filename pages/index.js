@@ -1,26 +1,29 @@
 import fetch from 'isomorphic-unfetch'
-import React from 'react'
-import ReactHtmlParser from 'react-html-parser';
+import Head from 'next/head';
+import config from '../config';
+import Base from '../components/layouts/Base';
 
-export default class extends React.Component {
+const Index = (props) => (
+  <div>
+    <Base
+        html={props.html}
+        title="test"
+      />
+  </div>
+)
 
-  static async getInitialProps(context) {
-    var path = context.query.path === undefined?"/":`/${context.query.path}`;
-    path = path.replace("//","/");
-    const fetch_url = `http://127.0.0.1:8080${path}`
-    console.log(fetch_url)
-    const res = await fetch(fetch_url)
-    const data = await res.text()
-
-    return { html: data }
-  }
-
-  render() {
-
-    return ReactHtmlParser(this.props.html);
-
-  }
+Index.getInitialProps = async function (context) {
+  var path = context.query.path === undefined ? "/" : `/${context.query.path}`;
+  path = path.replace("//", "/");
+  const fetch_url = `${config.data_url}${path}`
+  console.log(fetch_url)
+  const res = await fetch(fetch_url)
+  const data = await res.text()
+  return { html: data }
 }
+
+export default Index
+
 
 
 
