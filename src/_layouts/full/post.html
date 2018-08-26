@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: default
 ---
 
 <article itemscope itemtype="http://schema.org/Article">
@@ -19,7 +19,7 @@ layout: none
     {% endif %}
     <div style="margin:1.5rem;"></div>
     {{ content }}
-    
+<!--    {% if page.comments %}<div id="disqus_thread"></div>{% endif %}-->
   </div>
 </article>
 <hr>
@@ -36,3 +36,18 @@ layout: none
     {% endfor %}
   </ul>
 </div>
+
+{% if site.comment and page.comment == null %}
+  <hr>
+    {% include disqus.html %}
+    <!-- {% include disqus_comment_count.html %} -->
+{% endif %}
+
+{% if page.toc == true %}
+    <script type="text/javascript" src="{{ site.baseurl }}/static/js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#toc').toc({title: "<h2>Contents</h2>", showSpeed: 0, listType: 'ul'});
+        });
+    </script>
+{% endif %}

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: none
 title: About
 add_menu: true
 ---
@@ -22,12 +22,7 @@ add_menu: true
 
 <div class="columns">
   <div class="column is-4 ">
-    <!-- <img alt="my profile" class="profile" src=""> -->
-        <div style="margin: 0 auto;" class="profile placeholder" data-large="{{site.url}}/public/images/my-profile.jpg">
-          <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/my-profile.jpg" class="placeholder-img-small">
-          <noscript><img src="{{site.url}}/public/images/my-profile.jpg"/></noscript>
-          <div class="placeholder-ratio"></div>
-        </div>
+    <img alt="my profile" class="profile" src="{{site.url}}/static/images/my-profile.jpg">
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
@@ -67,29 +62,29 @@ add_menu: true
 ### Photography
 <div class="columns">
   <div class="column img-column">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/1.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/2.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/3.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/4.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/5.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/1.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/2.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/3.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/4.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/5.jpg">
 <!--    {% for i in (1..5) %}
-      <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
-        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
-        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+      <div class="image placeholder" data-large="{{site.url}}/static/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/static/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/static/images/about/{{i}}.jpg"/></noscript>
         <div class="placeholder-ratio"></div>
       </div>
     {% endfor %} -->
   </div>
   <div class="column img-column">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/6.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/7.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/8.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/9.jpg">
-    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/10.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/6.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/7.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/8.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/9.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/static/images/about/10.jpg">
   <!--  {% for i in (6..10) %}
-      <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
-        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
-        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+      <div class="image placeholder" data-large="{{site.url}}/static/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/static/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/static/images/about/{{i}}.jpg"/></noscript>
         <div class="placeholder-ratio"></div>
       </div>
     {% endfor %} -->

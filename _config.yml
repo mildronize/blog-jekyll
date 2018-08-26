@@ -26,8 +26,8 @@ url                             : https://mildronize.com
 # for dev
 # url                           : http://127.0.0.1:4000
 #baseurl                        : /en
-image_url                       : /public/images/
-featured_image_url              : /public/images/featured_image/
+image_url                       : /static/images/
+featured_image_url              : /static/images/featured_image/
 comment                         : true
 
 author                          : 
@@ -39,7 +39,7 @@ author                          :
   twitter                       : mildronize
   google_plus                   : mildronize
 
-icon                            : /public/images/my-profile.jpg
+icon                            : /static/images/my-profile.jpg
 
 google_analytics_id             : UA-62565035-1
 
@@ -59,7 +59,7 @@ twitter:
   username: mildronize
   card: summary
 
-logo                            : /public/favicon.jpg
+logo                            : /static/favicon.jpg
 
 social:
   name: Thada Wangthammang

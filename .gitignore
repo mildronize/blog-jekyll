@@ -43,3 +43,7 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+# nextjs
+.next
+out
