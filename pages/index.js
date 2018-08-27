@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-unfetch'
-import Head from 'next/head';
+// import Head from 'next/head';
 import config from '../config';
 import Base from '../components/layouts/Base';
 
@@ -7,7 +7,7 @@ const Index = (props) => (
   <div>
     <Base
         html={props.html}
-        title="test"
+        title="next version | mildronize.com"
         path={props.path}
       />
   </div>

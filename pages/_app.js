@@ -2,8 +2,10 @@ import App, {Container} from 'next/app'
 import React from 'react'
 import NProgress from 'nprogress'
 import Router from 'next/router'
+import '../styles/index.scss'
 
 if (typeof window !== "undefined") {
+
   NProgress.configure({ showSpinner: false });
 
   Router.onRouteChangeStart = () => {

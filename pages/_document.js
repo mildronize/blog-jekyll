@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import '../styles/index.scss'
+import React from 'react'
 
 export default class MyDocument extends Document {
   render() {
@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript />
+          {/* <NextScript /> */}
         </body>
       </html>
     )
