@@ -8,7 +8,7 @@ tags:
 - putty
 - git
 categories: [th]
-image: https://www.dropbox.com/s/6j7n98dlmnubjxq/cover.jpg?dl=0
+image: https://www.dropbox.com/s/6j7n98dlmnubjxq/cover.jpg?raw=1
 ---
 
 ขั้นตอนการตั้งค่าการใช้งาน Github  แบบไม่ต้องกรอกรหัสผ่านทุกครั้ง บน windows
@@ -21,21 +21,21 @@ image: https://www.dropbox.com/s/6j7n98dlmnubjxq/cover.jpg?dl=0
 4. จากนั้นก็อปปี้ public key จาก `puTTYgen` ตัวเดิมไปใส่ใน[หน้า SSH ของการตั้งค่า github ของเรา https://github.com/settings/keys ![2](https://www.dropbox.com/s/pxikmsgglo273yf/2.PNG?raw=1)
 5. ตั้งค่า environment variable `GIT_SSH` ให้เป็น path ไปยัง `plink` เช่น
 
-```
-SET GIT_SSH=C:\path\to\PuTTY\plink.exe
-```
+    ```
+    SET GIT_SSH=C:\path\to\PuTTY\plink.exe
+    ```
 
-3. เพิ่ม SSH key ลงไปในโปรแกรม `Pageantadd your SSH key to Pageant.
+6. เพิ่ม SSH key ลงไปในโปรแกรม `Pageant`
 
-```
-C:\path\to\PuTTY\pageant.exe c:\pathtoprivate-ssh-key.ppk`
-```
+    ```
+    C:\path\to\PuTTY\pageant.exe c:\pathtoprivate-ssh-key.ppk`
+    ```
 
-4. ตรวจสอบการเชื่อมต่อ เป็นอันเสร็จ
+7. ตรวจสอบการเชื่อมต่อ เป็นอันเสร็จ
 
-```
-plink -v git@github.com
-```
+    ```
+    plink -v git@github.com
+    ```
 
 ถ้าได้ผลลัพธ์ประมาณนี้ถือว่าผ่านแล้วครับ
 
@@ -56,7 +56,11 @@ Disconnected: All channels closed
 
 หลายๆ คนอาจจะเข้าไปที่ git directory บนเครื่องเราแล้ว ก็ยังต้องใส่ username และ password เหมือนเดิมอยู่อีก อย่าลืมเปลี่ยน remote URL จาก HTTPS เป็น SSH นะครับ เช่น
 
-ถ้าดูที่ github URL เราจะเห็นหน้าตาประมาณนี้ `https://github.com/USERNAME/REPOSITORY` เช่นถ้าเรา username: `mildronize` และ github repo คือ `mildronize.github.io`ดังนั้น URL จะมีหน้าตาประมาณนี้ `https://github.com/mildronize/mildronize.github.io` 
+ถ้าดูที่ github URL เราจะเห็นหน้าตาประมาณนี้ `https://github.com/USERNAME/REPOSITORY` 
+
+เช่นถ้าเรา username: `mildronize` และ github repo คือ `mildronize.github.io`
+
+ดังนั้น URL จะมีหน้าตาประมาณนี้ `https://github.com/mildronize/mildronize.github.io` 
 
 เราอาจจะ clone ด้วย HTTPS มา สังเกตุคือที่ URL จะขึ้นต้นด้วย HTTPS เช่น 
 
@@ -75,28 +79,30 @@ git clone git@github.com:mildronize/mildronize.github.io.git
 ### การเปลี่ยนไปใช้ remote URLs SSH จาก HTTPS
 
 1. `cd` ไปที่ git directory ของเราก่อนนะ
-
 2. ให้ใช้ `git remote -v` เพือดูว่าตอนนี้ directory นี้ชี้ไปที่ไหน
 
-   ```
-   git remote -v
-   origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-   origin  https://github.com/USERNAME/REPOSITORY.git (push)
-   ```
+    ```
+    git remote -v
+    origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+    origin  https://github.com/USERNAME/REPOSITORY.git (push)
+    ```
 
 3. เปลียนจาก remote URL จาก HTTPS เป็น SSH  `git remote set-url` command.
 
-   ```
-   git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
-   ```
+    ```
+    git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+    ```
 
 4. Verify that the remote URL has changed.
 
-   ```
-   git remote -v
-   # Verify new remote URL
-   origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
-   origin  git@github.com:USERNAME/REPOSITORY.git (push)
-   ```
+    ```
+    git remote -v
+    # Verify new remote URL
+    origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+    origin  git@github.com:USERNAME/REPOSITORY.git (push)
+    ```
+
+### ขอบคุณข้อมูลจาก
+- https://help.github.com/articles/changing-a-remote-s-url/
 
 เป็นไงบ้างครับ ไม่ยากเลยใช่มั้ยครับ จริงๆ เขียนให้ตัวเองอ่านด้วย ไว้พบกันใหม่ สวัสดีครับ
