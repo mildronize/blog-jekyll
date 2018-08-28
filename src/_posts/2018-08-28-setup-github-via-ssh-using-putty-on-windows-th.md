@@ -6,6 +6,7 @@ tags:
 - github
 - windows
 - putty
+- git
 categories: [th]
 image: https://www.dropbox.com/s/6j7n98dlmnubjxq/cover.jpg?dl=0
 ---
