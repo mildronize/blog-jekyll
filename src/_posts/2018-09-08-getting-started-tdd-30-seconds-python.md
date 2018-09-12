@@ -10,7 +10,7 @@ categories: [en]
 image: https://www.dropbox.com/s/bk014tpuzezep47/Getting%20Started%20TDD%20in%2030%20Seconds%20with%20Python.png?raw=1
 ---
 
-> Cross post at [Medium](https://medium.com/@mildronize/getting-started-tdd-in-30-seconds-with-python-8113d6c94753)
+> Cross published at [Medium.com](https://medium.com/@mildronize/getting-started-tdd-in-30-seconds-with-python-8113d6c94753)
 
 Quick start to setup python script for Test Driven Development in 30 seconds
 
