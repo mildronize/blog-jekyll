@@ -1,8 +1,12 @@
 module.exports = {
-  entry: __dirname + "/src/_assets",
+  entry: {
+    index: __dirname + "/src/_assets/index.js",
+    toc: __dirname + "/src/_assets/toc.js"
+  },
   output: {
     path: __dirname + "/src/public/js",
-    filename: "main.js"
+    libraryTarget: 'var',
+    library: 'EntryPoint'
   },
   module: {
     rules: [
