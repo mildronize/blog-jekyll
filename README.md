@@ -1,4 +1,4 @@
-# mildronize.github.io (http://dev.mildronize.com)
+# mildronize.github.io (https://mildronize.com)
 [![Build Status](https://travis-ci.org/mildronize/mildronize.github.io.svg?branch=jekyll)](https://travis-ci.org/mildronize/mildronize.github.io)
 
 my blog

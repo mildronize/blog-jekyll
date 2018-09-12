@@ -6,6 +6,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - redcarpet
+  - rouge
   - jekyll-paginate-v2
 
 source: src
