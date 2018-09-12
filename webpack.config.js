@@ -1,3 +1,4 @@
+
 module.exports = {
   entry: {
     index: __dirname + "/src/_assets/index.js",
@@ -18,5 +19,10 @@ module.exports = {
         }
       }
     ]
+  },
+  optimization: {
+    occurrenceOrder: true,
+    minimize: true
   }
+  
 }
