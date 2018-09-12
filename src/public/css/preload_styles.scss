@@ -6,7 +6,6 @@
 {% include css/pace-theme-minimal.css %}
 
 
-
 .placeholder {
   background-color: #f6f6f6;
   background-size: cover;
@@ -67,6 +66,7 @@
 .recent-posts{
   background-color: #333; 
   padding:0rem;
+  min-width: 250px;
 }
 
 .recent-posts-overlay{
@@ -80,6 +80,19 @@
   color: $white;
   margin-bottom: 0.3rem;
 }
+
+.recent-posts-size{
+  height: 200px;
+ 
+  // @media (min-width: $tablet) {  
+  //   min-height: px;
+  //  }
+
+ @media (min-width: $desktop) {  
+  height: 280px;
+ }
+}
+
 
 // end first page
 

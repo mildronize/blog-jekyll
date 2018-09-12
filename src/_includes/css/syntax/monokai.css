@@ -1,7 +1,8 @@
 /* http://jwarby.github.io/jekyll-pygments-themes/languages/python.html */
 .highlight pre { background-color: #272822; }
 .highlight .hll { background-color: #272822; }
-.highlight code { color: #eeeeee; }
+.highlighter-rouge {margin: 1.2rem 0;}
+.highlight code { color: #eeeeee; font-family: Consolas, Menlo, monospace;}
 .highlight code a { color: #66d9ef; }
 .highlight code a:hover { color: #55b5c9; }
 .highlight .c { color: #75715e } /* Comment */

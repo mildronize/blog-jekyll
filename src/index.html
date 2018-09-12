@@ -31,15 +31,15 @@ title: Home
 <div class="box">
   <div class="content">
 
-    <div class="columns">
-      {% for post in site.posts limit:2 %}
+    <div class="columns  is-multiline is-centered">
+      {% for post in site.posts limit:6 %}
       <div class="column">
 
-          <div class="recent-posts image-load-placeholder" style='height:20rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
-            <div class="image-cover" style='height:20rem; background-image: url({{ post.image }})'>         
+          <div class="recent-posts image-load-placeholder recent-posts-size" style='background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
+            <div class="image-cover recent-posts-size" style='background-image: url({{ post.image }})'>         
             <div class="recent-posts-overlay">
 
-              <h2 class="recent-post is-size-4 is-size-3-desktop">
+              <h2 class="recent-post is-size-5-mobile is-size-4">
                 <a href="{{ site.baseurl }}{{ post.url }}">
                   {{ post.title }}
                 </a>
@@ -55,7 +55,7 @@ title: Home
   </div>
 
   <div style="margin:3rem"></div>
-  {% for post in site.posts offset:2 limit:3 %}
+  {% for post in site.posts offset:6 limit:3 %}
     <div class="columns">
       <div class="column">
 
