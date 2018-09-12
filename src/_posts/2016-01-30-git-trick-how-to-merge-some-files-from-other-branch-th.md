@@ -14,7 +14,7 @@ language: th
 สมมติว่า ผมมี 2 branches คือ `master` และ `mildronize-dotfiles` ตามผลลัพธ์ด้านล่าง ผมต้องการที่จะ merge ไฟล์ `README.md` จาก `mildronize-dotfiles` ไปยัง `master` 
 และทำการ commit ให้เรียบร้อย
 
-```
+```bash
 $ git branch
   master
 * mildronize-dotfiles
@@ -22,14 +22,14 @@ $ git branch
 
 จากนั้นทำการย้าย branch ไปยัง `master`
 
-```
+```bash
 $ git checkout master
 ```
 
 จากนั้นใช้ `git checkout` เพื่อขอไฟล์ `README.md` จาก branch ของ `mildronize-dotfiles`
 มายัง branch ปัจจุบัน (นั่นคือ `master`)
 
-```
+```bash
 $ git checkout mildronize-dotfiles README.md
 $ git status
 On branch master
@@ -44,7 +44,7 @@ Changes to be committed:
 สังเกตุได้ว่า เมื่อใช้ `git status` ตรวรจสอบดูจะพบว่า ไฟล์ `README.md` ได้ถูกแก้ไขแล้ว
 จากนั้นก็ commit ให้เรียบร้อย เป็นอันเสร็จสิ้นครับ
 
-```
+```bash
 $ git commit -m "Merge readme into master branch"
 ```
 

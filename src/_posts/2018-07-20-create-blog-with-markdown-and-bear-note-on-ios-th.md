@@ -47,7 +47,7 @@ tags:
 ![https://www.dropbox.com/s/7dvcxre78kq2toi/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-1.jpeg?dl=0](https://www.dropbox.com/s/7dvcxre78kq2toi/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-1.jpeg?raw=1)
 และเมื่อ export เป็น Text Bundle ที่เป็นภาษา Markdown ดังนี้ครับ
 
-```
+```markdown
 # Template ชื่อบล็อก
 ---
 title: "เขียนบล็อกด้วยภาษา Markdown ด้วยแอพจดโน๊ต Bear บน iOS"

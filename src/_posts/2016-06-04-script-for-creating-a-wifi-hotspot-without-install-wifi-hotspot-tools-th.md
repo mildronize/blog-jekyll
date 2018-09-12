@@ -27,7 +27,7 @@ categories: [th]
   1. ใส่รหัสผ่าน ( *Password ?* )
 
 ## CLI
-```
+```bash
 hospot # ตั้งค่า ชื่อ Wifi และรหัสผ่าน ใหม่
 hospot start # เปิด Hotspot
 hospot stop # ปิด Hotspot
@@ -37,7 +37,7 @@ hospot restart # ปิดแล้วเปิดใหม่อีกครั
 ## โค๊ดการโปรแกรมเปิด Hotspot บน Windows
 <https://gist.github.com/mildronize/8d159d35497c56368914>
 
-```
+```batch
 @ECHO OFF
 echo Hotspot
 echo .

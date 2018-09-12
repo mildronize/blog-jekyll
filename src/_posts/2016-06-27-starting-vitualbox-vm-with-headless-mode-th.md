@@ -21,7 +21,7 @@ featured_image: logo/virtual.png
 
 - แสดงรายชื่อของ Virtual machine ที่มีอยู่ในเครื่อง
 
-  ```
+  ```bash
   $ VBoxManage list vms
   "Sandbox" {754f8cac-1fff-4863-952e-ba81ebf9efc7}
   "md9-dev" {dd6cfb08-0914-4b6f-b78a-7aa301fc8813}
@@ -30,13 +30,13 @@ featured_image: logo/virtual.png
 
 - เริ่มต้นการทำงาน Virtual machine แบบทำงานเบื้องหลัง (headless mode)
 
-  ```
+  ```bash
   $ VBoxManage startvm default --type headless
   ```
 
 - ปิดการทำงาน Virtual machine
 
-  ```
+  ```bash
   $ VBoxManage controlvm default poweroff
   ```
 
