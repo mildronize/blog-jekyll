@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -23,6 +24,10 @@ module.exports = {
   optimization: {
     occurrenceOrder: true,
     minimize: true
-  }
+  },
+  plugins: [
+    // Ignore all locale files of moment.js
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+  ],
   
 }
