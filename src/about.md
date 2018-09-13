@@ -96,4 +96,4 @@ add_menu: true
   </div>
 </div>
 
-<center>See more at my [Flickr](https://www.flickr.com/photos/mildronize)</center>
+<center>See more at my <a href="https://www.flickr.com/photos/mildronize">Flickr</a></center>
