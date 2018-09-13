@@ -3,14 +3,6 @@ layout: default
 title: Home 
 ---
 
-<script async type="text/javascript" src="{{ site.baseurl }}/public/js/index.js"></script>
-<script type="text/javascript">
-// <pre>
-window.onload = function(){
-  EntryPoint.dateFromNow() 
-};
-// </pre>
-</script>
 <!-- <h2>Featured post</h2>
 <div class="box">
     <div class="content">
@@ -46,11 +38,11 @@ window.onload = function(){
             <div class="image-cover recent-posts-size" style='background-image: url(https://ce8be7dec.cloudimg.io/crop/500x350/q70/{{ post.image }})'>         
             <div class="recent-posts-overlay">
 
-              <h2 class="recent-post is-size-5-mobile is-size-5-tablet is-size-4-desktop">
+              <span class="title recent-post is-size-5 is-size-4-desktop" >
                 <a href="{{ site.baseurl }}{{ post.url }}">
                   {{ post.title }}
                 </a>
-              </h2>
+              </span>
               <div class="recent-post is-size-6 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}"></div>
 
             </div>
@@ -68,10 +60,10 @@ window.onload = function(){
 
           <div class="columns is-mobile">
               <div class="column is-narrow" style="width: 130px;">
-              <span class="is-size-6">{{ post.date | date: "%Y, %b %e" }}</span>
+              <span class="is-size-6-desktop is-size-7"">{{ post.date | date: "%Y, %b %e" }}</span>
             </div>
             <div class="column">
-              <span class="title post-list is-size-5 is-size-6-mobile">
+              <span class="title post-list is-size-6 is-size-5-desktop">
                 <a href="{{ site.baseurl }}{{ post.url }}">
                   {{ post.title }}
                 </a>

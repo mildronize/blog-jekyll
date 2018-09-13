@@ -19,23 +19,26 @@
 
 // Import Sass Bulma.io CSS Framework
 $content-heading-line-height: 1.3; 
+// $is-size-5: 1.15rem;
 
 @import 'bulma_preload';
 {% include css/pace-theme-minimal.css %}
 
-h1,h2,h3, .title, .logo{
+h1,h2,h3, .title, .logo,
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6
+{
     font-family: 'Prompt', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     // font-family: 'supermarket', Helvetica, Arial, sans-serif;
 }
 .title{
-  font-weight: bolder;
+  // font-weight: bolder;
 }
 .post-list a, .title a {
   color: #333;
 }
 
-.post-list{
+code{
   @include word-wrap();
 }
 
@@ -258,7 +261,7 @@ img[class=post-list]{
   margin: 0.7rem;
 }
 
-$is-size-5: 1.15rem;
+
 
 .card{
   margin:1rem;
