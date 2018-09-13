@@ -38,9 +38,14 @@
   <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/forms-min.css"> -->
   <!-- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles.css"> -->
 
+  {% if jekyll.environment == "production" %}
   <style>
-      {% include css/preload_styles.css %}
-    </style>
+    {% include css/preload_styles.css %}
+  </style>
+  {% else %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/preload_styles.css ">
+  {% endif %}
+
 
   <!-- <link rel="preload" href="{{ site.baseurl }}/public/css/styles.css" as="style"> -->
   <link rel="preload" href="{{ site.baseurl }}/public/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
