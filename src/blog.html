@@ -33,7 +33,9 @@ pagination:
           
           <div class="wrapper">
               <div class="description is-size-7">{{ post.content| markdownify  | strip_html | truncate: 200  }}</div></div>
-           <hr style="margin: 1rem 0 0; height: 1px;">
+
+              {% if forloop.last == false %}
+              <hr style="margin: 1rem 0 0; height: 1px;">{% endif %}
         </div>
 
       </div>
@@ -59,7 +61,7 @@ pagination:
       <span class="pagination-item newer">Newer</span>
       {% endif %}
     </div> -->
-
+<center>
     {% if paginator.total_pages > 1 %}
       <div class="pagination">
           {% if paginator.next_page %}
@@ -75,4 +77,5 @@ pagination:
         </ul>
       </div>
       {% endif %}
+    </center>
 
