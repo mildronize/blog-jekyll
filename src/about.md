@@ -22,12 +22,9 @@ add_menu: true
 
 <div class="columns">
   <div class="column is-4 ">
-    <!-- <img alt="my profile" class="profile" src=""> -->
-        <div style="margin: 0 auto;" class="profile placeholder" data-large="{{site.url}}/public/images/my-profile.jpg">
-          <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/my-profile.jpg" class="placeholder-img-small">
-          <noscript><img src="{{site.url}}/public/images/my-profile.jpg"/></noscript>
-          <div class="placeholder-ratio"></div>
-        </div>
+    <div style="margin: 0 auto;" class="profile">
+      <img data-convert="disable" alt="my profile" class="profile" src="{{site.url}}/public/images/my-profile.jpg">
+    </div>
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
