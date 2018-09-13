@@ -12,12 +12,23 @@ h1,h2,h3, .title, .logo{
     font-weight: 200;
     // font-family: 'supermarket', Helvetica, Arial, sans-serif;
 }
+.title{
+  font-weight: bolder;
+}
 
 .logo a{
   color:  #0D47A1;
 }
 
 // Tag
+.tag a{
+  color: #999;
+}
+
+.tags{
+ margin: 0; 
+ padding: 0;
+}
 
 .tag {
   margin: 0 0.2rem;
@@ -176,10 +187,6 @@ body {
 
 .post-list a:hover, .title a:hover {
   color: $blue;
-}
-
-.tag a{
-  color: $grey-dark;
 }
 
 // header
