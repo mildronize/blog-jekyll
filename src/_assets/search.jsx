@@ -66,7 +66,7 @@ class Search extends React.Component {
             <div>
                 <div className="space"></div>
                 <form className="pure-form">
-                    <input type="text" className="pure-input-rounded pure-input-1"
+                    <input type="text" id="search-box" className="pure-input-rounded pure-input-1"
                         placeholder="Search keywords" value={this.state.query} onChange={this.onSearch}
                         ref={c => (this._searchTextBox = c)}
                     />
