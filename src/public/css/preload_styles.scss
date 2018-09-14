@@ -66,6 +66,77 @@ code{
   color: #ddd;
 }
 
+.space{
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.search-close a{
+  color: #111;
+  visibility: hidden;
+  display: none;
+  @media (min-width: 0) and (max-width: $tablet) { 
+    visibility: visible;
+    display: block;
+  }
+}
+
+@media (min-width: 0) and (max-width: $tablet) { 
+.modal {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+    // open
+    display: flex;
+    flex-direction: column;
+
+  &__header, &__content, &__footer{
+    background-color: #fff;
+    padding: 0 1rem;
+  }
+
+  &__content{
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+}
+
+// .search-overlay-parent
+// {
+// @media (min-width: 0) and (max-width: $tablet) {  
+//     position: fixed;
+//     height : 100vh;
+//     width : 95vw;
+//     top: 0;
+//     left:0;
+//     z-index: 40;
+//     background-color: #fff;
+//     display: flex;       
+//     overflow-y: auto;
+//   }
+// }
+
+
+// .search-overlay{
+//   @media (min-width: 0) and (max-width: $tablet) {  
+//     flex-grow : 1;
+//     width: 90%;
+//     position: relative;
+//     top: 15px;
+//     left:15px;
+//   }
+
+// }
+
+
+
+// description
+
 .wrapper{
   display: flex;
   width: 100%;

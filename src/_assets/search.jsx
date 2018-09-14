@@ -16,7 +16,7 @@ class Search extends React.Component {
     }
 
     async loadData() {
-        const res = await fetch('/search-data')
+        const res = await fetch('https://mildronize.com/search-data/index.html')
         const dataJson = await res.json()
         // console.log(dataJson)
         return {
@@ -57,16 +57,21 @@ class Search extends React.Component {
         this.editUrl(value);
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        this._searchTextBox.focus();
+      }
+
     render() {
         return (
             <div>
-                <h1>Search</h1>
+                <div className="space"></div>
                 <form className="pure-form">
                     <input type="text" className="pure-input-rounded pure-input-1"
                         placeholder="Search keywords" value={this.state.query} onChange={this.onSearch}
+                        ref={c => (this._searchTextBox = c)}
                     />
                 </form>
-                <ul className="list-group">
+                <ul className="list-search">
                 {this.state.items.map((index) => (
                     <li className="list-group-item" key={index}>
                     <a href={this.state.initialItems[index].link}>{this.state.initialItems[index].title}</a>
