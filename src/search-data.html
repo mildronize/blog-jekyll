@@ -1,0 +1,14 @@
+---
+layout: json
+---
+
+[
+  {% for post in site.posts %}
+  {
+    "title": "{{ post.title }}",
+    "link": "{{ post.url }}",
+    "date": "{{ post.date }}"
+  }
+  {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

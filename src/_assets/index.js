@@ -6,6 +6,8 @@ const dateFromNow = () => {
   });
 };
 
-module.exports = {
-  dateFromNow
-};
+// module.exports = {
+//   dateFromNow
+// };
+
+export default dateFromNow;
