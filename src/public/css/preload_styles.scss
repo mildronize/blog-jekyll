@@ -19,7 +19,8 @@
 
 // Import Sass Bulma.io CSS Framework
 $content-heading-line-height: 1.3; 
-// $is-size-5: 1.15rem;
+
+$is-size-4: 1.4rem;
 
 @import 'bulma_preload';
 {% include css/pace-theme-minimal.css %}
@@ -35,8 +36,9 @@ h1,h2,h3, .title, .logo,
   // font-weight: bolder;
 }
 .post-list a, .title a {
-  color: #333;
+  color: #111;
 }
+
 
 code{
   @include word-wrap();
@@ -47,8 +49,12 @@ code{
 }
 
 
-.logo a{
+.logo{
   color:  #0D47A1;
+}
+
+.recent-post a:hover{
+  color: #ddd;
 }
 
 .wrapper{
@@ -87,6 +93,15 @@ code{
 //   overflow: hidden;
 //   text-overflow: ellipsis;
 // }
+
+// content
+
+.content p{
+  line-height: 1.75rem;
+  @media (min-width: $fullhd) {  
+    line-height: 2rem;
+  }
+}
 
 // Tag
 .tag a{
