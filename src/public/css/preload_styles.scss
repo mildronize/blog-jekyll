@@ -32,13 +32,22 @@ h1,h2,h3, .title, .logo,
     font-weight: 400;
     // font-family: 'supermarket', Helvetica, Arial, sans-serif;
 }
+
 .title{
-  // font-weight: bolder;
+  line-height: 1.5rem; 
 }
+
+.content {
+  h1{ font-size: 1.65em; }
+  h2{ font-size: 1.55em; }
+  h3{ font-size: 1.35em; }
+  h4{ font-size: 1.20em; }
+  .post-date, .tags{ margin: 0 1rem; }
+}
+
 .post-list a, .title a {
   color: #111;
 }
-
 
 code{
   @include word-wrap();
@@ -180,10 +189,34 @@ code{
   background-repeat: no-repeat;
 }
 
+// recents posts
+.recent-posts-2{
+  padding:0rem;
+  min-width: 250px;
+}
+
+.recent-posts-size-2{
+  height: 125px;
+  border-radius: 7.5px;
+ 
+  @media (min-width: $tablet) and (max-width: $desktop)  {  
+    height: 150px;
+   }
+
+ @media (min-width: $desktop) {  
+  height: 150px;
+ }
+}
+
 .recent-posts{
   background-color: #333; 
   padding:0rem;
   min-width: 250px;
+}
+
+.recent-post a, .recent-post{ 
+  color: $white;
+  margin-bottom: 0.3rem;
 }
 
 .recent-posts-overlay{
@@ -191,11 +224,6 @@ code{
   height: 100%; 
   padding:1.3rem;
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.recent-post a, .recent-post{ 
-  color: $white;
-  margin-bottom: 0.3rem;
 }
 
 .recent-posts-size{
