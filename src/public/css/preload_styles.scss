@@ -196,16 +196,16 @@ code{
 }
 
 .recent-posts-size-2{
-  height: 125px;
+  height: 150px;
   border-radius: 7.5px;
  
-  @media (min-width: $tablet) and (max-width: $desktop)  {  
-    height: 150px;
-   }
+//   @media (min-width: $tablet) and (max-width: $desktop)  {  
+//     height: 150px;
+//    }
 
- @media (min-width: $desktop) {  
-  height: 150px;
- }
+//  @media (min-width: $desktop) {  
+//   height: 150px;
+//  }
 }
 
 .recent-posts{
