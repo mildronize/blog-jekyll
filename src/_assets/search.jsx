@@ -30,9 +30,9 @@ class Search extends React.Component {
 
     componentWillMount() {
         // console.log( this.state);
-        console.log(window.location);
-        if (window.location.href.search("#/") > 0)
-            this.setState({ query: window.location.href.replace(`${this.baseurl}#/`, '') })
+        // console.log(window.location);
+        // if (window.location.href.search("#/") > 0)
+        //     this.setState({ query: window.location.href.replace(`${this.baseurl}#/`, '') })
         this.loadData()
             .then( v => {
                 this.setState( { initialItems: v.data } )
@@ -54,7 +54,13 @@ class Search extends React.Component {
         this.setState({
             query: value
         });
-        this.editUrl(value);
+        // this.editUrl(value);
+    }
+
+    onKeyPress(event) {
+        if (event.which === 13) {
+          event.preventDefault();
+        }
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -65,9 +71,9 @@ class Search extends React.Component {
         return (
             <div>
                 <div className="space"></div>
-                <form className="pure-form">
+                <form className="pure-form" onKeyPress={this.onKeyPress}>
                     <input type="text" id="search-box" className="pure-input-rounded pure-input-1"
-                        placeholder="Search keywords" value={this.state.query} onChange={this.onSearch}
+                        placeholder="Search on mildronize.com" value={this.state.query} onChange={this.onSearch}
                         ref={c => (this._searchTextBox = c)}
                     />
                 </form>
