@@ -352,15 +352,21 @@ body {
 
 
 // header
+.button .is-white{
+  color: $grey-dark;
+}
+
 .menu-link a{
-  color: $grey-dark;  
-  margin-right:1rem;
-  line-height: 2.3;
+  // color: $grey-dark;  
+  margin-right: 0.3rem;
+  margin-top: 0.45rem;
+  // line-height: 3.3;  
   text-transform: lowercase;
 }
 .active {
   font-weight: bold;
 }
+
 .menu-link a:hover{
   color: $blue;
 }
