@@ -128,3 +128,8 @@ Parse.User.logIn('user', 'pass').then(function (user) {
 - [Modern JS Cheat sheet](https://github.com/mbeaudru/modern-js-cheatsheet)  one-stop cheat sheet for JS developer
 - https://nodeschool.io/ เว็บนี้ก็ดีงาม สอน JS แบบ interactive เลย
 - ES6 Cheat sheet: https://github.com/DrkSephy/es6-cheatsheet อันนี้ก็ดีนะ ไปดูได้
+
+
+---
+
+ *Cross published at [Medium.com](https://medium.com/@mildronize/promise-async-await-%E0%B8%82%E0%B8%AD%E0%B8%87-js-es6-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%9E%E0%B8%B9%E0%B8%94%E0%B9%80%E0%B8%A2%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%88%E0%B9%87%E0%B8%9A%E0%B8%84%E0%B8%AD-%E0%B9%81%E0%B8%96%E0%B8%A1-rxjs-12b9e7b32392)*

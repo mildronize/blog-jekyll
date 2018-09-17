@@ -90,3 +90,9 @@ tags:
 Download [publish bear note to markdown](https://workflow.is/workflows/de83eed7d725415dac37d35b46ce946e)
 Read more at [my gist](https://gist.github.com/mildronize/1da2120b1d2f0a25a7ecc429c06d3dce)
 P.S. For English version, I will write later.
+
+
+---
+
+ *Cross published at [Medium.com](https://medium.com/@mildronize/%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2-markdown-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95-bear-%E0%B8%9A%E0%B8%99-ios-d85908c2cea5)*
+
