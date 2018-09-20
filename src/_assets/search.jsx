@@ -18,7 +18,6 @@ class Search extends React.Component {
     async loadData() {
         const res = await fetch('https://mildronize.com/search-data/index.html')
         const dataJson = await res.json()
-        // console.log(dataJson)
         return {
           data: dataJson.data
         }
@@ -43,13 +42,28 @@ class Search extends React.Component {
         window.location.href = `${this.baseurl}#/${query}`;
     }
 
+    filterName(item, value){
+        return item.title.toLowerCase()
+            .search( value.toLowerCase()) !== -1
+    }
+
+    filterTag(item, value){
+        for( var i=0 ; i < item.tags.length; i++){
+            if(item.tags[i].toLowerCase().search(value.toLowerCase()) !== -1)
+                return true
+        }       
+        return false;
+    }
+
     onSearch(event) {
         const value = event.target.value;
         const initialItems = this.state.initialItems;
+        const that = this;
         var updatedList = Object.keys(initialItems);
-        updatedList = updatedList.filter(function (index) {
-            return initialItems[index].title.toLowerCase().search( value.toLowerCase()) !== -1;
-        });
+        updatedList = updatedList.filter( index => (
+            that.filterName(initialItems[index], value) 
+             || that.filterTag(initialItems[index], value)
+        ));
         this.setState({ items: updatedList });
         this.setState({
             query: value

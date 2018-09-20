@@ -11,7 +11,6 @@
 
           </div>
           <div class="column has-text-right has-text-centered-mobile">
-              <span class="is-size-5 menu-link{% if page.url == '/' %} active{% endif %}"><a class="button is-white" href="/">home</a></span>
               {% assign pages_list = site.pages %}
               {% for node in pages_list %}
                 {% if node.title != null %}
