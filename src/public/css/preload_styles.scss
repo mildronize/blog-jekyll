@@ -41,15 +41,18 @@ h1,h2,h3, .title, .logo,
   h2{ font-size: 1.55em; }
   h3{ font-size: 1.35em; }
   h4{ font-size: 1.20em; }
+  a, code{ @include word-wrap(); }
+  p{
+    line-height: 1.75rem;
+    @media (min-width: $fullhd) {  
+      line-height: 2rem;
+    }
+  }
   .post-date, .tags{ margin: 0 1rem; }
 }
 
 .post-list a, .title a {
   color: #111;
-}
-
-code{
-  @include word-wrap();
 }
 
 .post-list a:hover, .title a:hover {
@@ -183,14 +186,6 @@ code{
 //   text-overflow: ellipsis;
 // }
 
-// content
-
-.content p{
-  line-height: 1.75rem;
-  @media (min-width: $fullhd) {  
-    line-height: 2rem;
-  }
-}
 
 // Tag
 .tag a{
