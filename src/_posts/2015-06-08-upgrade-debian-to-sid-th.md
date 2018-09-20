@@ -2,7 +2,7 @@
 layout: post
 title: มาอัพเดท Debian จากเวอร์ชั่น stable มาเป็น sid กันเถอะ
 description: ขั้นตอนการอัพเกรดระบบ Debian จาก stable sid, การทำให้ user สามารถใช้สิทธิผู้ดูแลระบบได้(root) และการติดตั้ง non-free packages(non open source)
-tags: ['upgrade', 'debian', 'linux', 'how-to', 'font-thai', 'firmware-linux', 'sudo', 'update', 'sorces.list', 'non-free', 'archive-area']
+tags: ['upgrade', 'debian', 'linux', 'how-to', 'font-thai', 'firmware-linux', 'sudo', 'update', 'sorces.list', 'non-free']
 categories: [th]
 last_modified_at: 2016-02-16
 ---

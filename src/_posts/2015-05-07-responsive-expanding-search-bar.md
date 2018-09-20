@@ -3,7 +3,7 @@ layout: post
 title: Responsive expanding search bar
 description: Expanding search bar extension for any HTML page or Jekyll. This extension is a lightweight version of http://tympanus.net/Tutorials/ExpandingSearchBar/ for using  in Jekyll or HTML. This extension is used in my blog.
 categories: [en]
-tags: [css, javascript, js, html, project, jekyll, extension, plugin, responsive]
+tags: [css, javascript, js, html, project, jekyll, extension, plugin, responsive-web-design]
 
 featured_image: 2015-05-06-responsive-expanding-search-bar.jpg
 image: public/images/2015-05-06-responsive-expanding-search-bar.jpg
