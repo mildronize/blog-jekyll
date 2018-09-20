@@ -11,17 +11,30 @@ permalink: tags/
 {% assign tag_words = site_tags | split:',' | sort %}
 <!-- tag_words: {{ tag_words }} -->
 <div id="tags">
-  <ul class="tag-box inline">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <li>
-      <a href="#{{ this_word | cgi_escape }}">
-        {{ this_word }}
-        <!-- <span>{{ site.tags[this_word].size }}</span> -->
-      </a>
-    </li>
-  {% endunless %}{% endfor %}
-  </ul>
+
+<!-- https://www.gungorbudak.com/blog/2017/12/08/tags-cloud-sorted-by-post-count-for-jekyll-blogs-without-plugins/ 
+https://dev.to/rpalo/jekyll-tags-the-easy-way
+-->
+
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size | plus: -10000 }}###{{ tag[0] | replace: ' ', '##' }}###{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sorted_tags = tags | split: ' ' | sort %}
+{% for sorted_tag in sorted_tags %}
+    {% assign items = sorted_tag | split: '###' %}
+    {% assign tag = items[1] | replace: '##', ' ' %}
+    {% assign count = items[2] | plus: 0 %}
+    {% if count > 1 %}
+        {% assign size = count | times: 2 | plus: 10 %}
+    {% else %}
+        {% assign size = 12 %}
+    {% endif %} 
+    <span style="font-size: {{ size }}px">
+        <a class="tag-link" href="#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a> {% if count > 1 %} ({{ count }}) {% endif %} 
+    </span>
+{% endfor %}
 
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
