@@ -6,23 +6,32 @@ permalink: notes/
 ---
 <h2>Featured Notes</h2>
  <ul class="posts">
-    {% for post in site.categories['notes'] %}{% if post.featured == true %}
+    {% for post in site.pages %}
+    {% if post.category == 'notes' %}
+      {% if post.featured == true %}
       <li itemscope>
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
         : {{post.description}}
       </li>
-    {% endif %}{% endfor %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
   </ul>
+  
 <h2>Archived Notes</h2>
  <ul class="posts">
-    {% for post in site.categories['notes'] %}{% if post.title != null %}
+  {% for post in site.pages %}
+  {% if post.category == 'notes' %}
+    {% if post.title != null and post.featured != true %}
       <li itemscope>
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
         : {{post.description}}
       </li>
-    {% endif %}{% endfor %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
   </ul>
