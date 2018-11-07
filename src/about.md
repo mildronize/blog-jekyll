@@ -28,7 +28,7 @@ add_menu: true
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
-    <p>I'm currently Lecturer at Prince of Songkla University International College (PSUIC), Digital Media Program. I received M.Eng and B.Eng. in 2015 and 2018 from Department of Computer Engineering, Prince of
+    <p>I'm currently lecturer at Prince of Songkla University International College (PSUIC), Digital Media Program. I received M.Eng and B.Eng. in 2015 and 2018 from Department of Computer Engineering, Prince of
     Songkla University (PSU). 
     I'm enthusiastic to learn about and conduct some research
     in the areas of cloud technology and distributed and
