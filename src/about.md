@@ -28,7 +28,7 @@ add_menu: true
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
-    <p>I'm currently lecturer at Prince of Songkla University International College (PSUIC), Digital Media Program. I received M.Eng and B.Eng. in 2015 and 2018 from Department of Computer Engineering, Prince of
+    <p>I'm currently lecturer at Prince of Songkla University International College (PSUIC), Digital Media Program. I received M.Eng and B.Eng. in 2018 and 2015 from Department of Computer Engineering, Prince of
     Songkla University (PSU). 
     I'm enthusiastic to learn about and conduct some research
     in the areas of cloud technology and distributed and
@@ -36,6 +36,10 @@ add_menu: true
     <p>I also love to be healthy. <a href="https://connect.garmin.com/modern/profile/6bbc2036-215a-42b6-b8ab-179c7672fabc">Running</a> is my currently exercise. Another happiness is <a href="#photography">photography</a> </p>
   </div>
 </div>
+
+### Publications
+-	Thada Wangthammang and Pichaya Tandayya, **"A Software Cache Mechanism for Reducing the OpenTSDB Query Time,"** in proceeding of The 18<sup>th</sup> International Symposium on Communications and Information Technologies (ISCIT 2018), Sukosol Hotel, Bangkok, Thailand, Sep 26 -29, 2018.
+-	Thada Wangthammang, Seksun Suwanmanee, Touchai Angchuan and Sangsuree Vasupongayya, **"Registration Assistant Application using Local Search and Tabu List Technique,"** Thaksin University Journal Special Edition for 28<sup>th</sup> National Conference of Thaksin University, 2018.
 
 
 ### Mostly used tools
@@ -50,8 +54,10 @@ add_menu: true
 {% include user_info.html %}
 
 ### My contributions
-- 2016 [Submitted test result of installing ](https://appdb.winehq.org/objectManager.php?sClass=version&iId=33492) [Lingoes dictionary](http://www.lingoes.net/) on Debian via [Wine](https://www.winehq.org/)
-- 2015 [Translated a Vim cheat sheet in Thai](http://vim.rtorr.com/lang/th/)
+-	2018 "A Software Cache Mechanism for Reducing the OpenTSDB Query Time," Master Thesis Source code in Computer Engineering. Available on GitHub via <https://github.com/mildronize/tscache> and <https://github.com/mildronize/tscache-docker>.
+- 2016 [Submitted test result of installing ](https://appdb.winehq.org/objectManager.php?sClass=version&iId=33492) [Lingoes dictionary](http://www.lingoes.net/) on Debian via [Wine](https://www.winehq.org/).
+-	2015 "Registration Assistant Application Using Local Search Technique," Senior Project in Computer Engineering. Available on GitHub via <https://github.com/mildronize/R2ALS> and <https://github.com/mildronize/R2ALS-app>.
+- 2015 [Translated a Vim cheat sheet in Thai](http://vim.rtorr.com/lang/th/).
 
 ### Website status
 - The source code is public on [Github](https://github.com/mildronize/mildronize.github.io) and hosted by Github Page
