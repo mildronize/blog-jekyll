@@ -28,13 +28,16 @@ image: https://www.dropbox.com/s/lxir9pr41qsc9eu/cover.jpg?raw=1
 
 สุดท้ายก็ตัดสินใจจูน frontend ของบล็อกเดิม ที่เป็น Jekyll ใหม่ให้เป็น Responsive มากขึ้น ทั้งแง่ของ typography ด้วย
 
-## จากการทดสอบ google insights ก็ได้ 99 คะแนนบน mobile และ 97 คะแนนบน desktop
+## ผลการทดสอบจาก google insights
+จากการทดสอบ google insights ก็ได้ 99 คะแนนบน mobile และ 97 คะแนนบน desktop
 
 ![99 score on Mobile](https://www.dropbox.com/s/2irrnt11wei4aq7/2018-09-17-99-score-google-insight-web-optimization-3.jpg?raw=1)
 
 ![97 score on Mobile](https://www.dropbox.com/s/k6ib5pfgunc6dr0/2018-09-17-99-score-google-insight-web-optimization-4.jpg?raw=1)
 
-## หลักๆ ที่ปรับจูน Web สมัยเก่าให้ดูดี ทันสมัย และเร็วด้วย
+## ปรับปรุงเว็บเทคโนโลยีเก่าให้ทันสมัย
+
+หลักๆ ที่ปรับจูน Web สมัยเก่าให้ดูดี ทันสมัย และเร็วด้วย
 
 - เปลี่ยน core เป็น Bulma framework ทั้งหมด ทำให้ชีวิตการทำ responsive ง่ายขึ้น
 
