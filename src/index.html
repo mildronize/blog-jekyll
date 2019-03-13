@@ -12,65 +12,70 @@ title: Home
 // </pre>
 </script>
 
-<h1>Recent posts</h1>
+<h4>Recent posts</h4>
 <div style="margin:3rem"></div>
-    <div class="columns is-multiline is-centered">
-      {% for post in site.posts limit:6 %}
-      <div class="column" style="margin-bottom:1.25rem;">
-        <div class="recent-posts-2">
+<div class="columns is-multiline is-centered">
+  {% for post in site.posts limit:6 %}
+  <div class="column" style="margin-bottom:1.25rem;">
+    <div class="recent-posts-2">
+      <a href="{{ site.baseurl }}{{ post.url }}">
 
-          <div class="image-load-placeholder recent-posts-size-2" style='margin-bottom: 0.6rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
-            <div class="image-cover recent-posts-size-2" style='background-image: url(https://ce8be7dec.cloudimg.io/crop/500x350/q70/{{ post.image }})'>
+        <div class="image-load-placeholder recent-posts-size-2"
+          style='margin-bottom: 0.6rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
+          <div class="image-cover recent-posts-size-2"
+            style='background-image: url(https://ce8be7dec.cloudimg.io/crop/500x350/q70/{{ post.image }})'>
 
-            </div>
           </div>
-
-          <span class="title is-size-5 is-size-4-fullhd">
-            <a href="{{ site.baseurl }}{{ post.url }}">
-              {{ post.title }}
-            </a>
-          </span>
-          <div class="is-size-6 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}"></div>
         </div>
-      </div>
-      {% endfor %}
+
+        <span class="title is-size-5 is-size-4-fullhd">
+          <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
+          {{ post.title }}
+
+        </span>
+      </a>
+      <div class="is-size-6 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}"></div>
+
     </div>
+  </div>
+  {% endfor %}
+</div>
 
 
-    <div style="margin:1rem"></div>
+<div style="margin:1rem"></div>
 
-    {% for post in site.posts offset:6 limit:4 %}
-    <div class="columns" style="margin: 0;">
+{% for post in site.posts offset:6 limit:4 %}
+<div class="columns" style="margin: 0;">
+  <div class="column">
+
+    <div class="columns">
+      <div class="column is-narrow" style="width: 130px; padding: 0.75rem 0 0 0.75rem;">
+        <span class="is-size-6-desktop is-size-7">{{ post.date | date: "%Y, %b %e" }}</span>
+      </div>
       <div class="column">
+        <span class="title post-list is-size-5 is-size-4-fullhd">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {% if post.category == "notes" %}<i class="fa fa-sticky-note"></i>{% endif %}
+            {{ post.title }}
+          </a>
+        </span>
 
-        <div class="columns">
-          <div class="column is-narrow" style="width: 130px; padding: 0.75rem 0 0 0.75rem;">
-            <span class="is-size-6-desktop is-size-7">{{ post.date | date: "%Y, %b %e" }}</span>
-          </div>
-          <div class="column">
-            <span class="title post-list is-size-5 is-size-4-fullhd">
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {% if post.category == "notes" %}<i class="fa fa-sticky-note"></i>{% endif %}
-                {{ post.title }}
-              </a>
-            </span>
-
-            <div class="wrapper">
-              <div class="description is-size-7">{{ post.content| markdownify | strip_html | truncate: 200 }}</div>
-            </div>
-
-            {% if forloop.last == false %}
-            <hr style="margin: 1rem 0 0; height: 1px;">{% endif %}
-          </div>
-
+        <div class="wrapper">
+          <div class="description is-size-7">{{ post.content| markdownify | strip_html | truncate: 200 }}</div>
         </div>
 
+        {% if forloop.last == false %}
+        <hr style="margin: 1rem 0 0; height: 1px;">{% endif %}
       </div>
+
     </div>
 
-    {% endfor %}
-    <div style="margin:3rem"></div>
-    <center><a href="/blog/page/2/">Read more</a></center>
+  </div>
+</div>
+
+{% endfor %}
+<div style="margin:3rem"></div>
+<center><a href="/blog/page/2/">Read more</a></center>
 
 
-  <hr>
+<hr>

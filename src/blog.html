@@ -3,10 +3,10 @@ layout: page
 title: Blog 
 permalink: blog/
 pagination:
-  enabled: true
+  enabled: false
 ---
 
-{% for post in paginator.posts %}
+{% for post in site.posts %}
 <div class="columns" style="margin: 0;">
   <div class="column">
 
@@ -61,7 +61,7 @@ pagination:
       <span class="pagination-item newer">Newer</span>
       {% endif %}
     </div> -->
-<center>
+<!-- <center>
     {% if paginator.total_pages > 1 %}
       <div class="pagination">
           {% if paginator.next_page %}
@@ -77,5 +77,5 @@ pagination:
         </ul>
       </div>
       {% endif %}
-    </center>
+    </center> -->
 
