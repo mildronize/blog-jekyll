@@ -31,7 +31,7 @@ image: https://www.dropbox.com/s/53ds3aqow09hl0g/cover.jpeg?raw=1
 
 ![promise](https://www.dropbox.com/s/7se4umjvmx1jbgx/promise.gif?raw=1)
 
-## 1. **Promise** 
+## 1. Promise
 
 ```js
 const upperAfter = (text, ms) => (
@@ -60,7 +60,7 @@ const main = () => {
 
 **ข้อสังเกตุ** คือเราใช้ `.then()` เพื่อทำให้ Blocking i/O หรือ Synchronous นั้นเอง คล้ายกับการเรียก callback นั้นแล แต่ `.then()` เราสามารถต่อกันได้ ทำให้โค้ดสวยมากขึ้น และ debug ง่ายขึ้นนะ
 
-## 2. **Async, Await**
+## 2. Async, Await
 
 เอาโค้ดข้างบนมาแก้ `main` ใหม่
 
@@ -123,7 +123,7 @@ Parse.User.logIn('user', 'pass').then(function (user) {
 
 พอล่ะไม่อธิบายเยอะ เจ็บขอ แล้วพบกันใหม่ครับ
 
-### กราบขอบพระคุณแหล่งที่มาต่างๆ มีค่ายิ่ง
+### อ่านเพิ่มเติม
 
 - [Modern JS Cheat sheet](https://github.com/mbeaudru/modern-js-cheatsheet)  one-stop cheat sheet for JS developer
 - https://nodeschool.io/ เว็บนี้ก็ดีงาม สอน JS แบบ interactive เลย

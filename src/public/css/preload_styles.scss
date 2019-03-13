@@ -24,8 +24,7 @@ $is-size-4: 1.4rem;
 
 @import 'bulma_preload';
 
-h1,h2,h3, .title, .logo,
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6
+h1,h2,h3, .title, .logo
 {
     font-family: 'Prompt', sans-serif;
     font-weight: 400;
@@ -33,14 +32,27 @@ h1,h2,h3, .title, .logo,
 }
 
 .title{
-  line-height: 1.5rem; 
+  line-height: 1.1; 
+  font-weight: 500;
 }
 
 .content {
-  h1{ font-size: 1.65em; }
-  h2{ font-size: 1.55em; }
-  h3{ font-size: 1.35em; }
-  h4{ font-size: 1.20em; }
+  // scale 1.25
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+  }
+
+  h1{ font-size: 3.05rem; }
+  h2{ font-size: 2.441rem; }
+  h3{ font-size: 1.953rem; }
+  h4{ font-size: 1.563rem; }
+  h5{ font-size: 1.25rem; }
+  h6{ font-size: 1rem; }
+
+  h2:not(:first-child){
+    margin-top: 2em;
+  }
   a, code{ @include word-wrap(); }
   p{
     line-height: 1.75rem;
@@ -49,6 +61,21 @@ h1,h2,h3, .title, .logo,
     }
   }
   .post-date, .tags{ margin: 0 1rem; }
+
+  h1.post-title{
+    font-size: 2.5em;
+    line-height: 1.1;
+    font-weight: 600;
+    // margin-top: 1.333em;
+  }
+
+  p:not(:last-child){
+      margin: 1em 0;
+  }
+
+  ol li p:not(:last-child) {
+    margin: 0.67em;
+  }
 }
 
 .post-list a, .title a {
@@ -272,7 +299,7 @@ h1,h2,h3, .title, .logo,
 
 .recent-posts-size-2{
   height: 150px;
-  border-radius: 7.5px;
+  // border-radius: 7.5px;
  
 //   @media (min-width: $tablet) and (max-width: $desktop)  {  
 //     height: 150px;
@@ -436,6 +463,5 @@ img[class=post-list]{
 .related-posts li a:hover small {
   color: inherit;
 }
-
 
 

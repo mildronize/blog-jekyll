@@ -12,8 +12,7 @@ image: https://www.dropbox.com/s/lxir9pr41qsc9eu/cover.jpg?raw=1
 ---
 
 ได้ 99 คะแนนจาก Google Insights & เรียนรู้การทำ web optimization ผ่านการพัฒนาเว็บบล็อกให้ทันสมัย
-
-## จากการพัฒนา [blog version แรก](<https://mildronize.com/notes/my-blog-dev/>)  ซึ่ง clone theme Hyde ของ [Jekyll](https://jekyllrb.com/) มาแล้วปรับแก้มาเรื่อยๆ 
+จากการพัฒนา [blog version แรก](<https://mildronize.com/notes/my-blog-dev/>)  ซึ่ง clone theme Hyde ของ [Jekyll](https://jekyllrb.com/) มาแล้วปรับแก้มาเรื่อยๆ
 
 ![old web design](https://www.dropbox.com/s/sqk4d1no2xi4os0/2018-09-17-99-score-google-insight-web-optimization-1.jpg?raw=1)
 
@@ -49,7 +48,9 @@ image: https://www.dropbox.com/s/lxir9pr41qsc9eu/cover.jpg?raw=1
 
 - การใช้ **sass** ช่วยทำให้ชีวิตง่ายขึ้นเยอะในการจัดการค่าต่างๆ ในการตกแต่งหน้าเว็บ ให้มันเป็นอันหนึ่งอันเดียวกัน (consistency)
 
-## ใช้ Jekyll sass plugin ในการ bundle sass และ css (อนาคตจะไปใช้ webpack ด้วย) แยกเป็น 2 ไฟล์คือ
+## ใช้ Jekyll sass plugin ในการ bundle sass และ css 
+
+(อนาคตจะไปใช้ webpack ด้วย) แยกเป็น 2 ไฟล์คือ
 
 - `preload_styles.css` ไฟล์นี้ ถ้าโหลดผ่าน `LoadCSS` จะเหมือนรูปข้างบน จะใส่แบบปกติ ก็เดี๋ยวโดน Google หักคะแนน หาว่าโหลด stylesheet แบบ Blocking เดี๋ยวทำให้เว็บช้า **สรุปคือ** จัดการฝั่งโค้ด CSS เข้าไปใน HTML ซะเลย
 - `postload_styles.css` ไฟล์นี้โหลดผ่าน `LoadCSS `ไฟล์นี้จะเป็น พวก asset ขนาดใหญ่ พวกโหลด font, กับ Icon ต่างๆ ([Font Awesome](https://fontawesome.com/)) ซึ่งไม่จำเป็นต้องมาก่อนครั้งแรกที่เว็บโหลดก็ได้
