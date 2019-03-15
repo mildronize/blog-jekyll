@@ -2,24 +2,18 @@
 layout: default
 ---
 
+<div class="post-container">
 
-<div class="columns">
-  <div class="column is-8-desktop is-offset-2-desktop is-8-tablet is-offset-2-tablet">
-    <div class="content is-size-6 is-size-5-fullhd">
+    <div class="content">
 
       <!-- Article -->
       <article itemscope itemtype="http://schema.org/Article">
         <div class="post">
           <h1 class="post-title ">{{ page.title }}</h1>
-          <i class="icon far fa-calendar"></i><span class="post-date" itemprop="datePublished"
-            content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y, %b %e" }}</span>
-          <i class="icon fa fa-tags"></i><span class="tags">
-            {% for tag in page.tags %}
-            <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}"
-                title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
-            {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}
-            {% endfor %}
-          </span>
+          <!-- <i class="icon far fa-calendar"></i> -->
+            <span class="post-date" itemprop="datePublished"
+            content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e, %Y" }}</span>
+          <!-- <i class="icon fa fa-tags"></i> -->
           <!-- {% if site.comment and page.comment == null %}<p><a href="{{site.baseurl}}{{page.url}}#disqus_thread">Comments</a></p>{% endif %} -->
           {% if page.toc == true %}
           <div id="toc"></div>
@@ -30,7 +24,16 @@ layout: default
           <!--    {% if page.comments %}<div id="disqus_thread"></div>{% endif %}-->
         </div>
       </article>
-      <hr>
+      <hr style="margin:1.5em 0">
+      <!-- <div style="margin-top:1.5em"></div> -->
+      <span class="tags">
+        {% for tag in page.tags %}
+        <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}"
+            title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
+        {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}
+        {% endfor %}
+      </span>
+     
       <div class="related">
         <h3>Related Posts</h3>
         <ul class="related-posts">
@@ -61,6 +64,6 @@ layout: default
       {% endif %}
 
 
-    </div>
-  </div>
+
+</div>
 </div>
