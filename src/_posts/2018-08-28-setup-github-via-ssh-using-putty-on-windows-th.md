@@ -9,6 +9,7 @@ tags:
 - git
 categories: [th]
 image: https://www.dropbox.com/s/6j7n98dlmnubjxq/cover.jpg?raw=1
+toc: true
 ---
 
 ขั้นตอนการตั้งค่าการใช้งาน Github  แบบไม่ต้องกรอกรหัสผ่านทุกครั้ง บน windows

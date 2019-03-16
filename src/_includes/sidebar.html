@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar {% if page.toc == true %}is-active{% endif %}">
   <div class="sidebar-menu is-hidden-desktop">
       <a href="/" >
         home
@@ -45,7 +45,9 @@
       }
     });
 
+    console.log("wef");
     if ($(window).width() < 970) {
+      console.log("wefwef");
         $(".sidebar").removeClass("is-active");
         $(".navbar-burger").removeClass("is-active");
       }
