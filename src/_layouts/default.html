@@ -18,23 +18,30 @@ layout: compress
 
 <body class="has-navbar-fixed-top" style="margin:0; padding: 0">
 
-  <!-- Thank search bar from http://tympanus.net/Tutorials/ExpandingSearchBar/ -->
-  <!-- <div class="search-container">
-        <div id="sb-search" class="sb-search">
-            <form method="GET" onsubmit="return search_keywords()">
-                <input class="sb-search-input pure-input-3 search-bar" placeholder="Search title or tags" type="text" value="" name="search" id="search">
-                <input class="sb-search-submit" type="button" value="">
-                <span class="fa fa-search sb-icon-search"></span>
-            </form>
-        </div>
-    </div> -->
+  <!-- Search Bar -->
+
   {% include header.html %}
   {{ content }}
-
 
   {% include footer.html %}
 
   {% include tail.html %}
+ 
+    <div class="search-overlay">
+      <div class="modal open">
+        <!-- <div class="modal__header">
+        </div> -->
+        <div class="modal__content">
+            <div class="container">
+              <div id="search-component-root"></div>
+            </div>
+        </div>
+        <div class="modal__footer"></div>
+      </div>
+    </div>
+  
+  <script type="text/javascript" src="{{ site.baseurl }}/public/js/polyfill.js"></script>
+  <script async type="text/javascript" src="{{ site.baseurl }}/public/js/search.js"></script>
 
 </body>
 

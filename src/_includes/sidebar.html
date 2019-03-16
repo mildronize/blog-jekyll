@@ -72,6 +72,12 @@
       $(".navbar-burger").toggleClass("is-active");
       $(".sidebar-bg").toggleClass("is-active");
     });
+
+    $(".search-button").click(function () {
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".search-overlay").toggleClass("is-active");
+      $("#search-box").focus();
+    });
     
   });
 

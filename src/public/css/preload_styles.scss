@@ -327,7 +327,7 @@ h4,
   background-color: #fff;
   width: 100%;
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 100; /* Stay on top */
+  z-index: 98; /* Stay on top */
   top: 0em; /* Stay at the top */
   left: 0;
   border-bottom: 1px solid #eee;
@@ -380,14 +380,19 @@ a:hover .title {
   }
 }
 
-@media (min-width: 0) and (max-width: $tablet) {
-  .modal {
-    // display: none;
+// search bar
+
+.search-overlay{
+  display: none;
+}
+
+.modal {
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 99;
     // open
     display: flex;
     flex-direction: column;
@@ -400,41 +405,33 @@ a:hover .title {
     }
 
     &__header {
-      padding-top: 3.5rem;
+      padding-top: 5rem;
     }
 
     &__content {
+      padding-top: 5rem;
       height: 100%;
       overflow-y: auto;
     }
-  }
+
+    .list-search{
+      margin: 1rem;
+      // .list-group-item{
+      //   padding: 0.4em;
+      //   display: block;
+      // }
+      li a{
+        padding: 0.4rem 1rem;
+        display: block;
+      }
+      li a:hover{
+        background-color: #eee;
+        font-weight: bold;
+        border-radius: 3px;
+      }
+    }
+
 }
-
-// .search-overlay-parent
-// {
-// @media (min-width: 0) and (max-width: $tablet) {
-//     position: fixed;
-//     height : 100vh;
-//     width : 95vw;
-//     top: 0;
-//     left:0;
-//     z-index: 40;
-//     background-color: #fff;
-//     display: flex;
-//     overflow-y: auto;
-//   }
-// }
-
-// .search-overlay{
-//   @media (min-width: 0) and (max-width: $tablet) {
-//     flex-grow : 1;
-//     width: 90%;
-//     position: relative;
-//     top: 15px;
-//     left:15px;
-//   }
-
-// }
 
 // description
 
@@ -467,26 +464,6 @@ a:hover .title {
   }
 }
 
-// .description{
-//   color: #999;
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// }
-
-// Tag
-// .tag a {
-//   color: #999;
-// }
-
-// .tags {
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .tag {
-//   margin: 0 0.4rem 0 0;
-// }
 
 // placeholder image
 

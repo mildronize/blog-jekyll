@@ -7,7 +7,8 @@ title: Home
 <script type="text/javascript">
   // <pre>
   window.onload = function () {
-    EntryPoint.default();
+    console.log(EntryPoint)
+    EntryPoint.default(); 
   };
 // </pre>
 </script>
@@ -33,7 +34,7 @@ title: Home
             
         </span>
       </a>
-      <div class="is-size-7 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}"></div>
+      <div class="is-size-7 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %d, %Y" }}</div>
 
     </div>
   </div>

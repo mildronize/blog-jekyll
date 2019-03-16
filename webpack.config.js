@@ -5,7 +5,7 @@ module.exports = {
     polyfill: 'babel-polyfill',
     index: __dirname + "/src/_assets/index.js",
     toc: __dirname + "/src/_assets/toc.js",
-    search: __dirname + "/src/_assets/search.jsx",
+    search: __dirname + "/src/_assets/search.jsx"
   },
   output: {
     path: __dirname + "/src/public/js",
