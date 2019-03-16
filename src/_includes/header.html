@@ -48,24 +48,28 @@
         <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
       </a> -->
 
-      <div class="logo is-size-4" style="display: inline-block">
-          <a class="navbar-item" href="/" >mildronize</a>
-        </div>
+      <!-- <div class="logo is-size-4" style="display: inline-block">
+          <a class="navbar-item" href="/" >mildronize <span class="tag is-warning">Beta</span></a> 
+        </div> -->
+        <a class="navbar-item" href="/" >
+          <div class="logo is-size-4" style="display: inline-block">
+              mildronize
+          </div>
+          <span class="tag is-warning" style="margin-left: 0.5rem;">Beta</span></a> 
+        </a>
+        
 
       <div class="navbar-end" style="margin-left: auto;">
-        <!-- <div id="navbarBasicExample" class="navbar-menu">
-          <a class="navbar-item">
-            Documentation
-          </a>
-        </div> -->
+   
 
         <div class="navbar-item is-hidden-desktop">
-          <div class="buttons">
             <a class="button is-light" href="/search">
                 <i class="fas fa-search 2x"></i>
             </a>
-          </div>
         </div>
+        <!-- <a class="navbar-item is-hidden-desktop" href="/search" style="padding: inherit 0.6 em;">
+          <i class="fas fa-search 2x"></i>
+        </a> -->
       </div>
 
 
@@ -73,40 +77,28 @@
     <div id="navbarBasicExample" class="navbar-menu">
 
       <div class="navbar-end">
-
+          <a class="navbar-item" href="/" >
+            home
+          </a>
           {% assign pages_list = site.pages %}
               {% for node in pages_list %}
                 {% if node.title != null %}
                   {% if node.add_menu != null %}
-                  <div class="navbar-item">
-                   <a class="button is-white" href="{{ site.baseurl }}{{ node.url }}">{{ node.title | downcase  }}</a>
-                  </div>
+                  <a class="navbar-item" href="{{ site.baseurl }}{{ node.url }}">
+                  {{ node.title | downcase  }}
+                  </a>
                   {% endif %}
                 {% endif %}
               {% endfor %}
 
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-light" href="/search">
-                <i class="fas fa-search 2x"></i>
-            </a>
-          </div>
-        </div>
+        <a class="navbar-item" href="/search" style="padding: inherit 0.6 em;">
+          <i class="fas fa-search 2x"></i>
+        </a>
 
       </div>
     </div>
 
-    <!-- <div class="navbar-end" style="">
-        <div class="navbar-item is-hidden-mobile ">
-          <div class="buttons">
-            <a class="button is-light">
-              Search
-            </a>
-          </div>
-        </div>
-      </div>
-  -->
   </div>
 </nav>
 
-<div style="margin-bottom: 5rem"></div>
+<div style="margin-bottom: 3rem"></div>

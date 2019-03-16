@@ -4,11 +4,11 @@ layout: default
 
 <div class="post-container-responsive">
     <div class="columns">
-      <div class="sidebar-main {% if page.toc == true %}is-active{% endif %}">
+      <!-- <div class="sidebar-main"> -->
         <div class="column is-narrow ">
           {% include sidebar.html %}
         </div>
-      </div>
+      <!-- </div> -->
       <div class="column">
       
 
@@ -37,7 +37,7 @@ layout: default
         <hr style="margin:1.5em 0">
         <span class="tags">
           {% for tag in page.tags %}
-          <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}"
+          <span class="tag is-light" style="font-size: 1rem;"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}"
               title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
           {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}
           {% endfor %}
@@ -79,10 +79,10 @@ layout: default
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
 <script>
-
-
+  // <pre>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function (event) {
     anchors.add('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6');
   });
+  // </pre>
 </script>

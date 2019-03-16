@@ -178,19 +178,19 @@ h4,
 
   .post-date {
     color: #666;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   // .tags{ }
-  .tag {
-    margin: 0.3rem 0.2rem;
-    background-color: #eee;
-    padding: 0.4em 0.6em;
-    border-radius: 3px;
-  }
+  // .tag {
+  //   margin: 0.3rem 0.2rem;
+  //   background-color: #eee;
+  //   padding: 0.4em 0.6em;
+  //   border-radius: 3px;
+  // }
 
-  .tag a {
-    color: #444;
-  }
+  // .tag a {
+  //   color: #444;
+  // }
 
   p:not(:last-child) {
     margin-bottom: 0.8335em 0;
@@ -239,12 +239,12 @@ h4,
   margin-left: 0;
 }
 
-.sidebar-main{
-  display: none;
-}
+// .sidebar-main{
+//   display: none;
+// }
 
 .sidebar {
-  
+  display: none;
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 300px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -306,6 +306,10 @@ h4,
   left: 0;
   border-bottom: 1px solid #eee;
   padding: 0.5em 0;
+}
+
+.date-format{
+  color: #666;
 }
 
 code {
@@ -445,18 +449,18 @@ a:hover .title {
 // }
 
 // Tag
-.tag a {
-  color: #999;
-}
+// .tag a {
+//   color: #999;
+// }
 
-.tags {
-  margin: 0;
-  padding: 0;
-}
+// .tags {
+//   margin: 0;
+//   padding: 0;
+// }
 
-.tag {
-  margin: 0 0.4rem 0 0;
-}
+// .tag {
+//   margin: 0 0.4rem 0 0;
+// }
 
 // placeholder image
 

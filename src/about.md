@@ -22,9 +22,9 @@ add_menu: true
 
 <div class="columns">
   <div class="column is-narrow ">
-    <div style="margin: 0 auto;" class="profile">
-      <img data-convert="disable" alt="my profile" class="profile" src="{{site.url}}/public/images/my-profile.jpg">
-    </div>
+      <div style="margin: 0 auto; width: 200px" class="profile">
+        <img data-convert="disable" alt="my profile" class="profile" src="{{site.url}}/public/images/my-profile.jpg">
+      </div>
   </div>
   <div class="column has-text-justified">
     <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
