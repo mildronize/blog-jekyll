@@ -63,7 +63,6 @@ body {
 .page-container {
   margin: 0 auto;
   max-width: 60rem;
-  padding: 1.5em;
 }
 
 h1,
@@ -134,7 +133,7 @@ h4,
 
   @media (min-width: 0) and (max-width: $tablet) {
     blockquote {
-      margin-left: -1em;
+      margin-left: -0.8em;
     }
     .highlighter-rouge .highlight {
       margin-left: -0.5em;
@@ -209,7 +208,7 @@ h4,
 }
 
 .post-container-responsive {
-  padding: 1em;
+  // padding: 1em;
   margin: 0 auto;
   max-width: 42rem;
 
@@ -247,6 +246,17 @@ h4,
 //   display: none;
 // }
 
+.sidebar-bg {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 .sidebar {
   display: none;
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -259,8 +269,7 @@ h4,
   background-color: #fff;
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: auto;
-  // padding: 1.5em;
-  padding: 5em 1.5em 1.5em 1.5em;
+  padding: 4em 0em 1.5em 0em;
 
   .sidebar-title {
     // margin-bottom: 1.5em;
@@ -274,7 +283,12 @@ h4,
       display: block;
       color:black;
       font-weight: 600;
+      padding-left: 1.5rem;
     }
+  }
+
+  .sidebar-toc{
+    padding: 0 1.5em;
   }
 
 

@@ -1,15 +1,20 @@
-<div class="sidebar {% if page.toc == true %}is-active{% endif %}">
-  <div class="sidebar-menu is-hidden-desktop">
+
+  <div class="sidebar {% if page.toc == true %}is-toc{% endif %}">
+      
+    <div class="sidebar-menu is-hidden-desktop">
       {% include menu.html %}
+    </div>
+    {% if page.toc == true %}
+    <div class="sidebar-toc">
+      <h4 class="sidebar-title"><a href="#{{ page.title }}">{{ page.title }}</a></h4>
+      {% include toc.html html=content %}
+    </div>
+    {% endif %}
   </div>
-  {% if page.toc == true %}
-  <div class="sidebar-toc">
-    <h4 class="sidebar-title"><a href="#{{ page.title }}">{{ page.title }}</a></h4>
-    {% include toc.html html=content %}
-  </div>
-  {% endif %}
 </div>
-</div>
+
+<div class="sidebar-bg  {% if page.toc == true %}is-toc{% endif %}"></div>
+
 
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
@@ -17,14 +22,20 @@
   // <pre>
   $(document).ready(function () {
 
+    $( window ).resize(function() {
+      if ($(window).width() >= 970) {
+        $(".sidebar").removeClass("is-active");
+        $(".navbar-burger").removeClass("is-active");
+        $(".sidebar-bg").removeClass("is-active");
+      }
+    });
+
     // Check for click events on the navbar burger icon
-
     $(".navbar-burger").click(function () {
-
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".sidebar").toggleClass("is-active");
       $(".navbar-burger").toggleClass("is-active");
-
+      $(".sidebar-bg").toggleClass("is-active");
     });
 
     $(".sidebar-toc ul li a").click(function () {
@@ -32,15 +43,22 @@
         $(".sidebar").toggleClass("is-active");
         $(".navbar-burger").removeClass("is-active");
       }
+      $(".sidebar-bg").removeClass("is-active");
     });
 
-    console.log("wef");
     if ($(window).width() < 970) {
-      console.log("wefwef");
-        $(".sidebar").removeClass("is-active");
-        $(".navbar-burger").removeClass("is-active");
-      }
+      $(".sidebar").removeClass("is-active");
+      $(".navbar-burger").removeClass("is-active");
+      $(".sidebar-bg").removeClass("is-active");
+    }
 
+    $(".sidebar-bg").click(function () {
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".sidebar").toggleClass("is-active");
+      $(".navbar-burger").toggleClass("is-active");
+      $(".sidebar-bg").toggleClass("is-active");
+    });
+    
   });
 
 // </pre>
