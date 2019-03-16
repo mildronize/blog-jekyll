@@ -1,50 +1,48 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <img class="profile" alt="my-profile" src="{{ site.baseurl }}/public/{{ site.author.profile }}" width="120px">
-      <h2>
-        <a href="{{ site.baseurl }}/">
-          {{ site.title }}
-        </a>
-      </h2>
-      <p class="description">{{ site.description }}</p>
-      <a href="{{ site.url }}/{{ site.changelangurl }}">{{ site.changelang }}</a>
-        <div class="line-sidebar"></div>
-    </div>
+  <div class="sidebar-menu is-hidden-desktop">
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+    {% if node.title != null %}
+    {% if node.add_menu != null %}
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
-
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.add_menu != null %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
-
-    </nav>
-
-    <p class="social-icons">
-      <!-- <a href="{{ site.baseurl }}/search"><i class="fa fa-search fa-2x"></i></a> -->
-      <a href="https://github.com/mildronize"><i class="fa fa-github fa-2x"></i></a>
-      <a href="https://twitter.com/mildronize"><i class="fa fa-twitter fa-2x"></i></a>
-      <a href="{{ site.baseurl}}/feed.xml"><i class="fa fa-rss fa-2x"></i></a>
-      <!-- <a href="bitbucket"><i class="fa fa-bitbucket fa-2x"></i></a> -->
-
-<!--      <a href="linkedin"><i class="fa fa-linkedin fa-2x"></i></a>-->
-<!--      <a href="google-plus"><i class="fa fa-plus fa-2x"></i></a>-->
-
-    </p>
-
-
-    <p class="text-small">Build date: {{ site.time | date_to_string }}<br/>Powered by <a href="https://jekyllrb.com">Jekyll</a><br/>Mildronize &copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <a class="" href="{{ site.baseurl }}{{ node.url }}">{{ node.title | downcase  }}</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
   </div>
+  {% if page.toc == true %}
+  <div class="sidebar-toc">
+    <h4 class="sidebar-title"><a href="#{{ page.title }}">{{ page.title }}</a></h4>
+    {% include toc.html html=content %}
+  </div>
+  {% endif %}
 </div>
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+
+  $(document).ready(function () {
+
+    // Check for click events on the navbar burger icon
+
+    $(".navbar-burger").click(function () {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".sidebar-main").toggleClass("is-active");
+      $(".navbar-burger").toggleClass("is-active");
+
+    });
+
+    $(".sidebar-toc ul li a").click(function () {
+      if ($(window).width() < 970) {
+        $(".sidebar-main").toggleClass("is-active");
+        $(".navbar-burger").removeClass("is-active");
+      }
+
+    });
+  });
+
+
+</script>

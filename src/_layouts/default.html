@@ -4,8 +4,8 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="en-us">
-      {% include head.html %}
-      <!-- <script>
+{% include head.html %}
+<!-- <script>
           function search_keywords() {
             var x = document.getElementById("search").value;
             if (x == null || x == "") {
@@ -15,10 +15,11 @@ layout: compress
             return false;
         }
       </script> -->
-  <body>
 
-    <!-- Thank search bar from http://tympanus.net/Tutorials/ExpandingSearchBar/ -->
-    <!-- <div class="search-container">
+<body class="has-navbar-fixed-top" style="margin:0; padding: 0">
+
+  <!-- Thank search bar from http://tympanus.net/Tutorials/ExpandingSearchBar/ -->
+  <!-- <div class="search-container">
         <div id="sb-search" class="sb-search">
             <form method="GET" onsubmit="return search_keywords()">
                 <input class="sb-search-input pure-input-3 search-bar" placeholder="Search title or tags" type="text" value="" name="search" id="search">
@@ -27,12 +28,14 @@ layout: compress
             </form>
         </div>
     </div> -->
-    {% include header.html %}
-    {{ content }}
-    </section>
-    {% include footer.html %}
+  {% include header.html %}
+  {{ content }}
 
-    {% include tail.html %}
 
-  </body>
+  {% include footer.html %}
+
+  {% include tail.html %}
+
+</body>
+
 </html>

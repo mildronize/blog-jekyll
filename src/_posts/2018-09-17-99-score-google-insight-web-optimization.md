@@ -9,6 +9,7 @@ tags:
 - jekyll
 categories: [th]
 image: https://www.dropbox.com/s/lxir9pr41qsc9eu/cover.jpg?raw=1
+toc: true
 ---
 
 ได้ 99 คะแนนจาก Google Insights & เรียนรู้การทำ web optimization ผ่านการพัฒนาเว็บบล็อกให้ทันสมัย

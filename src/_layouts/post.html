@@ -2,68 +2,87 @@
 layout: default
 ---
 
-<div class="post-container">
-
-    <div class="content">
-
-      <!-- Article -->
-      <article itemscope itemtype="http://schema.org/Article">
-        <div class="post">
-          <h1 class="post-title ">{{ page.title }}</h1>
-          <!-- <i class="icon far fa-calendar"></i> -->
-            <span class="post-date" itemprop="datePublished"
-            content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e, %Y" }}</span>
-          <!-- <i class="icon fa fa-tags"></i> -->
-          <!-- {% if site.comment and page.comment == null %}<p><a href="{{site.baseurl}}{{page.url}}#disqus_thread">Comments</a></p>{% endif %} -->
-          {% if page.toc == true %}
-          <div id="toc"></div>
-          <hr>
-          {% endif %}
-          <div style="margin:1.5rem;"></div>
-          {{ content }}
-          <!--    {% if page.comments %}<div id="disqus_thread"></div>{% endif %}-->
+<div class="post-container-responsive">
+    <div class="columns">
+      <div class="sidebar-main {% if page.toc == true %}is-active{% endif %}">
+        <div class="column is-narrow ">
+          {% include sidebar.html %}
         </div>
-      </article>
-      <hr style="margin:1.5em 0">
-      <!-- <div style="margin-top:1.5em"></div> -->
-      <span class="tags">
-        {% for tag in page.tags %}
-        <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}"
-            title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
-        {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}
-        {% endfor %}
-      </span>
-     
-      <div class="related">
-        <h3>Related Posts</h3>
-        <ul class="related-posts">
-          {% for post in site.related_posts limit:5 %}
-          <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">
-              {{ post.title }}
-              <small>{{ post.date | date_to_string }}</small>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
       </div>
+      <div class="column">
+      
 
-      {% if site.comment and page.comment == null %}
-      <hr>
-      {% include disqus.html %}
-      <!-- {% include disqus_comment_count.html %} -->
-      {% endif %}
+      <div class="content">
 
-      {% if page.toc == true %}
-      <script type="text/javascript" src="{{ site.baseurl }}/public/js/toc.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function () {
-          $('#toc').toc({ title: "<h2>Contents</h2>", showSpeed: 0, listType: 'ul' });
-        });
-      </script>
-      {% endif %}
+        <!-- Article -->
+        <article itemscope itemtype="http://schema.org/Article">
+          <div class="post">
+            <h1 class="post-title" id="{{ page.title }}">{{ page.title }}</h1>
+            <!-- <i class="icon far fa-calendar"></i> -->
+            <span class="post-date" itemprop="datePublished"
+              content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %e, %Y" }}</span>
+            <!-- <i class="icon fa fa-tags"></i> -->
+            <!-- {% if site.comment and page.comment == null %}<p><a href="{{site.baseurl}}{{page.url}}#disqus_thread">Comments</a></p>{% endif %} -->
+            {% if page.toc == true %}
+            <div id="toc"></div>
+            <hr>
+            {% endif %}
+            <div style="margin:1.5rem;"></div>
 
 
+            {{ content }}
+            <!--    {% if page.comments %}<div id="disqus_thread"></div>{% endif %}-->
+          </div>
+        </article>
+        <hr style="margin:1.5em 0">
+        <span class="tags">
+          {% for tag in page.tags %}
+          <span class="tag is-light"><a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}"
+              title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></span>
+          {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %}
+          {% endfor %}
+        </span>
 
+        <div class="related">
+          <h3>Related Posts</h3>
+          <ul class="related-posts">
+            {% for post in site.related_posts limit:5 %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+                <small>{{ post.date | date_to_string }}</small>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        {% if site.comment and page.comment == null %}
+        <hr>
+        {% include disqus.html %}
+        <!-- {% include disqus_comment_count.html %} -->
+        {% endif %}
+
+        {% if page.toc == true %}
+        <!-- <script type="text/javascript" src="{{ site.baseurl }}/public/js/toc.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $('#toc').toc({ title: "<h2>Contents</h2>", showSpeed: 0, listType: 'ul' });
+          });
+        </script> -->
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+
+
+  // Add anchors on DOMContentLoaded
+  document.addEventListener("DOMContentLoaded", function (event) {
+    anchors.add('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6');
+  });
+</script>
