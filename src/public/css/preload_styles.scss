@@ -240,6 +240,9 @@ h4,
 
 .navbar-burger{
   margin-left: 0;
+  @media (min-width: $desktop) {
+    display: none !important;
+  }
 }
 
 // .sidebar-main{
@@ -278,7 +281,6 @@ h4,
   .sidebar-menu{
     border-bottom: 1px solid #eee;
     padding-bottom: 1em;
-    margin-bottom: 1em;
     a {
       display: block;
       color:black;
@@ -288,7 +290,13 @@ h4,
   }
 
   .sidebar-toc{
-    padding: 0 1.5em;
+    padding: 1em 1.5em;
+    border-bottom: 1px solid #eee;
+  }
+
+  .sidebar-author{
+    padding: 1em 1.5em;
+    border-bottom: 1px solid #eee;
   }
 
 
@@ -297,7 +305,7 @@ h4,
     list-style-position: inside;
     text-indent: -1em;
     padding-left: 1em;
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   .sidebar-title a {
     color: #333;

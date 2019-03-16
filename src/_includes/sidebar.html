@@ -1,5 +1,5 @@
 
-  <div class="sidebar {% if page.toc == true %}is-toc{% endif %}">
+  <div class="sidebar {% if page.toc == true %}enable-toc{% endif %}">
       
     <div class="sidebar-menu is-hidden-desktop">
       {% include menu.html %}
@@ -10,10 +10,15 @@
       {% include toc.html html=content %}
     </div>
     {% endif %}
+    <div class="sidebar-author">
+        <h4 class="sidebar-title">Author</h4>
+         Thada Wangthammang
+          
+        </div>
   </div>
 </div>
 
-<div class="sidebar-bg  {% if page.toc == true %}is-toc{% endif %}"></div>
+<div class="sidebar-bg  {% if page.toc == true %}enable-toc{% endif %}"></div>
 
 
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -24,9 +29,15 @@
 
     $( window ).resize(function() {
       if ($(window).width() >= 970) {
-        $(".sidebar").removeClass("is-active");
-        $(".navbar-burger").removeClass("is-active");
-        $(".sidebar-bg").removeClass("is-active");
+        if(!$(".sidebar").hasClass("enable-toc")){
+          $(".sidebar").removeClass("is-active");
+          $(".navbar-burger").removeClass("is-active");
+          $(".sidebar-bg").removeClass("is-active");
+        }else {
+          $(".sidebar-bg").removeClass("is-active");
+        }
+      }else if($(".sidebar").hasClass("enable-toc") && $(".sidebar").hasClass("is-active")){
+        $(".sidebar-bg").addClass("is-active");
       }
     });
 
@@ -50,6 +61,9 @@
       $(".sidebar").removeClass("is-active");
       $(".navbar-burger").removeClass("is-active");
       $(".sidebar-bg").removeClass("is-active");
+    }else if($(".sidebar").hasClass("enable-toc")){
+      $(".sidebar").addClass("is-active");
+      $(".navbar-burger").addClass("is-active");
     }
 
     $(".sidebar-bg").click(function () {
