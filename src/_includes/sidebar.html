@@ -1,17 +1,6 @@
 <div class="sidebar {% if page.toc == true %}is-active{% endif %}">
   <div class="sidebar-menu is-hidden-desktop">
-      <a href="/" >
-        home
-      </a>
-    {% assign pages_list = site.pages %}
-    {% for node in pages_list %}
-    {% if node.title != null %}
-    {% if node.add_menu != null %}
-
-    <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title | downcase  }}</a>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+      {% include menu.html %}
   </div>
   {% if page.toc == true %}
   <div class="sidebar-toc">

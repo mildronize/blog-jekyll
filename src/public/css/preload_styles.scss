@@ -235,6 +235,10 @@ h4,
   width: 1px;
 }
 
+.navbar-item-active{
+  font-weight: bold;
+}
+
 .navbar-burger{
   margin-left: 0;
 }
@@ -267,10 +271,9 @@ h4,
     padding-bottom: 1em;
     margin-bottom: 1em;
     a {
-      display: block; font-size:1.1rem;
+      display: block;
       color:black;
       font-weight: 600;
-      margin-bottom: 0.5em;
     }
   }
 
@@ -280,6 +283,7 @@ h4,
     list-style-position: inside;
     text-indent: -1em;
     padding-left: 1em;
+    font-size: 0.9em;
   }
   .sidebar-title a {
     color: #333;

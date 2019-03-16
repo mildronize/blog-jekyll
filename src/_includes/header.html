@@ -77,20 +77,7 @@
     <div id="navbarBasicExample" class="navbar-menu">
 
       <div class="navbar-end">
-          <a class="navbar-item" href="/" >
-            home
-          </a>
-          {% assign pages_list = site.pages %}
-              {% for node in pages_list %}
-                {% if node.title != null %}
-                  {% if node.add_menu != null %}
-                  <a class="navbar-item" href="{{ site.baseurl }}{{ node.url }}">
-                  {{ node.title | downcase  }}
-                  </a>
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-
+         {% include menu.html %}
         <a class="navbar-item" href="/search" style="padding: inherit 0.6 em;">
           <i class="fas fa-search 2x"></i>
         </a>
