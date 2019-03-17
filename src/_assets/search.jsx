@@ -59,11 +59,34 @@ class Search extends React.Component {
         const value = event.target.value;
         const initialItems = this.state.initialItems;
         const that = this;
-        var updatedList = Object.keys(initialItems);
-        updatedList = updatedList.filter( index => (
-            that.filterName(initialItems[index], value) 
-             || that.filterTag(initialItems[index], value)
-        ));
+        // var updatedList = Object.keys(initialItems);
+        // updatedList = updatedList.filter( index => (
+        //     that.filterName(initialItems[index], value) 
+        //      || that.filterTag(initialItems[index], value)
+        // ));
+        var updatedList = [];
+        console.log(value);
+        for( var i=0 ; i < initialItems.length; i++){
+            // console.log(initialItems[i]);
+            
+            const foundPosition =  initialItems[i].title.toLowerCase().search(value.toLowerCase()) ;
+            
+            if( foundPosition >= 0 ){
+                const startStr = initialItems[i].title.slice(0, foundPosition);
+                const foundStr = initialItems[i].title.slice(foundPosition, foundPosition + value.length);
+                const endStr = initialItems[i].title.slice(foundPosition + value.length);
+                let updatedListItem = { 
+                    ...initialItems[i], 
+                    title: `${startStr}<span class="search-highlight">${foundStr}</span>${endStr}`
+                }
+                updatedList.push(updatedListItem);
+            }else{
+                if (this.filterTag(initialItems[i], value)){
+                    updatedList.push(initialItems[i]);
+                }
+            }
+        }   
+        console.log(updatedList); 
         this.setState({ items: updatedList });
         this.setState({
             query: value
@@ -74,7 +97,17 @@ class Search extends React.Component {
     onKeyPress(event) {
         if (event.which === 13) {
           event.preventDefault();
+          console.log("Hey");
+          this._searchTextBox.blur();
         }
+    }
+
+    onSubmit(event) {
+        if (event.which === 13) {
+          event.preventDefault();
+          this._searchTextBox.blur();
+        }
+        console.log("Hey");
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -85,16 +118,16 @@ class Search extends React.Component {
         return (
             <div>
                 <div className="space"></div>
-                <form className="pure-form" onKeyPress={this.onKeyPress}>
+                <form className="pure-form" onKeyPress={(e) => this.onKeyPress(e)}>
                     <input type="text" id="search-box" className="pure-input-rounded pure-input-1"
                         placeholder="Search on mildronize.com" value={this.state.query} onChange={this.onSearch}
                         ref={c => (this._searchTextBox = c)}
                     />
                 </form>
                 <ul className="list-search">
-                {this.state.items.map((index) => (
-                    <li className="list-group-item" key={index}>
-                    <a href={this.state.initialItems[index].link}>{this.state.initialItems[index].title}</a>
+                {this.state.items.map((item) => (
+                    <li className="list-group-item" key={item.link}>
+                    <a href={item.link} dangerouslySetInnerHTML={{__html: item.title}}></a>
                     </li>
                 ))}
             </ul>
