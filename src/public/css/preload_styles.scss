@@ -61,10 +61,15 @@ body {
 
 // fix on mobile, oversize on mobile
 .columns{
-  margin-right: 0;
+  margin-right: 0rem;
+  padding-right: -0.75rem; 
 }
 
+.column{
+  padding-right: 0.95rem; 
+}
 .page-container {
+  padding: 2rem 0 1rem 1rem;
   margin: 0 auto;
   max-width: 60rem;
 }
