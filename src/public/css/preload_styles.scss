@@ -59,6 +59,10 @@ body {
 //   max-width: 42rem;
 // }
 
+// fix on mobile, oversize on mobile
+.columns{
+  margin-right: 0;
+}
 
 .page-container {
   margin: 0 auto;
@@ -220,7 +224,12 @@ h4,
   // }
 }
 
-// work with sidebar
+// work with sidebar & Navbar
+
+disable-scroll {
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+}
 
 /**
 * Create an invisible pseudo-element and make it the height of the

@@ -45,10 +45,19 @@
     $(".navbar-burger").click(function () {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".sidebar").toggleClass("is-active");
+
+      if ($(".sidebar").hasClass("is-active")){
+        $("html").css("overflow-y", "hidden");
+      }else{
+        $("html").css("overflow-y", "scroll");
+      }
       $(".navbar-burger").toggleClass("is-active");
       $(".sidebar-bg").toggleClass("is-active");
+      if ($(".search-overlay").hasClass("is-active")){
+        $(".search-overlay").removeClass("is-active");
+      }
     });
-
+    // $("body").addClass("disable-scroll");
     $(".sidebar-toc ul li a").click(function () {
       if ($(window).width() < 970) {
         $(".sidebar").toggleClass("is-active");
