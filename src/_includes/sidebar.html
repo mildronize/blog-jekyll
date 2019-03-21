@@ -56,6 +56,9 @@
       if ($(".search-overlay").hasClass("is-active")){
         $(".search-overlay").removeClass("is-active");
       }
+      if ($(window).width() > 970) {
+        $(".sidebar-bg").removeClass("is-active");
+      }
     });
     // $("body").addClass("disable-scroll");
     $(".sidebar-toc ul li a").click(function () {
