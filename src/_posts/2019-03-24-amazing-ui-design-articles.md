@@ -17,7 +17,7 @@ image: https://www.dropbox.com/s/zk9rpnoxncolajw/2019-03-24-amazing-ui-design-ar
 
 ## Refactor UI
 
-[Adam Wathan & Steve Schoger](https://refactoringui.com/) ,full stack developer, who are facing the design problem. They shows how amazing way to refactor UI without design skill in thier "[7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)" article.
+[Adam Wathan & Steve Schoger](https://refactoringui.com/), full stack developer, who are facing the design problem. They shows how amazing way to refactor UI without design skill in thier "[7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)" article.
 
 ![](https://cdn-images-1.medium.com/max/2600/1*KYZikUrx9F02cJU9kpn_gQ.png)
 
