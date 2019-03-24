@@ -2,18 +2,22 @@
   <div class="sidebar {% if page.toc == true %}enable-toc{% endif %}">
       
     <div class="sidebar-menu is-hidden-desktop">
+      <div class="sidebar-seperator"></div>
+      <h4 class="sidebar-title" style="padding-left: 1.5rem;">menu</h4>
       {% include menu.html %}
     </div>
     {% if page.toc == true %}
+    <div class="sidebar-seperator"></div>
     <div class="sidebar-toc">
-      <h4 class="sidebar-title"><a href="#{{ page.title }}">{{ page.title }}</a></h4>
+      <h4 class="sidebar-title">contents</h4>
+      <ul><li><a href="#{{ page.title }}" style="padding-left: 0;">{{ page.title }}</a></li></ul>
       {% include toc.html html=content %}
     </div>
     {% endif %}
+    <div class="sidebar-seperator"></div>
     <div class="sidebar-author">
         <h4 class="sidebar-title">Author</h4>
          Thada Wangthammang
-          
         </div>
   </div>
 </div>

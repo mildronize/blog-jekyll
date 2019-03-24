@@ -251,6 +251,7 @@ disable-scroll {
 
 .navbar-item-active{
   font-weight: bold;
+  border-bottom: 3px solid #0d47a1;
 }
 
 .navbar-burger{
@@ -290,11 +291,20 @@ disable-scroll {
   padding: 4em 0em 1.5em 0em;
 
   .sidebar-title {
-    // margin-bottom: 1.5em;
+    margin-bottom: 0.5rem;
     font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+    font-size: 0.7rem;
+    a {
+      color: #999;
+    }
+  }
+
+  .sidebar-seperator{
+    padding-bottom: 1rem;
   }
   .sidebar-menu{
-    border-bottom: 1px solid #eee;
     padding-bottom: 1em;
     a {
       display: block;
@@ -302,16 +312,34 @@ disable-scroll {
       font-weight: 600;
       padding-left: 1.5rem;
     }
+    .navbar-item{
+      font-weight: normal;
+    }
+    .navbar-item-active{
+      border: none;
+      font-weight: bold;
+    }
   }
 
   .sidebar-toc{
-    padding: 1em 1.5em;
-    border-bottom: 1px solid #eee;
+    padding: 0.5rem 1.5rem;
+    li{
+      padding: 0.5rem inherit;
+      margin: 0 inherit;
+    }
+    a{
+      color:black;
+    }
+    a:hover{
+      background-color: #eee;
+      color:black;
+    }
   }
 
   .sidebar-author{
-    padding: 1em 1.5em;
-    border-bottom: 1px solid #eee;
+    
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
   }
 
 
