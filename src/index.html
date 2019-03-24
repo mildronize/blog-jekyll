@@ -3,6 +3,14 @@ layout: page
 title: Home
 ---
 
+<style>
+    .image{
+        margin-top:0.2rem;
+        margin-bottom:0.2rem;
+    }
+    </style>
+    
+
 <script async type="text/javascript" src="{{ site.baseurl }}/public/js/index.js"></script>
 <script type="text/javascript">
   // <pre>
@@ -13,38 +21,30 @@ title: Home
 // </pre>
 </script>
 
-<!-- <div style="margin:3rem"></div> -->
-<div class="columns is-multiline is-centered">
-  {% for post in site.posts limit:6 %}
-  <div class="column" style="margin-bottom:1.25rem;">
-    <div class="recent-posts-2">
-      <a href="{{ site.baseurl }}{{ post.url }}">
+<div class="page-section-header">I'm lecturer</div>
 
-        <div class="image-load-placeholder recent-posts-size-2"
-          style='margin-bottom: 0.6rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
-          <div class="image-cover recent-posts-size-2"
-            style='background-image: url(https://ce8be7dec.cloudimg.io/crop/500x350/q70/{{ post.image }})'>
-
-          </div>
+<div class="columns">
+    <div class="column is-narrow ">
+        <div style="margin: 0 auto; width: 200px" class="profile">
+          <img data-convert="disable" alt="my profile" class="profile" src="{{site.url}}/public/images/my-profile.jpg">
         </div>
-
-        <span class="title is-size-5">
-          <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
-          {{ post.title }}
-            
-        </span>
-      </a>
-      <div class="is-size-7 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %d, %Y" }}</div>
-
+    </div>
+    <div class="column has-text-justified">
+      <p>Hi, I'm Mild or Thada Wangthammang. I live at Hatyai, Songkhla, Thailand. </p>
+      <p>I'm currently lecturer at <a href="https://www.uic.psu.ac.th/" target="blank">Prince of Songkla University International College (PSUIC), Digital Media Program.</a> I received M.Eng and B.Eng. in 2018 and 2015 from Department of Computer Engineering, Prince of
+      Songkla University (PSU). 
+      I'm enthusiastic to learn about and conduct some research
+      in the areas of cloud technology and distributed and
+      parallel computing, especially, in the area of web technology and game development.</p>
+      <p>I also love to be healthy. <a href="https://connect.garmin.com/modern/profile/6bbc2036-215a-42b6-b8ab-179c7672fabc">Running</a> is my currently exercise. Another happiness is <a href="#photography">photography</a> </p>
     </div>
   </div>
-  {% endfor %}
-</div>
 
+<div class="page-section-header">I'm Blogging</div>
 
 <div style="margin:1rem"></div>
 
-{% for post in site.posts offset:6 limit:4 %}
+{% for post in site.posts limit:6 %}
 <div class="columns" style="margin: 0;">
   <div class="column">
 
@@ -74,8 +74,41 @@ title: Home
 </div>
 
 {% endfor %}
-<div style="margin:3rem"></div>
-<center><a href="/blog">Read more</a></center>
+<div style="margin:2rem"></div>
+<center><a href="/blog">All blog posts</a></center>
+<div style="margin:1rem"></div>
 
+<div class="page-section-header">I'm Photographer</div>
 
-<hr>
+<div class="columns">
+  <div class="column img-column" style="padding: 0.4rem;">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/1.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/2.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/3.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/4.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/5.jpg">
+<!--    {% for i in (1..5) %}
+      <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+        <div class="placeholder-ratio"></div>
+      </div>
+    {% endfor %} -->
+  </div>
+  <div class="column img-column" style="padding: 0.4rem;">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/6.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/7.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/8.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/9.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/10.jpg">
+  <!--  {% for i in (6..10) %}
+      <div class="image placeholder" data-large="{{site.url}}/public/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+        <div class="placeholder-ratio"></div>
+      </div>
+    {% endfor %} -->
+  </div>
+</div>
+
+<center>See more at my <a href="https://www.flickr.com/photos/mildronize">Flickr</a></center>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Home
 ---
 
@@ -15,27 +15,32 @@ title: Home
 <h1>Design Collection</h1>
 <hr>
 
-<div class="columns is-multiline is-centered">
-        {% for post in site.posts limit:6 %}
-        <div class="column">
+      <div class="columns is-multiline is-centered">
+          {% for post in site.posts limit:6 %}
+          <div class="column" style="margin-bottom:1.25rem;">
             <div class="recent-posts-2">
-            
-                    <div class="image-load-placeholder recent-posts-size-2" style='margin-bottom: 0.6rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
-                        <div class="image-cover recent-posts-size-2" style='background-image: url(https://ce8be7dec.cloudimg.io/crop/500x350/q70/{{ post.image }})'>
-                           
-                        </div>
-                    </div>
-  
-                <span class="title is-size-5 is-size-4-desktop">
-                  <a href="{{ site.baseurl }}{{ post.url }}">
-                    {{ post.title }}
-                  </a>
+              <a href="{{ site.baseurl }}{{ post.url }}">
+        
+                <div class="image-load-placeholder recent-posts-size-2"
+                  style='margin-bottom: 0.6rem; background-image: url(https://ce8be7dec.cloudimg.io/width/80/fgaussian2/{{ post.image }})'>
+                  <div class="image-cover recent-posts-size-2"
+                    style='background-image: url(https://ce8be7dec.cloudimg.io/crop/500x350/q70/{{ post.image }})'>
+        
+                  </div>
+                </div>
+        
+                <span class="title is-size-5">
+                  <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
+                  {{ post.title }}
+                    
                 </span>
-                <div class="is-size-6 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}"></div>
+              </a>
+              <div class="is-size-7 date-format" data-date="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %d, %Y" }}</div>
+        
             </div>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
 
 <hr>
 
