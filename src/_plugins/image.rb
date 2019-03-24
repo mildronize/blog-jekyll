@@ -24,7 +24,7 @@ module Jekyll
         if node['data-convert'] != "disable"
           node.add_next_sibling "
           <div class=\"image\">
-            <div class=\"placeholder\" data-large=\"https://ce8be7dec.cloudimg.io/cdno/n/q90/" + src + "\">
+            <div class=\"placeholder\" data-large=\"" + src + "\">
               <img src=\"https://ce8be7dec.cloudimg.io/bound/100x100/q20/" + src + "\" class=\"placeholder-img-small\">
               <div class=\"placeholder-ratio\"></div>
             </div>
