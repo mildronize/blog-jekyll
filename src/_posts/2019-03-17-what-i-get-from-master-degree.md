@@ -44,14 +44,14 @@ toc: true
 
 จะเขียนสิ่งที่ได้จากการเรียนโท ออกเป็นบล็อกย่อยๆ ตามหัวข้อข้างล่าง
 
-### Related Ariticle
+### Related Article
 1. การวาดกราฟจากข้อมูลจำนวนมากด้วย Numpy (Plot graph with numpy )
 2. automate test ด้วย python ซึ่งไปรัน docker อีกทีนึง 
 3. เขียนโปรแกรม linux บน Windows (MacOS ก็ได้ คอนเซ็ปเดียวกัน) แบบ Seamless คือทำ two-way sync โดยใช้ docker, unison, intellji + script นิดหน่อย
-4. Opentsdb
-    1. Intro & architecture 
-    2. Opentsdb internal
-    3. Asynchorous programming using deferred object ( async Hbase )
+4. OpenTSDB
+    1. Intro & Architecture 
+    2. OpenTSDB Internal
+    3. Asynchronous programming using deferred object ( async Hbase )
 5. memcached & internal
 
 ### Supported Stuffs and tools
