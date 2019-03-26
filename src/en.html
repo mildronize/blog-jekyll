@@ -1,64 +1,116 @@
 ---
-layout: default
-title: English Posts
+layout: page
+title: Home (EN)
 permalink: en/
 ---
 
-<div class="box">
-  {% for post in site.categories['en'] %}
-  <div class="content">
-    <div class="columns">
-      <div class="column">
-        <h2 class="post-list is-size-5 is-size-5-mobile">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {% if post.category == "notes" %}
-            <i class="fa fa-sticky-note"></i>
-            {% endif %} {{ post.title }}
-          </a>
-        </h2>
-        <!-- <div style="subtitle description">{{ post.content | strip_html | truncate: 100  }}</div> -->
 
-        <p style="subtitle is-size-6 is-size-7-mobile">
-          <i class="icon far fa-calendar"></i>
-          <span class="is-size-7">{{ post.date | date_to_string }}</span>
-          <i class="icon fa fa-tags"></i>
-          {% comment %}
-          <div class="tags"> {% endcomment %} {% for tag in post.tags %}
-            <span class="tag is-light is-size-7">
-              <a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>
-            </span>
-            {% comment %} {% unless forloop.last %} {% endunless %} {% endcomment %} {% endfor %} {% comment %}
-          </div> {% endcomment %}
-        </p>
-        {% if post.image != null %}
-        <p>
-          <img alt="{{ post.title }}" src="{{ post.image }}">
-        </p>{% endif %} {% comment %}
-        <p> {% endcomment %} {% if post.home != null %}
-          <a class="pure-button button-small" href="{{ post.home }}">
-            <i class="fa fa-home"></i>Home</a>{% endif %} {% if post.demo != null %}
-          <a class="pure-button button-small" href="{{ post.demo }}">
-            <i class="fa fa-play"></i>Demo</a>{% endif %} {% if post.source != null %}
-          <a class="pure-button button-small" href="{{ post.source }}">
-            <i class="fa fa-code"></i>Source code</a>{% endif %} {% comment %} </p>
-        {% endcomment %}
-      </div>
-      
+<style>
+    .image{
+        margin-top:0.7rem;
+        margin-bottom:0.7rem;
+    }
+    </style>
+    
+
+<script async type="text/javascript" src="{{ site.baseurl }}/public/js/index.js"></script>
+<script type="text/javascript">
+  // <pre>
+  window.onload = function () {
+    console.log(EntryPoint)
+    EntryPoint.default(); 
+  };
+// </pre>
+</script>
+
+<div class="page-section-header" style="margin-top:0;">I'm lecturer</div>
+
+<div class="columns">
+    <div class="column is-narrow ">
+        <div style="margin: 0 auto; width: 200px" class="profile">
+          <img data-convert="disable" alt="my profile" class="profile" src="{{site.url}}/public/images/my-profile.jpg">
+        </div>
+    </div>
+    <div class="column has-text-justified">
+      <p>Hi, I'm Mild or Thada Wangthammang. I live in Hatyai, Songkhla, Thailand. </p>
+      <p>I'm currently lecturer at <a href="https://www.uic.psu.ac.th/" target="blank">Prince of Songkla University International College (PSUIC), Digital Media Program.</a> I received M.Eng and B.Eng. in 2018 and 2015 from Department of Computer Engineering, Prince of
+      Songkla University (PSU). 
+      I'm enthusiastic to learn about and conduct some research
+      in the areas of cloud technology and distributed and
+      parallel computing, especially, in the area of web technology and game development.</p>
+      <p>I also love to be healthy. <a href="https://connect.garmin.com/modern/profile/6bbc2036-215a-42b6-b8ab-179c7672fabc">Running</a> is my currently exercise. Another happiness is <a href="#photography">photography</a> </p>
     </div>
   </div>
-  {% endfor %}
-  <hr>
-  <div class="pagination">
-      {% if paginator.next_page %}
-      <a class="pagination-item older" href="{{ site.baseurl }}/page/{{paginator.next_page}}">Older</a>
-      {% else %}
-      <span class="pagination-item older">Older</span>
-      {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-      {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page/{{paginator.previous_page}}">Newer</a>
-      {% endif %} {% else %}
-      <span class="pagination-item newer">Newer</span>
-      {% endif %}
+
+<div class="page-section-header">I'm Blogging</div>
+
+<div style="margin:1rem"></div>
+
+{% for post in site.categories['en'] limit:6 %}
+<div class="columns" style="margin: 0;">
+  <div class="column">
+
+    <div class="columns">
+      <div class="column is-narrow" style="width: 130px; padding: 0.75rem 0 0 0.75rem;">
+        <span class="is-size-6-desktop is-size-7">{{ post.date | date: "%Y, %b %e" }}</span>
+      </div>
+      <div class="column">
+        <span class="title post-list is-size-5">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {% if post.category == "notes" %}<i class="fa fa-sticky-note"></i>{% endif %}
+            {{ post.title }}
+          </a>
+        </span>
+
+        <div class="wrapper">
+          <div class="description is-size-7">{{ post.content| markdownify | strip_html | truncate: 200 }}</div>
+        </div>
+
+        {% if forloop.last == false %}
+        <hr style="margin: 1rem 0 0; height: 1px;">{% endif %}
+      </div>
+
     </div>
+
+  </div>
 </div>
+
+{% endfor %}
+<div style="margin:2rem"></div>
+<center><a href="/blog">All blog posts</a></center>
+<div style="margin:1rem"></div>
+
+<div class="page-section-header">I'm Photographer</div>
+
+<div class="columns">
+  <div class="column img-column" style="padding: 0.4rem;">
+    <!-- <img alt="my photo" class="image" src="{{site.url}}/public/images/about/1.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/2.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/3.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/4.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/5.jpg"> -->
+   {% for i in (1..5) %}
+      <div class="image placeholder" data-large="https://ce8be7dec.cloudimg.io/cdno/n/q90/{{site.url}}/public/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+        <div class="placeholder-ratio"></div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="column img-column" style="padding: 0.4rem;">
+    <!-- <img alt="my photo" class="image" src="{{site.url}}/public/images/about/6.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/7.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/8.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/9.jpg">
+    <img alt="my photo" class="image" src="{{site.url}}/public/images/about/10.jpg"> -->
+   {% for i in (6..10) %}
+      <div class="image placeholder" data-large="https://ce8be7dec.cloudimg.io/cdno/n/q90/{{site.url}}/public/images/about/{{i}}.jpg">
+        <img src="https://ce8be7dec.cloudimg.io/bound/100x100/q20/{{site.url}}/public/images/about/{{i}}.jpg" class="placeholder-img-small">
+        <noscript><img src="{{site.url}}/public/images/about/{{i}}.jpg"/></noscript>
+        <div class="placeholder-ratio"></div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<center>See more at my <a href="https://www.flickr.com/photos/mildronize">Flickr</a></center>
