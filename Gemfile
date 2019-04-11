@@ -5,7 +5,6 @@ gem 'html-proofer'
 gem 'jekyll-feed'
 gem 'pygments.rb'
 gem 'redcarpet'
-gem 'html-proofer'
 gem 'jekyll-paginate-v2'
 
 # # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
