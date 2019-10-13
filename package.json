@@ -42,7 +42,7 @@
     "react-dom": "^16.5.1",
     "recursive-readdir": "^2.2.2",
     "sync": "^0.2.5",
-    "yarn": "^1.13.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
