@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://jekyll.mildronize.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jekyll.mildronize.com/" rel="alternate" type="text/html" /><updated>2019-10-14T13:19:48+00:00</updated><id>https://jekyll.mildronize.com/</id><title type="html">Mildronize’s blog</title><subtitle>My notes and interesting things</subtitle><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><entry><title type="html">React Design Patterns</title><link href="https://jekyll.mildronize.com/en/react-design-patterns/" rel="alternate" type="text/html" title="React Design Patterns" /><published>2019-04-11T00:00:00+00:00</published><updated>2019-04-11T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/en/react-design-patterns</id><content type="html" xml:base="https://jekyll.mildronize.com/en/react-design-patterns/">&lt;p&gt;Hi everyone, here is not getting started guide for writing React. You should have some basic of React such as &lt;a href=&quot;https://reactjs.org/docs/hello-world.html&quot;&gt;basic concept of React&lt;/a&gt; and practical &lt;a href=&quot;https://reactjs.org/tutorial/tutorial.html&quot;&gt;React tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;I’m follwing &lt;a href=&quot;https://github.com/airbnb/javascript/tree/master/react&quot;&gt;Airbnb styleguide&lt;/a&gt; and using  react in pattern books for references https://github.com/krasimir/react-in-patterns, &lt;a href=&quot;https://github.com/vasanthk/react-bits&quot;&gt;https://github.com/vasanthk/react-bits&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;designing-react-web-application&quot;&gt;Designing React Web Application&lt;/h3&gt;
+
+&lt;p&gt;Nowaday, we have many appoaches to design the composition of react component.&lt;/p&gt;
+
+&lt;p&gt;Here is one of approaches to design&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Preparation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Use Airbnb Styleguide for consistency code style&lt;/li&gt;
+  &lt;li&gt;Use popular React boilerplate (&lt;code class=&quot;highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt;) for reducing complexiity to manage build tools such as webpack, babel, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Basic Design&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In React documentation describes &lt;a href=&quot;https://reactjs.org/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;  for explaining how to design react component and how they compose each others. However, when I ‘ve getting started with React, I realize the component design thinking is most important thing for designing react application. In a React application, it will be at least one component, or can be divived into child component which should work with the parent one.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start with a few React component for reducing the complexity in state management.&lt;/li&gt;
+  &lt;li&gt;Break the code down to component when necessary, if it feel easier.&lt;/li&gt;
+  &lt;li&gt;The component can break into 2 parts: &lt;strong&gt;Container Component&lt;/strong&gt; and &lt;strong&gt;Presentional Component&lt;/strong&gt;, when necessary.
+    &lt;ol&gt;
+      &lt;li&gt;Container Component&lt;/li&gt;
+      &lt;li&gt;Presentational Component&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Advanced Design: Reusable Components&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Break the code down to component if you want to reuse the components.&lt;/li&gt;
+  &lt;li&gt;Use High-order Component when necessary.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;composing-components&quot;&gt;Composing components&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Passing a child as a prop&lt;/li&gt;
+  &lt;li&gt;Passing state through the props&lt;/li&gt;
+  &lt;li&gt;Using top component for storing state&lt;/li&gt;
+  &lt;li&gt;Using simple state management library for small application
+    &lt;ol&gt;
+      &lt;li&gt;Honorable mention libraries: &lt;a href=&quot;https://github.com/gunn/pure-store&quot;&gt;pure-store&lt;/a&gt;, &lt;a href=&quot;https://github.com/jamiebuilds/unstated&quot;&gt;unstated&lt;/a&gt; and &lt;a href=&quot;https://github.com/developit/unistore&quot;&gt;unistore&lt;/a&gt;other approches are shown at &lt;a href=&quot;https://github.com/GantMan/ReactStateMuseum&quot;&gt;React State Musuem&lt;/a&gt; which good place for reviewing react state management library.&lt;/li&gt;
+      &lt;li&gt;I’m interesting in &lt;a href=&quot;https://github.com/mobxjs/mobx&quot;&gt;mobx&lt;/a&gt; approaches for small application&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Using  &lt;a href=&quot;https://github.com/reduxjs/redux&quot;&gt;Redux&lt;/a&gt; , &lt;a href=&quot;https://github.com/mobxjs/mobx&quot;&gt;mobx&lt;/a&gt; for big application&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Alternative, you can use MVC approach if you familiar, however, in my opinion using MVC on react.&lt;/p&gt;
+
+&lt;h2 id=&quot;design-patterns-and-techniques&quot;&gt;Design Patterns and Techniques&lt;/h2&gt;
+
+&lt;h3 id=&quot;component-organization-templates--patterns&quot;&gt;Component Organization Templates &amp;amp; Patterns&lt;/h3&gt;
+
+&lt;h4 id=&quot;full-feature-stateful-component&quot;&gt;Full Feature (Stateful Component)&lt;/h4&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;smiling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smiling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smiling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;componentWillMount&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// add event listeners (Flux Store, WebSocket, document, etc.)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;componentDidMount&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// React.getDOMNode()&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;componentWillUnmount&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// remove event listeners (Flux Store, WebSocket, document, etc.)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;smilingMessage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smiling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;is smiling&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smilingMessage&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defaultProps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Guest'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;propTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PropTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ref: https://github.com/chantastic/react-patterns#component-organization&lt;/p&gt;
+
+&lt;h4 id=&quot;stateless-component&quot;&gt;Stateless Component&lt;/h4&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StatelessComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      This is Stateless Component.
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;stateless-component-with-props&quot;&gt;Stateless Component with props&lt;/h4&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StatelessComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Container Component&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We can split our component into 2 types: Container component, Presentational component&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// CommentList.js&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CommentList&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;—&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// CommentListContainer.js&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CommentListContainer&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;getInitialState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;componentDidMount&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/my-comments.json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;dataType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CommentList&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;comments=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Read more for &lt;a href=&quot;https://krasimir.gitbooks.io/react-in-patterns/content/chapter-06/&quot;&gt;Presentational and container components&lt;/a&gt;, using ref https://github.com/chantastic/react-patterns#container-components&lt;/p&gt;
+
+&lt;h3 id=&quot;jsx-rendering&quot;&gt;JSX Rendering&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Message&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if-else&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;isTrue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Rendered when `TRUE`&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Rendered when `FALSE`&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Loop items for JSX&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;todos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Write a paper'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sampleComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        	&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;key=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;todo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;two-way-binding&quot;&gt;Two way binding&lt;/h3&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+  &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;textbox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textbox&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;onChange=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;textbox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textbox&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;composing-components-1&quot;&gt;Composing components&lt;/h2&gt;
+
+&lt;h3 id=&quot;file-structure&quot;&gt;File Structure&lt;/h3&gt;
+
+&lt;p&gt;Todo Components&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── components
+│   ├── todo
+│      ├── index.jsx
+│      ├── AddTodo.jsx
+│      └── TodoList
+│          ├── index.jsx
+│          └── Todo.jsx
+├── app.js
+└── index.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;passing-a-child-as-a-prop&quot;&gt;Passing a child as a prop&lt;/h3&gt;
+
+&lt;p&gt;Every React component has &lt;code class=&quot;highlighter-rouge&quot;&gt;children&lt;/code&gt; props.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Hello there!&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      Resting content
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ref: https://krasimir.gitbooks.io/react-in-patterns/content/chapter-04/#passing-a-child-as-a-prop&lt;/p&gt;
+
+&lt;h3 id=&quot;passing-state-through-the-props&quot;&gt;Passing state through the props&lt;/h3&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Counter.jsx&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;nx&quot;&gt;handleAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CounterView&lt;/span&gt; 
+        &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;onAdd=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CounterView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// CounterView.jsx&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CounterView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onAdd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Count: &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onAdd&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Add&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;using-top-component-for-storing-state&quot;&gt;Using top component for storing state&lt;/h3&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// store.js&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;getRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Counter.jsx&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;nx&quot;&gt;handleAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CounterView&lt;/span&gt; 
+        &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CounterView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// CounterView.jsx&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CounterView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Count: &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Add&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks for &lt;a href=&quot;https://anastue.com/&quot;&gt;Anas&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;share-state-between-components&quot;&gt;Share state between components&lt;/h3&gt;
+
+&lt;p&gt;Design choice:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Small Application: &lt;a href=&quot;https://github.com/gunn/pure-store&quot;&gt;pure-store&lt;/a&gt;, &lt;a href=&quot;https://github.com/jamiebuilds/unstated&quot;&gt;unstated&lt;/a&gt; and &lt;a href=&quot;https://github.com/developit/unistore&quot;&gt;unistore&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;Small - Medium Application: &lt;a href=&quot;https://github.com/mobxjs/mobx&quot;&gt;mobx&lt;/a&gt; (Also using &lt;a href=&quot;https://github.com/jamiebuilds/unstated&quot;&gt;unstated&lt;/a&gt; and &lt;a href=&quot;&quot;&gt;unistore&lt;/a&gt; )&lt;/li&gt;
+  &lt;li&gt;Using  &lt;a href=&quot;https://github.com/reduxjs/redux&quot;&gt;Redux&lt;/a&gt; , &lt;a href=&quot;https://github.com/mobxjs/mobx&quot;&gt;mobx&lt;/a&gt; for big application&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Read more how to implement in each state management library in &lt;a href=&quot;https://github.com/GantMan/ReactStateMuseum&quot;&gt;React State Musuem&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-choose-the-composing-component-pattern&quot;&gt;How to choose the composing component pattern?&lt;/h3&gt;
+
+&lt;h2 id=&quot;style-guide--naming&quot;&gt;Style Guide &amp;amp; Naming&lt;/h2&gt;
+
+&lt;h3 id=&quot;style-guide&quot;&gt;Style Guide&lt;/h3&gt;
+
+&lt;p&gt;Read more in &lt;a href=&quot;https://github.com/airbnb/javascript/tree/master/react&quot;&gt;Airbnb’s Style guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;naming-events&quot;&gt;Naming Events&lt;/h3&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Owner&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// handle click event&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Original: &lt;a href=&quot;https://github.com/chantastic/react-patterns#naming-events&quot;&gt;https://github.com/chantastic/react-patterns#naming-events&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;other-resources&quot;&gt;Other Resources&lt;/h2&gt;
+
+&lt;p&gt;Other topics can read in below resources:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/contributing/design-principles.html&quot;&gt;React Design principles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/airbnb/javascript/tree/master/react&quot;&gt;Airbnb React/JSX Style Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/krasimir/react-in-patterns&quot;&gt;React in pattern by krasimir&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/planningcenter/react-patterns&quot;&gt;React patterns at Planning Center Online&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://reactpatterns.com/&quot;&gt;React patterns by Michael Chan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vasanthk/react-bits&quot;&gt;React patterns, techniques, tips and tricks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;State&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/GantMan/ReactStateMuseum&quot;&gt;React State Musuem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;P.S. PR, Suggestions are welcome&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="react" /><category term="pattern" /><category term="javascript" /><category term="es6" /><summary type="html">Hi everyone, here is not getting started guide for writing React. You should have some basic of React such as basic concept of React and practical React tutorial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/9u7jxihxp12n06w/2019-03-13-react-pattern.jpg?raw=1" /></entry><entry><title type="html">Amazing UI Design Articles</title><link href="https://jekyll.mildronize.com/en/amazing-ui-design-articles/" rel="alternate" type="text/html" title="Amazing UI Design Articles" /><published>2019-03-24T00:00:00+00:00</published><updated>2019-03-24T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/en/amazing-ui-design-articles</id><content type="html" xml:base="https://jekyll.mildronize.com/en/amazing-ui-design-articles/">&lt;h2 id=&quot;refactor-ui&quot;&gt;Refactor UI&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://refactoringui.com/&quot;&gt;Adam Wathan &amp;amp; Steve Schoger&lt;/a&gt;, full stack developer, who are facing the design problem. They shows how amazing way to refactor UI without design skill in thier “&lt;a href=&quot;https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886&quot;&gt;7 Practical Tips for Cheating at Design&lt;/a&gt;” article.&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://cdn-images-1.medium.com/max/2600/1*KYZikUrx9F02cJU9kpn_gQ.png&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://cdn-images-1.medium.com/max/2600/1*KYZikUrx9F02cJU9kpn_gQ.png&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Another good arcticle from &lt;a href=&quot;https://refactoringui.com/&quot;&gt;Adam Wathan &amp;amp; Steve Schoger&lt;/a&gt; for redesigning application UI in Laravel forum website via their article, &lt;a href=&quot;https://medium.com/refactoring-ui/redesigning-laravel-io-c47ac495dff0&quot;&gt;Redesigning Laravel.io&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://cdn-images-1.medium.com/max/2400/1*AZkkwzahAr0VpKdJ4OzRNQ.png&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://cdn-images-1.medium.com/max/2400/1*AZkkwzahAr0VpKdJ4OzRNQ.png&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;design&quot;&gt;Design&lt;/h2&gt;
+
+&lt;p&gt;Fundamental Design for web via &lt;a href=&quot;https://medium.freecodecamp.org/before-you-can-master-design-you-must-first-master-the-fundamentals-1981a2af1fda&quot;&gt;Before you can master design, you must first master the fundamentals&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This article talks about 4 fundamentals&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go back to the basics with type&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use space to create balance&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use size to establish visual hierarchy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use color to convey meaning&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;uiux-animation&quot;&gt;UI/UX Animation&lt;/h2&gt;
+
+&lt;p&gt;Other interesting stuff about design&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://cdn-images-1.medium.com/max/2600/1*boQYFGPLtlDof3RRs124bQ.gif&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://cdn-images-1.medium.com/max/2600/1*boQYFGPLtlDof3RRs124bQ.gif&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;https://medium.com/ux-in-motion/creating-usability-with-motion-the-ux-in-motion-manifesto-a87a4584ddc&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="web-design" /><category term="design" /><category term="ui" /><category term="factor" /><category term="ux" /><summary type="html">Refactor UI</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/zk9rpnoxncolajw/2019-03-24-amazing-ui-design-articles.jpg?raw=1" /></entry><entry><title type="html">สิ่งที่ได้รับจากการเรียนวิศวกรรมคอมพิวเตอร์ปริญญาโท</title><link href="https://jekyll.mildronize.com/th/what-i-get-from-master-degree/" rel="alternate" type="text/html" title="สิ่งที่ได้รับจากการเรียนวิศวกรรมคอมพิวเตอร์ปริญญาโท" /><published>2019-03-17T00:00:00+00:00</published><updated>2019-03-17T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/what-i-get-from-master-degree</id><content type="html" xml:base="https://jekyll.mildronize.com/th/what-i-get-from-master-degree/">&lt;p&gt;สวัสดีคับ ผมชื่อมายด์คับ ห่างหายจากการเขียนบล็อกมานานแสนนานมาก เนื่องจากต้องไปรับราชการทหารอยู่ 6 เดือนระหว่างตอนที่เรียนโทอยู่ครับ วันนี้ก็มีเรื่องเล่ามาแชร์ ให้ฟังคับว่า เป็นอย่างไรบ้างระหว่างการเรียน และได้อะไรมาบ้าง (อาจจะไม่ครบถ้วน ถ้านึกออกจะมาใส่เพิ่มนะครับ) ถือว่าเป็นการแบ่งปันนะคับ&lt;/p&gt;
+
+&lt;h2 id=&quot;สิ่งที่ได้จากการเรียนโท&quot;&gt;สิ่งที่ได้จากการเรียนโท&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+&lt;strong&gt;องค์ความรู้ต่างๆ&lt;/strong&gt; : แน่นอนครับการเรียนที่สูงขึ้นก็ต้องได้ความรู้ในด้านที่เราสนใจลึกลงไป&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;ความสามารถในการเรียนรู้สิ่งใหม่ๆ ด้วยตนเอง&lt;/strong&gt;: หลายๆ สิ่งที่เราศึกษาเป็นสิ่งที่ยังไม่มีคนทำทีครับ ดังนั้นเราต้องต่อยอดองค์ความรู้เดิมให้ได้ ถ้ามีไม่พอก็ต้องศึกษาเพิ่ม ถ้ามีผู้รู้ก็ยิ่งดีเลย ถ้าไม่มีใครให้ถามก็ต้องพึ่งตัวเองครับ&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;ทักษะวิจัย&lt;/strong&gt;: ตรงนี้ค่อนข้างยาว ยกไปพูดหัวข้อถัดไปละกันคับ&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;การพัฒนาตัวเอง&lt;/strong&gt;: ในหลายๆ ด้าน ไม่ว่าการบริหารจัดการเวลา การจัดการตัวเอง การวางแผน ความรับผิดชอบ&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;ทักษะการสื่อสาร&lt;/strong&gt;: ให้คนอื่นเข้าใจ การพูดการนำเสนอ การทำสไลด์&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ทักษะวิจัย&quot;&gt;ทักษะวิจัย&lt;/h2&gt;
+&lt;p&gt;ผมเรียนแบบแผน ก2 ก็คือ มีเรียน lecture ด้วยประมาณ 4-5 วิชา แล้วก็มีวิทยานิพนธ์ด้วย&lt;/p&gt;
+
+&lt;p&gt;ทักษะวิจัย เป็นอะไรที่ไม่เคยเข้าใจเลยไม่ว่าจะผ่านการทำโครงงานหรือโปรเจ็คต่างๆมา พอสมควร จนกระทั่งเรียนโทนี่แหละ และเป็นอะไรที่อธิบายได้ยากครับว่ามันเป็นยังไง อารมณ์เหมือนว่าเราต้องเข้าใจถึงโจทย์หรือปัญหา ภาษาทางวิจัยเค้าเรียกว่า problem statement ว่าอะไรคือประเด็นปัญหา แล้วประเด็นปัญหาที่ว่านั่นเป็นปัญหาทางวิศวกรรมคอมพิวเตอร์หรือไม่ ( เกี่ยวข้องกับสาขาที่เรียน ) แล้วเราจะแก้ปัญหาอย่างไร เสนอแนวทางการแก้ปัญหาอย่างไร แล้ววัดผลอะไรบ้าง มีปัจจัยอะไรบ้างที่จะวิเคราะห์ สรุปผลการทดลอง แล้วอะไรคือ contribution สิ่งที่จะเป็นประโยชน์หรือองค์ความรู้ที่เกิดขึ้นมาใหม่ ซึ่งล้อกับวัตถุประสงค์ที่เราตั้งไว้&lt;/p&gt;
+
+&lt;p&gt;โดยความคิดเห็นของผมเอง คิดว่ามันเป็นทักษะที่มีประโยชน์ในหลายๆ ด้านเลยครับ สิ่งจริงๆ สิ่งที่ได้จริงจากการเรียนคือไม่ใช่แค่ความรู้ ความชำนาญในเรื่องที่เกี่ยวข้องเท่านั้น แต่ยังสามารถคิดริเริ่มสิ่งใหม่ๆ โดยไม่กลัว และยังสร้างองค์ความรู้ใหม่ และอธิปรายสิ่งที่ที่เกิดขึ้นได้ เพราะว่าบางเหตุการณ์มันก็ไม่ได้เป็นไปตามคาดคับ&lt;/p&gt;
+
+&lt;h2 id=&quot;โจทย์ของผม&quot;&gt;โจทย์ของผม&lt;/h2&gt;
+&lt;p&gt;นอกจากปริญญาบัตรและทักษะวิจัย สิ่งที่ผมคาดหวังว่าจะได้จากเรียนคือทักษะที่เกี่ยวข้องกับวิชาชีพ&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;ปริญญาบัตร&lt;/li&gt;
+  &lt;li&gt;เทคโนโลยีที่ใช้ต้องทันสมัย&lt;/li&gt;
+  &lt;li&gt;และสุดท้ายเรื่องที่ทำต้องทันสมัยด้วย&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;สิ่งที่ผมทำ&quot;&gt;สิ่งที่ผมทำ&lt;/h2&gt;
+
+&lt;p&gt;ก่อนอื่นเลยต้องอธิบายภาพรวมก่อน คือ ผมปรับปรุงประสิทธิภาพฐานข้อมูล opentsdb ให้สามารถ query เร็วกว่าเดิมโดยใช้ cache ของ memcached และตรงกับเงื่อนไขของผมพอดี&lt;/p&gt;
+
+&lt;h2 id=&quot;รวมสิ่งที่ได้จากการเรียน&quot;&gt;รวมสิ่งที่ได้จากการเรียน&lt;/h2&gt;
+
+&lt;p&gt;จะเขียนสิ่งที่ได้จากการเรียนโท ออกเป็นบล็อกย่อยๆ ตามหัวข้อข้างล่าง&lt;/p&gt;
+
+&lt;h3 id=&quot;related-article&quot;&gt;Related Article&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;การวาดกราฟจากข้อมูลจำนวนมากด้วย Numpy (Plot graph with numpy )&lt;/li&gt;
+  &lt;li&gt;automate test ด้วย python ซึ่งไปรัน docker อีกทีนึง&lt;/li&gt;
+  &lt;li&gt;เขียนโปรแกรม linux บน Windows (MacOS ก็ได้ คอนเซ็ปเดียวกัน) แบบ Seamless คือทำ two-way sync โดยใช้ docker, unison, intellji + script นิดหน่อย&lt;/li&gt;
+  &lt;li&gt;OpenTSDB
+    &lt;ol&gt;
+      &lt;li&gt;Intro &amp;amp; Architecture&lt;/li&gt;
+      &lt;li&gt;OpenTSDB Internal&lt;/li&gt;
+      &lt;li&gt;Asynchronous programming using deferred object ( async Hbase )&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;memcached &amp;amp; internal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;supported-stuffs-and-tools&quot;&gt;Supported Stuffs and tools&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Dotfiles : vim , zsh, tmux&lt;/li&gt;
+  &lt;li&gt;docker &amp;amp; docker compose&lt;/li&gt;
+  &lt;li&gt;Tdd. &amp;amp; unit test with python &amp;amp; java&lt;/li&gt;
+  &lt;li&gt;Project pywatch4test&lt;/li&gt;
+  &lt;li&gt;Ci by Jenkins &amp;amp; Travis ci using mildronize.com as a case study&lt;/li&gt;
+  &lt;li&gt;Vim cheat sheet thai&lt;/li&gt;
+  &lt;li&gt;PSU Latex template&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="experience" /><category term="study" /><category term="research" /><category term="opentsdb" /><category term="master-degree" /><summary type="html">สวัสดีคับ ผมชื่อมายด์คับ ห่างหายจากการเขียนบล็อกมานานแสนนานมาก เนื่องจากต้องไปรับราชการทหารอยู่ 6 เดือนระหว่างตอนที่เรียนโทอยู่ครับ วันนี้ก็มีเรื่องเล่ามาแชร์ ให้ฟังคับว่า เป็นอย่างไรบ้างระหว่างการเรียน และได้อะไรมาบ้าง (อาจจะไม่ครบถ้วน ถ้านึกออกจะมาใส่เพิ่มนะครับ) ถือว่าเป็นการแบ่งปันนะคับ</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/mophblmhv1psxua/2019-03-17-what-i-get-from-master-degree.jpg?raw=1" /></entry><entry><title type="html">ได้ 99 คะแนนจาก Google Insights &amp;amp; เรียนรู้การทำ web optimization</title><link href="https://jekyll.mildronize.com/th/99-score-google-insight-web-optimization/" rel="alternate" type="text/html" title="ได้ 99 คะแนนจาก Google Insights &amp; เรียนรู้การทำ web optimization" /><published>2018-09-17T00:00:00+00:00</published><updated>2018-09-17T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/99-score-google-insight-web-optimization</id><content type="html" xml:base="https://jekyll.mildronize.com/th/99-score-google-insight-web-optimization/">&lt;p&gt;ได้ 99 คะแนนจาก Google Insights &amp;amp; เรียนรู้การทำ web optimization ผ่านการพัฒนาเว็บบล็อกให้ทันสมัย
+จากการพัฒนา &lt;a href=&quot;https://mildronize.com/notes/my-blog-dev/&quot;&gt;blog version แรก&lt;/a&gt;  ซึ่ง clone theme Hyde ของ &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; มาแล้วปรับแก้มาเรื่อยๆ&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/sqk4d1no2xi4os0/2018-09-17-99-score-google-insight-web-optimization-1.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/sqk4d1no2xi4os0/2018-09-17-99-score-google-insight-web-optimization-1.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/gt0p9ta4da7t6gs/2018-09-17-99-score-google-insight-web-optimization-2.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/gt0p9ta4da7t6gs/2018-09-17-99-score-google-insight-web-optimization-2.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;ตอนแรกไปลองใช้ &lt;a href=&quot;https://gatsbyjs.org/&quot;&gt;GatsbyJS&lt;/a&gt; อยู่สักพัก ซึ่งใช้ React ทั้งระบบเลย แต่สุดท้ายก็ย้ายจาก Gatsby กลับมาใช้ Jekyll เหมือนเดิม เท่าที่ลองใช้งานดู Gatsby เร็วกว่าในหลายๆ ด้านเลย ทั้งด้าน dev และ รันขึ้น production เป็น pwa ด้วย&lt;/p&gt;
+
+&lt;p&gt;แต่ดูเหมือนต้องปรับจูนเยอะกว่าจะได้ blog แบบที่เราต้องการ เลยไม่เอาดีกว่า ยอมใช้ Jekyll ที่ compile ช้ากว่า แต่ เราถนัดกว่า ( เทคโนโลยี แบบดั้งเดิมดี ไม่ต้องเปลี่ยนเยอะ)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ตรงนี้จากประสบการณ์ตัวเอง เนื่องจากว่าเว็บบล็อกไม่ได้เขียนโค้ด หรือพัฒนาอยู่บ่อยๆ ส่วนใหญ่เน้นไปที่เขียนบทความใหม่ๆ มากกว่า ดังนั้น เมื่อเวลาผ่านไปนานๆ และเทคโนโลยีฝั่งเว็บไปเร็วมาก จนบางครั้งอาจจะทำให้เทคโนโลยีเว็บเดิมที่เคยใช้อยู่ทำงานไม่ได้ ใน browser สมัยใหม่ หรือการปรับเปลี่ยนให้ทันยุคทันสมัยต้องมานั่งแก้เว็บใหม่อีก&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;ดังนั้น&lt;/strong&gt; ผมเลยตัดสินใจใช้เทคโนโลยีเก่าหน่อย ที่ยังคงเป็น long term support แต่ก็ยังคงสามารถทำให้ดูทันสมัยได้ และไม่ได้ทำงานช้าด้วยซึ่งก็เหมาะสมกับเว็บบล็อกดี&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;สุดท้ายก็ตัดสินใจจูน frontend ของบล็อกเดิม ที่เป็น Jekyll ใหม่ให้เป็น Responsive มากขึ้น ทั้งแง่ของ typography ด้วย&lt;/p&gt;
+
+&lt;h2 id=&quot;ผลการทดสอบจาก-google-insights&quot;&gt;ผลการทดสอบจาก google insights&lt;/h2&gt;
+&lt;p&gt;จากการทดสอบ google insights ก็ได้ 99 คะแนนบน mobile และ 97 คะแนนบน desktop&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/2irrnt11wei4aq7/2018-09-17-99-score-google-insight-web-optimization-3.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/2irrnt11wei4aq7/2018-09-17-99-score-google-insight-web-optimization-3.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/k6ib5pfgunc6dr0/2018-09-17-99-score-google-insight-web-optimization-4.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/k6ib5pfgunc6dr0/2018-09-17-99-score-google-insight-web-optimization-4.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ปรับปรุงเว็บเทคโนโลยีเก่าให้ทันสมัย&quot;&gt;ปรับปรุงเว็บเทคโนโลยีเก่าให้ทันสมัย&lt;/h2&gt;
+
+&lt;p&gt;หลักๆ ที่ปรับจูน Web สมัยเก่าให้ดูดี ทันสมัย และเร็วด้วย&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;เปลี่ยน core เป็น Bulma framework ทั้งหมด ทำให้ชีวิตการทำ responsive ง่ายขึ้น&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เปลี่ยนจากการโหลด CSS แบบ Synchronous (Blocking) ให้โหลดแบบ Async ใช้ไลบรารี่ &lt;a href=&quot;https://github.com/filamentgroup/loadCSS&quot;&gt;LoadCSS&lt;/a&gt; (ซึ่งแนะนำโดย Google Insights) ในการโหลด CSS เข้ามา เมื่อโหลดเสร็จ&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ผลที่ได้คือ&quot;&gt;ผลที่ได้คือ&lt;/h3&gt;
+
+&lt;p&gt;หน้าเว็บโหลดเร็วขึ้น แต่ข้อเสียคือ มันจะเห็นหน้าตาเว็บแบบไม่มี css ใดๆ เลย ซึ่งไม่สวยเลย 55 พอ CSS โหลดเข้ามาหน้าตาเว็บก็เป็นแบบที่เห็น แบบนี้เลยคับ&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/vks0ebprrdansm7/2018-09-17-99-score-google-insight-web-optimization-5.gif?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/vks0ebprrdansm7/2018-09-17-99-score-google-insight-web-optimization-5.gif?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;การใช้ &lt;strong&gt;sass&lt;/strong&gt; ช่วยทำให้ชีวิตง่ายขึ้นเยอะในการจัดการค่าต่างๆ ในการตกแต่งหน้าเว็บ ให้มันเป็นอันหนึ่งอันเดียวกัน (consistency)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ใช้-jekyll-sass-plugin-ในการ-bundle-sass-และ-css&quot;&gt;ใช้ Jekyll sass plugin ในการ bundle sass และ css&lt;/h2&gt;
+
+&lt;p&gt;(อนาคตจะไปใช้ webpack ด้วย) แยกเป็น 2 ไฟล์คือ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;preload_styles.css&lt;/code&gt; ไฟล์นี้ ถ้าโหลดผ่าน &lt;code class=&quot;highlighter-rouge&quot;&gt;LoadCSS&lt;/code&gt; จะเหมือนรูปข้างบน จะใส่แบบปกติ ก็เดี๋ยวโดน Google หักคะแนน หาว่าโหลด stylesheet แบบ Blocking เดี๋ยวทำให้เว็บช้า &lt;strong&gt;สรุปคือ&lt;/strong&gt; จัดการฝั่งโค้ด CSS เข้าไปใน HTML ซะเลย&lt;/li&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;postload_styles.css&lt;/code&gt; ไฟล์นี้โหลดผ่าน &lt;code class=&quot;highlighter-rouge&quot;&gt;LoadCSS &lt;/code&gt;ไฟล์นี้จะเป็น พวก asset ขนาดใหญ่ พวกโหลด font, กับ Icon ต่างๆ (&lt;a href=&quot;https://fontawesome.com/&quot;&gt;Font Awesome&lt;/a&gt;) ซึ่งไม่จำเป็นต้องมาก่อนครั้งแรกที่เว็บโหลดก็ได้&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;เปลี่ยนเทคโนโลยีหน้า-search&quot;&gt;เปลี่ยนเทคโนโลยีหน้า Search&lt;/h2&gt;
+
+&lt;p&gt;จาก AngularJS ซึ่ง&lt;a href=&quot;https://github.com/mildronize/mildronize.github.io/commit/831f4fb466d0f9cd513a45c299b946ca2f398aed&quot;&gt;เขียนตั้งแต่ปี 2558&lt;/a&gt; ให้เป็น React โดยเป็นการใช้ React แบบ library จริงๆ คือเฉพาะส่วนของ content เท่านั้นที่เป็น React ที่เหลือยังคงเป็น HTML ธรรมดา (Header, Footer) ซึ่ง bundle ใส่ในไฟล์ &lt;code class=&quot;highlighter-rouge&quot;&gt;search.js&lt;/code&gt; ปรับหน้า search ให้เป็น responsive บน mobile แยกต่างหากด้วย&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/3d4vqbnd424wbsh/2018-09-17-99-score-google-insight-web-optimization-6.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/3d4vqbnd424wbsh/2018-09-17-99-score-google-insight-web-optimization-6.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ทำเว็บ-bundle-ด้วย-webpack4&quot;&gt;ทำเว็บ Bundle ด้วย Webpack4&lt;/h2&gt;
+&lt;p&gt;เนื่องจากเป็น Static page ธรรมดา ไม่มีการทำ SPA แต่อย่างใด ดังนั้นเลยใช้การแพ็กเป็น bundle ( คือรวมทุกๆ ไฟล์ เข้ามาเป็นไฟล์เดียว หรือแบ่งเป็นหลายๆ ส่วนแล้วแต่โมดูลก่อนก็ได้ ) ซึ่ง &lt;a href=&quot;https://webpack.js.org/&quot;&gt;webpack&lt;/a&gt; ก็มาตอบโจทย์ตรงนี้ได้ เพื่อให้ลดจำนวน request ส่งไปยัง server ตอนนี้เว็บแบ่งออกเป็น 3 ไฟล์ (entry)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; โหลดเฉพาะหน้าแรกเท่านั้น เป็นการเรียกใช้ &lt;a href=&quot;https://momentjs.com/&quot;&gt;Moment.js&lt;/a&gt; ( &lt;a href=&quot;https://github.com/jmblog/how-to-optimize-momentjs-with-webpack&quot;&gt;Optimize file size ของ Moment ด้วยไม่งั้นไฟล์อ้วนมาก&lt;/a&gt;) ในการแปลงเวลาของแต่บล็อก ให้แสดงผลว่า บล็อกเขียนมาแล้วกี่วัน&lt;/li&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toc.js&lt;/code&gt; โหลดเฉพาะหน้าที่มี Table of Content จ้า มี JQuery กับ &lt;a href=&quot;https://github.com/ghiculescu/jekyll-table-of-contents&quot;&gt;Jekyll ToC&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;search.js&lt;/code&gt;โหลดเฉพาะหน้า Search เท่านั้น ซึ่งใช้ React ในหัวข้อก่อนหน้านี้&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lazy-load-image&quot;&gt;&lt;a href=&quot;https://github.com/verlok/lazyload&quot;&gt;Lazy load image&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;คือไม่ได้โหลด รูปทุกรูปในครั้งแรกที่เว็บโหลดแต่ จะค่อยๆ โหลดเมื่อ user scroll ผ่านเท่านั้น เพื่อลดปริมาณข้อมูลที่โหลดทั้งหมด&lt;/p&gt;
+
+&lt;p&gt;สุดท้ายทำ&lt;/p&gt;
+
+&lt;h2 id=&quot;โหลดรูปภาพแบบ-เบลอก่อนแล้วเมื่อรูปโหลดเสร็จถึงจะแสดงรูปจริงแบบ-mediumcom&quot;&gt;โหลดรูปภาพแบบ เบลอก่อนแล้วเมื่อรูปโหลดเสร็จถึงจะแสดงรูปจริงแบบ &lt;a href=&quot;http://medium.com/&quot;&gt;medium.com&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;(ตรงนี้จะแชร์ในอีกบล็อกครับ) ซึ่งตรงนี้ใช้บริการแคชรูปของ &lt;a href=&quot;https://cloudimage.io/&quot;&gt;Cloudimage.io&lt;/a&gt; ซึ่งทำ cache, thumbnail ได้ง่ายมากๆ แถมให้ใช้ฟรี ตั้ง 15 GB ตรงนี้เขียน Plugin ของ Jekyll เข้ามาช่วยในการแปลง img tag ให้เป็นแบบ เบลอก่อนโหลดเสร็จด้วย&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/4t30cmbtezs3qbw/2018-09-17-99-score-google-insight-web-optimization-7.gif?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/4t30cmbtezs3qbw/2018-09-17-99-score-google-insight-web-optimization-7.gif?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;สรุป-สิ่งได้เรียนรู้จาก-google-insights&quot;&gt;สรุป สิ่งได้เรียนรู้จาก Google Insights&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ให้คำแนะนำละเอียดมาก แนะนำว่าเว็บเรามีปัญหาตรงไหนแล้ว ควรจะแก้ยังไง&lt;/li&gt;
+  &lt;li&gt;เหมาะสำหรับทดสอบเว็บแบบ responsive มีคะแนนแยกในส่วนของ mobile และ desktop&lt;/li&gt;
+  &lt;li&gt;server response time ควรจะเร็ว ถ้าช้าจะหักคะแนนตรงนี้ไปเยอะ&lt;/li&gt;
+  &lt;li&gt;Blocking rendering หรือ Synchronous rendering ตรงถ้า เอาส่วนตรงนี้ออกไปได้เว็บจะโหลดเร็วขึ้น และได้คะแนนเพิ่มด้วย&lt;/li&gt;
+  &lt;li&gt;Minify HTML, JS , CSS ตรงนี้ถ้า ถ้าบีบไฟล์ source ได้เว็บจะโหลดเร็วขึ้นด้วย และไม่ถูกหักคะแนน&lt;/li&gt;
+  &lt;li&gt;image compression ไม่จำเป็นเท่าไหร่นัก ถ้าดูจาก weight คะแนนของ insights แล้ว ถือว่าน้อยมาก แต่ถ้าทำด้วยจะดีมาก&lt;/li&gt;
+  &lt;li&gt;redirect page ไปมา ทำให้คะแนนตกจ้า เว็บก็โหลดช้า&lt;/li&gt;
+  &lt;li&gt;*** แถมการลดจำนวน request ไปยัง resource ต่างๆ ช่วยให้เว็บโหลดเร็วขึ้นด้วย ตรงนี้เราสามารถใช้ &lt;a href=&quot;https://webpack.js.org/&quot;&gt;webpack&lt;/a&gt; ช่วย bundle ได้ เพื่อรวมหลายๆ ไฟล์ is รวมเป็นไฟล์เดียว&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;สิ่งที่จะทำต่อไป&quot;&gt;สิ่งที่จะทำต่อไป&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ตอนนี้ยังใช้บน IE แล้วยังมีปัญหา เรื่องของ Image Loading&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Source code: https://github.com/mildronize/mildronize.github.io&lt;/p&gt;
+
+&lt;p&gt;แล้วพบกันใหม่ สวัสดีครับ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Cross published at &lt;a href=&quot;https://medium.com/@mildronize/%E0%B9%84%E0%B8%94%E0%B9%89-99-%E0%B8%84%E0%B8%B0%E0%B9%81%E0%B8%99%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81-google-insights-%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3-web-optimization-9b835aeac9b&quot;&gt;Medium.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="optimization" /><category term="google-insights" /><category term="responsive-web-design" /><category term="webpack" /><category term="jekyll" /><summary type="html">ได้ 99 คะแนนจาก Google Insights &amp;amp; เรียนรู้การทำ web optimization ผ่านการพัฒนาเว็บบล็อกให้ทันสมัย จากการพัฒนา blog version แรก ซึ่ง clone theme Hyde ของ Jekyll มาแล้วปรับแก้มาเรื่อยๆ</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/lxir9pr41qsc9eu/cover.jpg?raw=1" /></entry><entry><title type="html">Getting Started TDD in 30 Seconds with Python</title><link href="https://jekyll.mildronize.com/en/getting-started-tdd-30-seconds-python/" rel="alternate" type="text/html" title="Getting Started TDD in 30 Seconds with Python" /><published>2018-09-08T00:00:00+00:00</published><updated>2018-09-08T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/en/getting-started-tdd-30-seconds-python</id><content type="html" xml:base="https://jekyll.mildronize.com/en/getting-started-tdd-30-seconds-python/">&lt;p&gt;Quick start to setup python script for Test Driven Development in 30 seconds&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time start!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install Python virtual environment for human ( yay! ) &lt;a href=&quot;https://pipenv.readthedocs.io&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pipenv&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo pip install pipenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;create a directory and enter to it&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; mkdir my-tdd
+ cd my-tdd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Activate Python virtual environment, then the tool will automatically create it (if it’s not exist!)&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; pipenv shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install &lt;a href=&quot;https://docs.pytest.org/&quot;&gt;pytest&lt;/a&gt; as a dev dependency&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; pipenv install pytest --dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;create file and test file in any place of the directory&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;# in lib.py&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;
+
+ &lt;span class=&quot;c&quot;&gt;# in lib_test.py or test_lib.py&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;lib&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;let’s test&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; pytest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Getting result!&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/bgwfkw2d70jp4xk/Getting%20Started%20TDD%20in%2030%20Seconds%20with%20Python-02.png?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/bgwfkw2d70jp4xk/Getting%20Started%20TDD%20in%2030%20Seconds%20with%20Python-02.png?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;The structure will be like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lib.py
+lib_test.py
+Pipfile
+Pipfile.lock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;extra&quot;&gt;&lt;strong&gt;Extra!&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;You can use automatically test your code when the code’s changed using &lt;a href=&quot;https://github.com/joeyespo/pytest-watch&quot;&gt;pytest-watch&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pipenv install pytest-watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s fun with TDD&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ptw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Time stoppppppppppp!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As I said before, this blog will end within 30 seconds&lt;/p&gt;
+
+&lt;p&gt;Thanks guy, any question, pls comment&lt;/p&gt;
+
+&lt;p&gt;Good bye, see you&lt;/p&gt;
+
+&lt;p&gt;P.S. fastest blogging ever 🙏&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Cross published at &lt;a href=&quot;https://medium.com/@mildronize/getting-started-tdd-in-30-seconds-with-python-8113d6c94753&quot;&gt;Medium.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="python" /><category term="tdd" /><category term="pipenv" /><category term="pytest" /><summary type="html">Quick start to setup python script for Test Driven Development in 30 seconds</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/ai9dub2ym6qv5pb/Getting%20Started%20TDD%20in%2030%20Seconds%20with%20Python.jpg?raw=1" /></entry><entry><title type="html">Promise, Async, Await ของ JS ES6+ ฉบับสั้นๆ ไม่พูดเยอะ เจ็บคอ แถม RxJS</title><link href="https://jekyll.mildronize.com/th/promise-async-await-rxjs-js-es6/" rel="alternate" type="text/html" title="Promise, Async, Await ของ JS ES6+ ฉบับสั้นๆ ไม่พูดเยอะ เจ็บคอ แถม RxJS" /><published>2018-09-02T00:00:00+00:00</published><updated>2018-09-02T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/promise-async-await-rxjs-js-es6</id><content type="html" xml:base="https://jekyll.mildronize.com/th/promise-async-await-rxjs-js-es6/">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;อ่านฉันหน่อย&lt;/strong&gt;:  บทความนี้ใช้ javascript ES6 นะครับ ใครยังไม่ชินไปตามอ่านได้ใน Cheat sheet นี้เลย มีภาษาไทยด้วย&lt;/p&gt;
+
+  &lt;p&gt;https://github.com/mbeaudru/modern-js-cheatsheet/blob/master/translations/th-TH.md&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;หมายเหตุ ต่อไป:&lt;/strong&gt;  ผมเขียน Python, C เป็นหลักนะครับ Java เป็นรอง แต่เขียน Async บน Java ด้วย ดังนั้น อาจจะไม่ถูกใจขา JS&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;สวัสดีครับ บล็อกนี้มาสั้นๆ ไม่เกริ่นทีมา ว่าทำไมถึงใช้ และหลักการต่างๆ ข้ามไว้ก่อน เพราะเราขี้เกียจเขียน (ไว้ค่อยกลับมาเขียน 555)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;สรุปสั้นๆ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ใช้ &lt;strong&gt;Promise&lt;/strong&gt; เพื่อแก้ปัญหา Callback Hell&lt;/li&gt;
+  &lt;li&gt;ใช้ &lt;strong&gt;Async, Await&lt;/strong&gt; เพื่อไม่ต้องใช้ &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; แล้วยังไงล่ะ ไปดู&lt;/li&gt;
+  &lt;li&gt;เนื่องจาก Promise &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve&lt;/code&gt; ได้แค่ครั้งเดียว ถ้าอยาก &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve&lt;/code&gt; หลายครั้ง เช่นข้อมูลแบบ stream ใช้ &lt;strong&gt;RxJS&lt;/strong&gt; เพื่อแก้ปัญหา&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;สรุปจบ ไปดูโค๊ด&lt;/p&gt;
+
+&lt;p&gt;เราจะเขียน Promise กันง่ายๆ คือ ให้ฟังชั่นที่ทำงานนานๆ ตัวนึงชื่อ &lt;code class=&quot;highlighter-rouge&quot;&gt;upperAfter&lt;/code&gt; โดยทำหน้าที่แปลงเป็นตัวพิมพ์ใหญ่ หลังจาก 2 วินาที ไปดูตัวอย่างกัน&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/7se4umjvmx1jbgx/promise.gif?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/7se4umjvmx1jbgx/promise.gif?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1-promise&quot;&gt;1. Promise&lt;/h2&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;upperAfter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;start upperAfter('test',2000)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;upperAfter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finish upperAfter('test',2000)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;เมื่อเรารัน &lt;code class=&quot;highlighter-rouge&quot;&gt;main()&lt;/code&gt; แล้ว มันจะทำงานดังนี้&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;เรียก &lt;code class=&quot;highlighter-rouge&quot;&gt;upperAfter('test',2000)&lt;/code&gt; จะ return เป็น Promise ออกมา&lt;/li&gt;
+  &lt;li&gt;object ของ promise จะสามารถต่อด้วย &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; หรือ &lt;code class=&quot;highlighter-rouge&quot;&gt;.catch()&lt;/code&gt; ก็ได้
+    &lt;ul&gt;
+      &lt;li&gt;ถ้าทำสำเร็จก็ใช้ &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt;  (คือค่า ที่ถูก &lt;em&gt;resolve&lt;/em&gt; ออกมา ในที่นี้คือ &lt;code class=&quot;highlighter-rouge&quot;&gt;text.toUpperCase()&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;ถ้าทำไม่สำเร็จก็ใช้ &lt;code class=&quot;highlighter-rouge&quot;&gt;.catch() &lt;/code&gt; (คือค่า ที่ถูก &lt;em&gt;reject&lt;/em&gt; ออกมา )&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;เมื่อเรียก &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; ค่าของข้อความจะมาใส่มาใน &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; เราก็สามารถเอา &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; ไปต้มยำทำแกงอะไรก็ได้ เย้ จบ!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;ข้อสังเกตุ&lt;/strong&gt; คือเราใช้ &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; เพื่อทำให้ Blocking i/O หรือ Synchronous นั้นเอง คล้ายกับการเรียก callback นั้นแล แต่ &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; เราสามารถต่อกันได้ ทำให้โค้ดสวยมากขึ้น และ debug ง่ายขึ้นนะ&lt;/p&gt;
+
+&lt;h2 id=&quot;2-async-await&quot;&gt;2. Async, Await&lt;/h2&gt;
+
+&lt;p&gt;เอาโค้ดข้างบนมาแก้ &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; ใหม่&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;start upperAfter('test',2000)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;upperAfter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Finish upperAfter('test',2000)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;เป็นไงล่ะ ทำงานได้เหมือนเดิม แต่ชีวิตง่ายขึ้นมั้ย ทีนี้เราก็ทำตัวเหมือนเขียน Blocking I/O หรือ Synchronous  แบบ C, Python ได้แล้ว เจ๋งป่ะล่ะ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ข้อสังเกตุ&lt;/strong&gt; ฟังก์ชัน &lt;code class=&quot;highlighter-rouge&quot;&gt;main()&lt;/code&gt; ต้องเป็น &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; เพื่อบอกว่าฟังก์ชันนี้มี การทำ blocking I/O หรือ Synchronous อยู่นะ  เราใส่ &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; หน้า promise นั้นเอง มันจะ auto &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; ให้เลย สะดวกสุดๆ&lt;/p&gt;
+
+&lt;p&gt;ในบรรทัดนี้ &lt;code class=&quot;highlighter-rouge&quot;&gt;const data = await upperAfter('test',2000)&lt;/code&gt; อารมณ์เหมือนเราได้ค่า &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; มาเลย แล้วก็เอาไปทำอะไรต่อก็ได้ ไม่ต้องอยู่ใน &lt;code class=&quot;highlighter-rouge&quot;&gt;.then()&lt;/code&gt; แล้ว&lt;/p&gt;
+
+&lt;h2 id=&quot;ก่อนปิดบล็อก&quot;&gt;ก่อนปิดบล็อก&lt;/h2&gt;
+
+&lt;p&gt;อ่าวจบแล้ว? RxJS ล่ะ เอาแค่นี้ก่อน พอรู้ข้อจำกัดของการใช้ Promise แล้ว คราวหน้า เราสามารถไปใช้ RxJS ได้&lt;/p&gt;
+
+&lt;h3 id=&quot;ของแถม-แล้ว-promise-มาช่วยแก้ปัญหา-callback-hell--ยังไง&quot;&gt;ของแถม แล้ว &lt;strong&gt;Promise&lt;/strong&gt; มาช่วยแก้ปัญหา Callback Hell  ยังไง&lt;/h3&gt;
+
+&lt;p&gt;อันนี้เอาตัวอย่างมาจาก โปรเจ็ค &lt;code class=&quot;highlighter-rouge&quot;&gt;promise-it-wont-hurt&lt;/code&gt; ของ https://nodeschool.io/&lt;/p&gt;
+
+&lt;p&gt;อันนี้เค้าเรียกกันว่า Callback Hell ถ้ามีมากกว่าหลายชั้นก็นี้ก็ hell จริงๆ ละคับ&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'user'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pass'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// the object was saved&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;แล้วถ้าใช้ Promise ช่วยล่ะ&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'user'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pass'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// the object was saved&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// an error happened somewhere in the process&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;เป็นไงบ้าง ดูง่ายขึ้นเยอะมั้ย ครับ&lt;/p&gt;
+
+&lt;p&gt;พอล่ะไม่อธิบายเยอะ เจ็บขอ แล้วพบกันใหม่ครับ&lt;/p&gt;
+
+&lt;h3 id=&quot;อ่านเพิ่มเติม&quot;&gt;อ่านเพิ่มเติม&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+&lt;a href=&quot;https://github.com/mbeaudru/modern-js-cheatsheet&quot;&gt;Modern JS Cheat sheet&lt;/a&gt;  one-stop cheat sheet for JS developer&lt;/li&gt;
+  &lt;li&gt;https://nodeschool.io/ เว็บนี้ก็ดีงาม สอน JS แบบ interactive เลย&lt;/li&gt;
+  &lt;li&gt;ES6 Cheat sheet: https://github.com/DrkSephy/es6-cheatsheet อันนี้ก็ดีนะ ไปดูได้&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Cross published at &lt;a href=&quot;https://medium.com/@mildronize/promise-async-await-%E0%B8%82%E0%B8%AD%E0%B8%87-js-es6-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%9E%E0%B8%B9%E0%B8%94%E0%B9%80%E0%B8%A2%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%88%E0%B9%87%E0%B8%9A%E0%B8%84%E0%B8%AD-%E0%B9%81%E0%B8%96%E0%B8%A1-rxjs-12b9e7b32392&quot;&gt;Medium.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="promise" /><category term="javascript" /><category term="es6" /><category term="async" /><category term="await" /><summary type="html">อ่านฉันหน่อย: บทความนี้ใช้ javascript ES6 นะครับ ใครยังไม่ชินไปตามอ่านได้ใน Cheat sheet นี้เลย มีภาษาไทยด้วย https://github.com/mbeaudru/modern-js-cheatsheet/blob/master/translations/th-TH.md</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/53ds3aqow09hl0g/cover.jpeg?raw=1" /></entry><entry><title type="html">วิธีตั้งค่าการใช้งาน Github (แบบไม่ต้องกรอกรหัสผ่านทุกครั้ง) ผ่าน SSH บน Windows</title><link href="https://jekyll.mildronize.com/th/setup-github-via-ssh-using-putty-on-windows-th/" rel="alternate" type="text/html" title="วิธีตั้งค่าการใช้งาน Github (แบบไม่ต้องกรอกรหัสผ่านทุกครั้ง) ผ่าน SSH บน Windows" /><published>2018-08-28T00:00:00+00:00</published><updated>2018-08-28T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/setup-github-via-ssh-using-putty-on-windows-th</id><content type="html" xml:base="https://jekyll.mildronize.com/th/setup-github-via-ssh-using-putty-on-windows-th/">&lt;p&gt;ขั้นตอนการตั้งค่าการใช้งาน Github  แบบไม่ต้องกรอกรหัสผ่านทุกครั้ง บน windows&lt;/p&gt;
+
+&lt;p&gt;จริงๆ แล้ว ก็ใช้ git มานานแต่บางครั้งก็ขีเกียจตั้งค่า โดยเฉพาะบน Windows มันมีหลายวิธีมาก แต่ผมถนัดวิธีนี้ทุกสุดและยุ่งยากน้อยสุดแล้ว (เขียนไม่ค่อยละเอียดเท่าไหร่ เหมาะสำหรับคนที่คุ้นชินกับ Putty อยู่แล้ว)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+&lt;a href=&quot;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&quot;&gt;ดาวโหลด&lt;/a&gt; และติดตั้ง Putty ไว้ในเครื่องก่อนเลย แนะนำให้ลงแบบ &lt;code class=&quot;highlighter-rouge&quot;&gt;MSI (‘Windows Installer’)&lt;/code&gt;เพราะมันจะมีโปรแกรมเพื่อนบ้านมาให้ด้วย ในโพสนี้จะใช้ &lt;code class=&quot;highlighter-rouge&quot;&gt;puTTYgen&lt;/code&gt; และ &lt;code class=&quot;highlighter-rouge&quot;&gt;plink&lt;/code&gt; หรือใครจะลงแยกก็ได้&lt;/li&gt;
+  &lt;li&gt;ตั้งค่า system environment variable ให้เรียบร้อย ถ้าลงผ่าน installer น่าจะตั้งค่าไว้แล้ว&lt;/li&gt;
+  &lt;li&gt;สร้าง Private Key และ Public Key จาก &lt;code class=&quot;highlighter-rouge&quot;&gt;puTTYgen&lt;/code&gt; โดยเลือกเป็น RSA 2048 (ใครจะเลือกตัวอื่นก็ได้นะ เผื่อตัวที่ดีกว่านี้ในอนาคต) กด generate แล้วก็เอา mouse เป็นวนๆ ที่ว่างๆ จนแถบโหลดเต็ม แล้วก็ตั้งค่ารหัสผ่าน (key passphrase) จะใส่ตรงที่มีการใช้ key นี้ทุกครั้ง (จะไม่ตั้งก็ได้นะ จะได้ตามชื่อบล็อกพอดี) 
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/7d1cqu99b93pv1w/1.png?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/7d1cqu99b93pv1w/1.png?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+&lt;/li&gt;
+  &lt;li&gt;จากนั้นก็อปปี้ public key จาก &lt;code class=&quot;highlighter-rouge&quot;&gt;puTTYgen&lt;/code&gt; ตัวเดิมไปใส่ใน[หน้า SSH ของการตั้งค่า github ของเรา https://github.com/settings/keys 
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/pxikmsgglo273yf/2.PNG?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/pxikmsgglo273yf/2.PNG?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ตั้งค่า environment variable &lt;code class=&quot;highlighter-rouge&quot;&gt;GIT_SSH&lt;/code&gt; ให้เป็น path ไปยัง &lt;code class=&quot;highlighter-rouge&quot;&gt;plink&lt;/code&gt; เช่น&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; SET GIT_SSH=C:\path\to\PuTTY\plink.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เพิ่ม SSH key ลงไปในโปรแกรม &lt;code class=&quot;highlighter-rouge&quot;&gt;Pageant&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; C:\path\to\PuTTY\pageant.exe c:\pathtoprivate-ssh-key.ppk`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ตรวจสอบการเชื่อมต่อ เป็นอันเสร็จ&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; plink -v git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ถ้าได้ผลลัพธ์ประมาณนี้ถือว่าผ่านแล้วครับ&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;Hi mildronize! You've successfully authenticated, but GitHub does not provide shell access.
+Server sent command exit status 1
+Disconnected: All channels closed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;ขอบคุณแหล่งที่มาดีๆ-ครับ&quot;&gt;ขอบคุณแหล่งที่มาดีๆ ครับ&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.richardkotze.com/top-tips/git-on-windows-in-command-line&quot;&gt;Git and Putty on Windows in command line&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vladmihalcea.com/tutorials/git/windows-git-ssh-authentication-to-github/&quot;&gt;Windows git SSH authentication to GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ของแถม&quot;&gt;ของแถม&lt;/h2&gt;
+
+&lt;p&gt;หลายๆ คนอาจจะเข้าไปที่ git directory บนเครื่องเราแล้ว ก็ยังต้องใส่ username และ password เหมือนเดิมอยู่อีก อย่าลืมเปลี่ยน remote URL จาก HTTPS เป็น SSH นะครับ เช่น&lt;/p&gt;
+
+&lt;p&gt;ถ้าดูที่ github URL เราจะเห็นหน้าตาประมาณนี้ &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/USERNAME/REPOSITORY&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;เช่นถ้าเรา username: &lt;code class=&quot;highlighter-rouge&quot;&gt;mildronize&lt;/code&gt; และ github repo คือ &lt;code class=&quot;highlighter-rouge&quot;&gt;mildronize.github.io&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ดังนั้น URL จะมีหน้าตาประมาณนี้ &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/mildronize/mildronize.github.io&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;เราอาจจะ clone ด้วย HTTPS มา สังเกตุคือที่ URL จะขึ้นต้นด้วย HTTPS เช่น&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/mildronize/mildronize.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;แต่ถ้าเรา clone ด้วย SSH สังเกตุที่ URL จะขึ้นต้นด้วย &lt;code class=&quot;highlighter-rouge&quot;&gt;git@github.com&lt;/code&gt; มาหน้าตาจะประมาณนี้&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git@github.com:mildronize/mildronize.github.io.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;เข้าเรื่องกันเลย ไปดูขั้นตอนการเปลียนจาก remote URL จาก HTTPS เป็น SSH&lt;/p&gt;
+
+&lt;h3 id=&quot;การเปลี่ยนไปใช้-remote-urls-ssh-จาก-https&quot;&gt;การเปลี่ยนไปใช้ remote URLs SSH จาก HTTPS&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; ไปที่ git directory ของเราก่อนนะ&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ให้ใช้ &lt;code class=&quot;highlighter-rouge&quot;&gt;git remote -v&lt;/code&gt; เพือดูว่าตอนนี้ directory นี้ชี้ไปที่ไหน&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git remote -v
+ origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+ origin  https://github.com/USERNAME/REPOSITORY.git (push)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เปลียนจาก remote URL จาก HTTPS เป็น SSH  &lt;code class=&quot;highlighter-rouge&quot;&gt;git remote set-url&lt;/code&gt; command.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Verify that the remote URL has changed.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git remote -v
+ # Verify new remote URL
+ origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+ origin  git@github.com:USERNAME/REPOSITORY.git (push)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ขอบคุณข้อมูลจาก&quot;&gt;ขอบคุณข้อมูลจาก&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://help.github.com/articles/changing-a-remote-s-url/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;เป็นไงบ้างครับ ไม่ยากเลยใช่มั้ยครับ จริงๆ เขียนให้ตัวเองอ่านด้วย ไว้พบกันใหม่ สวัสดีครับ&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="how-to" /><category term="github" /><category term="windows" /><category term="putty" /><category term="git" /><summary type="html">ขั้นตอนการตั้งค่าการใช้งาน Github แบบไม่ต้องกรอกรหัสผ่านทุกครั้ง บน windows</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/6j7n98dlmnubjxq/cover.jpg?raw=1" /></entry><entry><title type="html">รู้จักกับฐานข้อมูลอนุกรมเวลา OpenTSDB กันเถอะ</title><link href="https://jekyll.mildronize.com/th/introduction-to-open-time-series-database-th/" rel="alternate" type="text/html" title="รู้จักกับฐานข้อมูลอนุกรมเวลา OpenTSDB กันเถอะ" /><published>2018-08-13T00:00:00+00:00</published><updated>2018-08-13T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/introduction-to-open-time-series-database-th</id><content type="html" xml:base="https://jekyll.mildronize.com/th/introduction-to-open-time-series-database-th/">&lt;p&gt;สวัสดีครับ ผมชื่อมายนะคับ เนื่องจากผมทำวิทยานพินธ์ปริญญาโท เกี่ยวกับการปรับปรุงประสิทธิภาพของฐานข้อมูลอนุกรมเวลา OpenTSDB และบ้านเราก็ยังไม่ค่อยมีคนพูดถึงเรื่องนี้เท่าไหร่นัก ถือว่าเป็นโอกาสดีที่จะนำความรู้มาแบ่งปันกันครับ&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ถ้าใครยังไม่รู้จักกับฐานข้อมูลอนุกรมเวลา (Time Series Database) หรือยังใหม่สำหรับเรื่องนี้ หรือสามารถตามอ่านได้ในบทความก่อนหน้านี้ครับ &lt;a href=&quot;/th/introduction-to-time-series-database-th/&quot;&gt;ทำไมเราถึงควรใช้ฐานข้อมูลอนุกรมเวลาสำหรับ “ข้อมูลอนุกรมเวลา” (Time Series Database)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;OpenTSDB ถูกใช้ในบริษัทใหญ่ๆ อย่าง eBay, Yahoo, Pinterest, Box, Bitbucket และบริษัทใหญ่ๆ อีกหลายบริษัท ซึ่งในบทความนี้ผมจะแนะนำเบื้องต้นเกี่ยวกับ OpenTSDB ข้อดี และข้อควรระวัง รวมถึงตัวอย่างการ query หลักการทำงานคร่าวๆ ว่ากันแล้ว&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr-ยาวไปไม่อ่าน&quot;&gt;TL;DR (ยาวไปไม่อ่าน):&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://opentsdb.net&quot;&gt;OpenTSDB&lt;/a&gt; คือฐานข้อมูลอนุกรมเวลา Open Source บนฐานข้อมูล &lt;a href=&quot;https://hbase.apache.org&quot;&gt;HBase&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;สรุปความสามารถเด่นๆ ดังนี้&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;สามารถขยายตัวได้ (Scalablity) และมีความคงทนของข้อมูลสูงอีกด้วย ( Availability) สรุปง่ายๆ คือ อาศัยความสามารถของ HBase และ Hadoop เป็นจุดเด่น&lt;/li&gt;
+  &lt;li&gt;เหมาะสำหรับข้อมูลอนุกรมเวลาขนาดใหญ่&lt;/li&gt;
+  &lt;li&gt;1 data point จัดเก็บได้เฉพาะ เวลา (timestamp) และตัวเลข (ค่าของข้อมูล)&lt;/li&gt;
+  &lt;li&gt;การ Query มี syntax เป็นของตัวเองผ่าน HTTP API&lt;/li&gt;
+  &lt;li&gt;สามารถทำ post processing ได้เช่น downsampling, rate, interoperation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;จริงๆ แล้วทุกวันนี้เราน่าจะได้ยินเกี่ยวกับอนุกรมเวลามากขึ้น และใช้กันบ่อยขึ้น บางคนอาจจะจะรู้จักในนามของกราฟหุ้น หรือเทคโนโลยีที่เป็นที่นิยมอยู่ตอนนี้คือ Internet of Thing โดยมองคอนเซ็ปว่าทุกอย่างสามารถต่ออินเตอร์เน็ตได้&lt;/p&gt;
+
+&lt;p&gt;ดังนั้นในอนาคตเราก็จะมีข้อมูลเกิดขึ้นอย่างมหาศาล ลองคิดเล่นๆ ว่า หลอดไฟทุกดวงในประเทศต่ออินเตอร์เน็ต และส่งข้อมูลสถานะของมันออกมาทุกๆ วินาที เป็นระยะเวลาสัก 1 ปี แค่นี้ก็จินตนาการไม่ออกแล้วว่าข้อมูลจะมากขึ้น หรือจริงๆ แล้วอนุกรมเวลาครอบคลุมทุกอย่างที่มีความสัมพันธ์กับเวลาเลยทีเดียว&lt;/p&gt;
+
+&lt;p&gt;เชื่อว่าหลายๆ คนอาจจะยังไม่คุ้นชินกับฐานข้อมูลอนุกรมเวลา หรือ OpenTSDB เพราะในบ้านไม่ค่อนมีคนพูดถึงมากนัก รวมถึงในฝั่งงานวิจัยเองก็ยังคงเป็นเรื่องที่ใหม่มากๆ (เปเปอร์ที่ survey เกี่ยวกับฐานข้อมูลอนุกรมเวลาเพิ่งออกเมื่อปีที่แล้วเลย 2017)&lt;/p&gt;
+
+&lt;p&gt;แต่ถ้าเราต้องเก็บข้อมูลอนุกรมเวลาขนาดใหญ่ และดึงข้อมูลออกมาวิเคราะห์แล้ว OpenTSDB ตอบโจทย์ได้ดีมาก เพราะสามารถทำงานได้เร็วกว่าพวก database ทั่วๆ ไป พวก MySQL, MongoDB, HBase&lt;/p&gt;
+
+&lt;h2 id=&quot;opentsdb-open-time-series-database&quot;&gt;OpenTSDB (Open Time series database)&lt;/h2&gt;
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/2zprjjijpfo8y1t/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-3.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/2zprjjijpfo8y1t/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-3.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;OpenTSDB ถูกสร้างครั้งแรกโดย StumbleUpon ซึ่งคนที่ดูแลหลักๆ คือ Yahoo โดยเจ้าดังๆ ที่มีใช้ก็มี eBay, Atlassian หรือบางคนอาจจะรู้จักในนาม bitbucket, Box, Pinterest , Tumblr, MapR, Cloudflare และอีกหลายๆบริษัทเลย&lt;/p&gt;
+
+&lt;p&gt;จุดแข็งของ OpenTSDB ที่ทำให้ผมชอบ และหลงรักคือการออกแบบอยู่บน HBase&lt;/p&gt;
+
+&lt;p&gt;แล้ว OpenTSDB คืออะไร หน้าเว็บหลักเค้าบอกว่าแบบนี้คับ&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Scalable Time Series Database 
+Store and serve massive amounts of time series data without losing granularity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ก็คือฐานข้อมูลที่เหมาะสำหรับการเก็บข้อมูลอนุกรมเวลาขนาดใหญ่บนฐานข้อมูล HBase ซึ่งสืบทอดความสามารถของ HBase ซึ่งอยู่ใน ecosystem ของ Hadoop โดยมีความสามารถหลักๆ ประมาณนี้ครับ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ตัว HBase เองมีความสามารถในการจัดเก็บข้อมูลแบบกระจายตัวที่มีความสามารถในการขยายตัวได้ดีมากในแบบ horizontal ( Scalability )อีกทั้งยังมีความคงทนของข้อมูลสูงอีกด้วย (Availability)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;โดยเริ่มต้นเอง พัฒนามาเพื่อใช้สำหรับในงาน Monitoring ระบบคอมพิวเตอร์ ต่างๆ ซึ่งมี ตัวที่เป็นสคริปซ์ (เรียกว่า &lt;a href=&quot;http://opentsdb.net/docs/build/html/user_guide/utilities/tcollector.html&quot;&gt;Tcollector&lt;/a&gt;) ไว้สำหรับส่ง data เข้าสู่ OpenTSDB ด้วย เช่นการ monitor สถานะของ mysql หรือ พวก redis เป็นต้น และข้อมูลที่เก็บเป็นแบบ time series เท่านั้น&lt;/li&gt;
+  &lt;li&gt;OpenTSDB ยังมี HTTP API สำหรับการ write และ read ข้อมูลลงฐานข้อมูล รวมถึงหน้าตา dashboard แบบง่ายๆ ให้ใช้งานด้วย (visualization tool)&lt;/li&gt;
+  &lt;li&gt;ข้อดีอย่างหนึ่งของ OpenTSDB คือการเก็บ data points ทั้งหมด ซึ่งไม่เหมือนบางฐานข้อมูล เช่น &lt;a href=&quot;https://oss.oetiker.ch/rrdtool/&quot;&gt;RDDtool&lt;/a&gt; ซึ่งตัวนึงที่ใช้มากในระบบ monitoring ซึ่งมันจะลดจำนวนจุดที่มีบันทึกนานมาแล้ว โดยการเอามารวมกัน เพื่อการลดพื้นที่การจัดเก็บ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ดังนั้น OpenTSDB จึงเหมาะสำหรับจัดเก็บข้อมูลเซนเซอร์หรือข้อมูล IoT หรือแม้แต่ time series ทั่วๆ ไปได้ ซึ่งทุกๆ จุดมีประโยชน์ต่อการนำไปวิเคราะห์ข้อมูล&lt;/p&gt;
+
+&lt;h3 id=&quot;ตัวอย่างการ-query&quot;&gt;ตัวอย่างการ query&lt;/h3&gt;
+
+&lt;p&gt;เพื่อให้เห็นภาพมากขึ้น ขอยกตัวอย่างการ query ข้อมูลจากฐานข้อมูล OpenTSDB นะครับ&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/9f7oa9mnbfntb20/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-4.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/9f7oa9mnbfntb20/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-4.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;OpenTSDB มี Web GUI เป็นของตัวเอง และสามารถใช้ HTTP API ได้ จากรูปข้างบน เราสามารถกำหนดเวลา ตั้งต้น และสิ้นสุด และชื่อของอนุกรมเวลาได้ (ทางซ้ายมือ)&lt;/p&gt;
+
+&lt;p&gt;ซึ่งผลลัพธ์ก็ได้ JSON ดังรูปทางขวามือคับ ซึ่ง data point จะอยู่ในรูปแบบของ key และ value ระหว่าง timestamp และค่าของมันคับ&lt;/p&gt;
+
+&lt;p&gt;หลายๆ คนอาจจะสงสัยแล้วว่า OpenTSDB ทำงานยังไง แล้วทีนี้เราก็มาดู architecture ภาพรวมคร่าวๆ กันนะครับ&lt;/p&gt;
+
+&lt;h3 id=&quot;opentsdb-ทำงานอย่างไร&quot;&gt;Opentsdb ทำงานอย่างไร&lt;/h3&gt;
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/9u78y13ja2da3s4/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-5.png?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/9u78y13ja2da3s4/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-5.png?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;รูปจาก&lt;a href=&quot;http://opentsdb.net/overview.html&quot;&gt;หน้าเว็บหลักของ OpenTSDB&lt;/a&gt;  แสดงสถาปัตยกรรมของ OpenTSDB&lt;/p&gt;
+
+&lt;p&gt;OpenTSDB จะสร้าง worker ที่แตก thread ออกมา ซึ่งเรียกว่า TSD (Time Series Daemon) สำหรับจัดการ job ของ OpenTSDB ซึ่งจะต้องมี worker (หรือ TSD) อย่างน้อย 1 ตัว แต่ละตัวทำงานไม่เกี่ยวข้องกัน ถ้าดูจากรูปข้างบน คือ จะไม่มีเส้น ระหว่าง TSD แต่จะต่อตรงกับ HBase ทีเดียวเลย&lt;/p&gt;
+
+&lt;p&gt;หลักๆ คือ TSD ทำหน้าที่เป็นตัวกลางระหว่างการเขียนและการอ่านของ OpenTSDB กับ HBase&lt;/p&gt;
+
+&lt;p&gt;ผมขอแนะนำ time series database ที่ชื่อ OpenTSDB ไว้แต่เพียงแค่นี้ครับ หลังจากนี้จะเป็นสรุปข้อดี ข้อเด่น และข้อควรระวังในการนำ OpenTSDB ไปใช้ จากประสบการณ์การใช้งานของผมเอง&lt;/p&gt;
+
+&lt;h2 id=&quot;ข้อดีของ-opentsdb&quot;&gt;ข้อดีของ OpenTSDB&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;ทำงานเร็วกว่าฐานข้อมูลเอนกประสงค์ทั่วๆ ไปมาก&lt;/li&gt;
+  &lt;li&gt;รองรับการขยายตัวได้ดีเมื่อเทียบกับ &lt;a href=&quot;https://prometheus.io/docs/introduction/comparison/#prometheus-vs.-opentsdb&quot;&gt;prometheus&lt;/a&gt;, &lt;a href=&quot;http://iopscience.iop.org/article/10.1088/1742-6596/664/4/042036/pdf&quot;&gt;InfluxDB, Elasticsearch&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;มีการ compaction เพื่อลดขนาดของพื้นที่ที่ใช้จัดเก็บข้อมูล&lt;/li&gt;
+  &lt;li&gt;สามารถปรับจูนประสิทธิภาพได้เยอะ&lt;/li&gt;
+  &lt;li&gt;เป็น Open Source และมี Commnuity ที่โอเคพอควร&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ข้อควรระวังของ-opentsdb&quot;&gt;ข้อควรระวังของ OpenTSDB&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;เนื่องจากเป็นฐานข้อมูลที่ทำงานบน HBase ดังนั้นการติดตั้งและตั้งค่าอาจจะยุ่งยาก&lt;/li&gt;
+  &lt;li&gt;สามารถเก็บเวลาได้แค่ 2 หน่วยคือ วินาที และ มิลลิวินาที&lt;/li&gt;
+  &lt;li&gt;ค่าที่บันทึกได้มีแค่ตัวเลข ทศนิยมหรือจำนวนเต็ม ไม่สามารถเก็บข้อความได้&lt;/li&gt;
+  &lt;li&gt;เนื่องจากยังไม่มีมาตรฐานการออกแบบฐานข้อมูลอนุกรมเวลา ดังนั้น API การใช้งานจึงเฉพาะเจาะจงสำหรับ OpenTSDB เท่านั้น&lt;/li&gt;
+  &lt;li&gt;บางระบบอาจจะยังไม่ตอบโจทย์เพราะว่า OpenTSDB อาจจะ general เกินไป&lt;/li&gt;
+  &lt;li&gt;ยังไม่มีแคชในส่วนของการ Query ข้อมูล ซึ่งใน roadmap ของ OpenTSDB 3.0 บอกว่าจะใส่เข้ามา&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ส่วนผมเองได้ออกแบบและพัฒนากลไกแคชสำหรับ OpenTSDB โดยใช้ Memcached ซึ่งจะปีพิมพ์ในงานประชุมวิชาการ ISCIT 2018 ด้วยครับ บล็อกหน้าจะอธิบายในส่วนถัดๆไป คับ&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;ในบทความต่อไปถัดไปจะพูดถึง&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Internal OpenTSDB&lt;/li&gt;
+  &lt;li&gt;Asynchorous programming using deferred object ( async Hbase )&lt;/li&gt;
+  &lt;li&gt;Memcached &amp;amp; internal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ไว้พบกันใหม่โอกาสหน้าครับ สวัสดีครับ&lt;/p&gt;
+
+&lt;h2 id=&quot;หมายเหตุ&quot;&gt;หมายเหตุ&lt;/h2&gt;
+&lt;p&gt;ใช้ OpenTSDB 2.3.0 เป็นตัวอ้างอิงนะครับ&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="opentsdb" /><category term="hbase" /><category term="time-series" /><category term="database" /><summary type="html">สวัสดีครับ ผมชื่อมายนะคับ เนื่องจากผมทำวิทยานพินธ์ปริญญาโท เกี่ยวกับการปรับปรุงประสิทธิภาพของฐานข้อมูลอนุกรมเวลา OpenTSDB และบ้านเราก็ยังไม่ค่อยมีคนพูดถึงเรื่องนี้เท่าไหร่นัก ถือว่าเป็นโอกาสดีที่จะนำความรู้มาแบ่งปันกันครับ</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/3qn79g1jnrhat0h/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-cover2.jpeg?raw=1" /></entry><entry><title type="html">ทำไมเราถึงควรใช้ฐานข้อมูลอนุกรมเวลาสำหรับ ข้อมูลอนุกรมเวลา (Time Series Database)</title><link href="https://jekyll.mildronize.com/th/introduction-to-time-series-database-th/" rel="alternate" type="text/html" title="ทำไมเราถึงควรใช้ฐานข้อมูลอนุกรมเวลาสำหรับ ข้อมูลอนุกรมเวลา (Time Series Database)" /><published>2018-08-08T00:00:00+00:00</published><updated>2018-08-08T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/introduction-to-time-series-database-th</id><content type="html" xml:base="https://jekyll.mildronize.com/th/introduction-to-time-series-database-th/">&lt;p&gt;ปัจจุบันนี้ internet of thing หรือ IoT ก็ได้เข้ามามีบทบาทในอุตสาหกรรมและเทคโนโลยี ซึ่งใน สถาปัตยกรรมของ IoT เอง ก็มีหลายชั้น ตั้งแต่เซ็นเซอร์เก็บข้อมูล ชั้นเก็บข้อมูล รวมไปถึงการแสดงข้อมูลให้ผู้ใช้ ตามรูป IoT Wolrd Forum ได้ทำรูปอ้างอิงลำดับชั้นของ IoT
+
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/nz351ddv6aw6v51/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-0.jpeg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/nz351ddv6aw6v51/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-0.jpeg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;ตรงนี้ขอไม่ลงรายละเอียดของ IoT มากนัก จากรูปข้างบน เราจะเห็นได้ว่าตั้งแต่ layer ที่ 1 ถึง layer ที่ 7 หรือก็คือตั้งแต่เซนเซอร์หรืออุปกรณ์ที่รวบรวมหรือทำงานหรือควบคุม ต่างๆ ไปจนถึงชั้นของ application และการจัดการ โดยในบทความนี้จะกล่าวถึง&lt;strong&gt;ฐานข้อมูล OpenTSDB ซึ่งจะอยู่ใน Layer ที่ 4-5&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;IoT เองก็เก็บข้อมูลในลักษณะอนุกรมเวลาเป็นส่วนใหญ่ รวมถึงสัญญาไฟฟ้า (signal) สัญญาณดิจิตอลเองก็เป็นอนุกรมเวลา แต่เมื่อข้อมูลใหญ่มากขึ้นการจัดเก็บข้อมูลอนุกรมเวลาในรูปแบบเดิมๆ อาจจะทำให้ระบบทำงานช้ากว่าที่ควรจะเป็น เช่น general purpose database อย่าง  MySQL, PostgreSQL&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;แล้วอนุกรมเวลาคืออะไร ลองไปดูกันครับ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;จริงๆ ถ้าคนเรียนสายคณิตศาสตร์คงคุ้นเคยกับคำๆ นี้ดีอยู่แล้ว แต่ผมขออธิบายง่ายๆ อย่างนี้นะคับ&lt;/p&gt;
+
+&lt;p&gt;สมมติว่า ถ้าเราวัดอุณหภูมิของ อ.หาดใหญ่ ทุกๆ ชั่วโมงตั้งแต่ 9 โมงเช้าถึง 6 โมงเย็น แล้วเราก็จดอุณหภูมิไว้ เราก็สามารถนำข้อมูลมาพล็อตเป็นกราฟ ในรูปข้างล่างทางขวามือได้ นี่คือ อนุกรมเวลาแบบง่ายๆ คับ คือมี เวลากับค่าที่เราบันทึก&lt;/p&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/036qgbbs3dy6sao/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-1.jpeg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/036qgbbs3dy6sao/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-1.jpeg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Analysis-Time-Introduction-Chapman-Statistical/dp/1584883170&quot;&gt;อนุกรมเวลา&lt;/a&gt; ก็คือ ชุดข้อมูลที่เรียงลำดับตามเวลา
+โดยอนุกรมเวลาประกอบไปด้วยจุดข้อมูล (data point) ซึ่งในแต่ละจุดข้อมูลมีเวลาที่บันทึก และค่าที่วัดได้ ณ เวลานั้นๆ 
+ข้อมูลอนุกรมเวลาส่วนใหญ่แล้วใช้ในการจัดเก็บข้อมูลจากสภาพแวดล้อมต่างๆ ขึ้นอยู่กับการใช้งาน โดยในหลายๆงานก็ได้นำข้อมูลอนุกรมเวลาไปใช้ เช่น การพยากรณ์สภาพอากาศ, ระบบคอมพิวเตอร์, การจราจร, กระบวนทางเคมี หรือแม้กระทั่ง การพยากรณ์แนวโน้มของราคาหุ้น&lt;/p&gt;
+
+&lt;p&gt;ตัวอย่างของข้อมูลอนุกรมเวลาในกรณีของการเก็บข้อมูลสภาพอากาศ เช่น&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ลำดับของอุณหภูมิที่ถูกบันทึกเป็นรายชั่วโมง&lt;/li&gt;
+  &lt;li&gt;การบันทึกความชื้นทุกชั่วโมง&lt;/li&gt;
+  &lt;li&gt;การบันทึกความเร็วทุกๆ หนึ่งนาที&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ระยะห่างระหว่างเวลาที่บันทึกของข้อมูลแต่ละจุดจะเป็นเท่าใดก็ได้&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ฐานข้อมูลอนุกรมเวลา&quot;&gt;ฐานข้อมูลอนุกรมเวลา&lt;/h2&gt;
+&lt;p&gt;ช่วงนี้ฐานข้อมูลอนุกรมเวลาเริ่มดังกันขึ้นเยอะแล้ว จาก&lt;a href=&quot;https://prometheus.io/blog/2016/05/09/prometheus-to-join-the-cloud-native-computing-foundation/&quot;&gt;ข่าวที่ฐานข้อมูลอนุกรมเวลา Prometheus เข้าร่วมกับ Cloud Native Computing Foundation&lt;/a&gt;
+หลังจากที่ศึกษามาสักพักเปเปอร์ survey ด้าน time series ก็ออกมาแล้วครับ
+&lt;a href=&quot;https://ieeexplore.ieee.org/document/8012550/&quot;&gt;Time Series Management Systems: A Survey&lt;/a&gt; จึงเป็นโอกาสที่ดีจะเขียนบทความถึงฐานข้อมูลอนุกรมเวลาครับ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ทำไมถึงได้มีฐานข้อมูลอนุกรมเวลาเกิดขึ้นแล้วเหมาะสำหรับระบบแบบไหน?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;คุณ Søren ใน&lt;a href=&quot;https://ieeexplore.ieee.org/document/8012550/&quot;&gt;เปเปอร์&lt;/a&gt; survey บอกว่า TSMS (Time Series Management System) หรือ TSDB (Time Series Database) ก็ได้ ถ้าเป็น TSMS จะครอบคลุมความหมายมากกว่า เพราะบางระบบไม่ใช่แค่ฐานข้อมูล โดยฐานข้อมูลอนุกรมเวลาเกิดขึ้นจากความต้องการที่เฉพาะเจาะจงมากขึ้น ดังนี้&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+&lt;strong&gt;Database Management System (DBMS) กับ (Relational Database Management System (RDBMS) ทั่วๆ ไปยังไม่ตอบโจทย์เท่าไหร่นัก&lt;/strong&gt;เมื่อ เรามีเครือข่ายของเซนเซอร์ขนาดใหญ่ ที่ป้อนข้อมูลอนุกรมเวลาจำนวนมาก ทั้งในแง่ของประมาณ (Volume) และความเร็วในเพิ่มขึ้นของจำนวนข้อมูล (Velocity)&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;ในแง่ของการนำข้อมูลไปวิเคราะห์&lt;/strong&gt;  ในระบบแบบเดิมยังต้อง export ข้อมูลออกไปยังโปรแกรมวิเคราะห์เช่น R, SPSS ซึ่งทำให้การขั้นตอนการทำงานยุ่งยาก&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;ในแง่ของการจัดเก็บและเรียกดู ประสิทธิภาพของระบบยังคงต้องดี&lt;/strong&gt; เมื่อข้อมูลมีขนาดใหญ่  ซึ่ง TSMS ก็เข้ามาช่วยตอบโจทย์ตรงนี้&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;หลายๆ คนอาจจะสงสัยว่าแล้วที่บอกว่าข้อมูลอนุกรมขนาดใหญ่นี้ มันใหญ่ขนาดไหนถึงต้องไปใช้ฐานข้อมูลอนุกรมเวลา ตรงนี้ผมขอยกตัวอย่างงานวิจัยของ Facebook ครับ 
+โดยเค้าต้องการ จะทำ server สำหรับ monitor ข้อมูลของทุก cluster ของ Facebook ครับ&lt;/p&gt;
+
+&lt;p&gt;ซึ่งโจทย์คือต้องสามารถตรวจสอบความผิดปกติได้อย่างรวดเร็ว ดังนั้นเค้าจึงออกแบบฐานข้อมูลอนุกรมเวลาที่อยู่บนแรมครับที่ชื่อว่า &lt;a href=&quot;https://www.vldb.org/pvldb/vol8/p1816-teller.pdf&quot;&gt;Gorilla&lt;/a&gt; เพื่อให้ต้องการ monitor แบบ real time ลองมามาดูโจทย์ของ Facebook กันครับ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;มีข้อมูล 2 พันล้านอนุกรมเวลา&lt;/li&gt;
+  &lt;li&gt;มีข้อมูลอนุกรมเวลา 700 ล้านจุดเข้ามาในระบบ ต่อนาที&lt;/li&gt;
+  &lt;li&gt;เก็บข้อมูลย้อนหลังได้ 26 ชั่วโมง&lt;/li&gt;
+  &lt;li&gt;รับโหลดสูงสุดได้ 40,000 query ต่อวินาที&lt;/li&gt;
+  &lt;li&gt;สามารถอ่านข้อมูลได้อย่างรวดเร็ว&lt;/li&gt;
+  &lt;li&gt;รองรับการโตของข้อมูล 2 เท่า ต่อปี&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;เป็นไงกันบ้างครับ ข้อมูลเยอะมากใช่มั้ย นี่คือตัวอย่างงานแบบ monitoring ถ้าเราไม่ต้องการ real time แบบนี้ ก็ไม่ต้องเก็บข้อมูลบนแรมก็ได้คับ โดยปกติจะเก็บของข้อมูลบน  Harddisk ขึ้นอยู่กับ requirements คับ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;มาถึงตรงนี้ แล้วฐานข้อมูลอนกรุมเวลาคืออะไร?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/document/6427510/&quot;&gt;ฐานข้อมูลแบบอนุกรมเวลา&lt;/a&gt;  คือฐานข้อมูลที่ถูกพัฒนาและปรับปรุงมาเพื่อเก็บข้อมูลในงานทางด้านอนุกรมเวลาโดยเฉพาะ
+ฐานข้อมูลแบบอนุกรมเวลาส่วนใหญ่แล้วจะถูกปรับแต่งให้เหมาะกับข้อมูลที่มีปริมาณมาก
+และสามารถที่จะจัดเก็บจุดข้อมูลของอนุกรมเวลาและคำอธิบายเพิ่มเติมของข้อมูลนั้นๆ เท่านั้น&lt;/p&gt;
+
+&lt;p&gt;ดังนั้นฐานข้อมูลแบบอนุกรมเวลาสามารถจัดการข้อมูลแบบอนุกรมเวลาได้เหมาะสมกว่าฐานข้อมูลอเนกประสงค์ทั่วๆ ไป 
+เช่น ฐานข้อมูลแบบมีความสัมพันธ์ (Relational database) หรือฐานข้อมูลแบบไม่มีความสัมพันธ์ (Non-relational database)&lt;/p&gt;
+
+&lt;p&gt;อีกทั้งฐานข้อมูลแบบนี้ยังสามารถค้นหาข้อมูลแบบอนุกรมเวลา 
+เลื่อนช่วงของเวลาที่ต้องการสอบถาม รวมหลายๆ 
+อนุกรมเวลาเข้ามาเป็นหนึ่งอนุกรมเวลา หรือคำนวณเพื่อหาค่าของจุดที่หายไปของอนุกรมเวลา (interpolation)&lt;/p&gt;
+
+&lt;p&gt;ปัจจุบันยังไม่มีมาตรฐานการออกแบบและการเชื่อมต่อที่ชัดเจนที่จะอธิบายว่าฐานข้อมูลแบบอนุกรมเวลานั้นควรเป็นแบบไหน
+และมีการเชื่อมต่ออย่างไร
+หลายๆ องค์กรได้มีความพยายามที่จะสร้างฐานข้อมูลแบบอนุกรมเวลาสำหรับใช้ในองค์กร 
+ซึ่งแต่ละผู้พัฒนาได้ออกแบบความสามารถและ 
+API ของตนแตกต่างกันไป&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ฐานข้อมูลอนุกรมเวลาส่วนใหญ่แล้วมักจะมี 4 องค์ประกอบ คือ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ส่วนของการเก็บข้อมูลอนุกรมเวลา&lt;/li&gt;
+  &lt;li&gt;ส่วนของการเก็บเกี่ยวข้อมูล&lt;/li&gt;
+  &lt;li&gt;ส่วนของการแสดงผล&lt;/li&gt;
+  &lt;li&gt;ส่วนของการประมวลผลข้อมูล&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ซึ่งบางฐานข้อมูลอนุกรมเวลามีองค์ประกอบไม่ครบ 
+แต่ฐานข้อมูลเหล่านั้นมักอนุญาตให้เชื่อมต่อกับภายนอก
+ยกตัวอย่างเช่น OpenTSDB มีส่วนของแสดงผลที่เหมาะสำหรับการใช้งานที่ไม่ซับซ้อน แต่ 
+OpenTSDB 
+ก็สามารถเชื่อมต่อกับโปรแกรมประยุกต์เพื่อการแสดงผลอนุกรมเวลา เช่น &lt;a href=&quot;https://grafana.com/&quot;&gt;Grafana&lt;/a&gt;
+ได้ 
+
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/bc4remlp4qcl27f/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-2.png?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/bc4remlp4qcl27f/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-2.png?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://grafana.com/&quot;&gt;Grafana&lt;/a&gt; คือ หน้าต่างอเนกประสงค์สำหรับแสดงผลข้อมูลอนุกรมเวลา&lt;br&gt;
+และมีส่วนขยายสำหรับการเชื่อมต่อกับ OpenTSDB อีกด้วย&lt;/p&gt;
+
+&lt;h3 id=&quot;ตัวอย่างการ-query-ข้อมูลจากฐานข้อมูลอนุกรมเวลา&quot;&gt;ตัวอย่างการ Query ข้อมูลจากฐานข้อมูลอนุกรมเวลา&lt;/h3&gt;
+
+&lt;p&gt;ประเภทงานส่วนใหญ่ของการใช้ฐานข้อมูลแบบอนุกรมเวลาคือการสอบถามข้อมูลอนุกรมเวลา
+ฐานข้อมูลแบบอนุกรมเวลาส่วนใหญ่จะมีการออกแบบที่ทำให้สะดวกต่อการใช้ค้นหาตามช่วงของเวลา
+สมมติว่า 
+เราต้องการสอบถามข้อมูลอุณหภูมิที่จัดเก็บไว้ในฐานข้อมูลอยู่ก่อนแล้วจากปีค.ศ. 2013 
+ถึง 2016
+จากข้อมูลตัวอย่าง มีข้อมูลจำนวน 1 ล้านจุดต่อข้อมูลระยะเวลา 1 ปี
+คำสั่งในการสอบถามมีลักษณะได้หลากหลายรูปแบบ 
+โดยรูปแบบข้างล่างนี้เป็นตัวอย่างอย่างง่ายในการสอบถามข้อมูล&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;QUERY temperature FROM 2013 TO 2016
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ผลลัพธ์การสอบถามจะเป็นในรูปแบบของอาร์เรย์ของจุดข้อมูล โดยผลลัพธ์จะมี 3 
+ล้านจุดข้อมูล
+และผลลัพธ์ที่ได้ยังสามารถนำไปแสดงผลเป็นกราฟอนุกรมเวลา&lt;/p&gt;
+
+&lt;p&gt;ฐานข้อมูลแบบอนุกรมเวลาแบบ Open Source ที่ได้รับความนิยม เช่น OpenTSDB, &lt;a href=&quot;https://kairosdb.github.io/&quot;&gt;KairosDB&lt;/a&gt;, &lt;a href=&quot;https://www.influxdata.com/&quot;&gt;InfluxDB&lt;/a&gt;, &lt;a href=&quot;https://prometheus.io/&quot;&gt;Prometheus&lt;/a&gt; และ &lt;a href=&quot;https://www.elastic.co/products/elasticsearch&quot;&gt;Elasticsearch&lt;/a&gt; จริงๆ ก็มีอีกหลายตัวที่ไม่ได้ยกตัวอย่างมาครับ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;สามารถศึกษาเพิ่มเติมได้นะครับ&quot;&gt;สามารถศึกษาเพิ่มเติมได้นะครับ&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/document/8012550/&quot;&gt;Time Series Management Systems: A Survey&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.influxdata.com/time-series-database/&quot;&gt;Time Series Database (TSDB) Explained&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;https://blog.timescale.com/what-the-heck-is-time-series-data-and-why-do-i-need-a-time-series-database-dcf3b1b18563&lt;/li&gt;
+  &lt;li&gt;https://blog.timescale.com/time-series-data-why-and-how-to-use-a-relational-database-instead-of-nosql-d0cd6975e87c&lt;/li&gt;
+  &lt;li&gt;https://github.com/xephonhq/awesome-time-series-database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ไว้พบกันใหม่โอกาสหน้าครับ สวัสดีครับ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Cross published at &lt;a href=&quot;https://medium.com/@mildronize/%E0%B8%97%E0%B8%B3%E0%B9%84%E0%B8%A1%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2-time-series-database-d524d25060ec&quot;&gt;Medium.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="time-series" /><category term="database" /><category term="iot" /><summary type="html">ปัจจุบันนี้ internet of thing หรือ IoT ก็ได้เข้ามามีบทบาทในอุตสาหกรรมและเทคโนโลยี ซึ่งใน สถาปัตยกรรมของ IoT เอง ก็มีหลายชั้น ตั้งแต่เซ็นเซอร์เก็บข้อมูล ชั้นเก็บข้อมูล รวมไปถึงการแสดงข้อมูลให้ผู้ใช้ ตามรูป IoT Wolrd Forum ได้ทำรูปอ้างอิงลำดับชั้นของ IoT</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/d9xvup8eylfhgeu/2018-08-13-%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%20OpenTSDB%20%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-cover.jpg?raw=1" /></entry><entry><title type="html">เขียนบล็อกด้วยภาษา Markdown ด้วยแอพจดโน๊ต Bear บน iOS</title><link href="https://jekyll.mildronize.com/th/create-blog-with-markdown-and-bear-note-on-ios-th/" rel="alternate" type="text/html" title="เขียนบล็อกด้วยภาษา Markdown ด้วยแอพจดโน๊ต Bear บน iOS" /><published>2018-07-20T00:00:00+00:00</published><updated>2018-07-20T00:00:00+00:00</updated><id>https://jekyll.mildronize.com/th/create-blog-with-markdown-and-bear-note-on-ios-th</id><content type="html" xml:base="https://jekyll.mildronize.com/th/create-blog-with-markdown-and-bear-note-on-ios-th/">&lt;blockquote&gt;
+  &lt;p&gt;ย้าย blog กลับมาใช้ Jekyll เหมือนเดิมแล้วคับ&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;เนื่องจากผมเอง&lt;a href=&quot;http://mildronize.github.io&quot;&gt;เขียน blog&lt;/a&gt; กับ &lt;a href=&quot;https://www.staticgen.com&quot;&gt;Static page generator&lt;/a&gt; ซึ่งใช้ภาษา Markdownในการเขียนเนื้อหา ซึ่งใช้ &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; ในในการแปลงเป็นหน้าเว็บให้ เลยหาเครื่องมือหาเหมาะๆ ที่ไม่ต้องอยู่หน้าคอม แล้วมานั่งเขียนบล็อก อยากแบบเขียนช่วงว่างๆ ตาม มุมพักผ่อนต่างๆ ที่ไม่ต้องพกโน๊ตบุ๊คไปด้วยคับ ( ไว้มีโอกาสจะเขียน เรื่อง Static page generator อีกบล็อกครับ)&lt;/p&gt;
+
+&lt;p&gt;เลยลองหาแอพที่เอาไว้ใช้เขียน blog ดูว่าตัวไหนดีและฟรีบ้าง ก็มาเจอ &lt;a href=&quot;http://www.bear-writer.com&quot;&gt;Bear&lt;/a&gt; นี่แหละครับ จริงๆ bear เป็น แอพไว้จดโน๊ตอารมณ์เดียวกับ Evernote นั่นแหละครับ 
+
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/ctdl5fr7c7cplbb/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-0.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/ctdl5fr7c7cplbb/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-0.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ข้อดีของ-bear-ที่ทำให้ผมชอบมากๆ-คือ&quot;&gt;ข้อดีของ Bear ที่ทำให้ผมชอบมากๆ คือ&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bear คือแอพจดโน๊ตที่รวมกับ Markdown ได้อย่างแนบเนียน ไม่เหมือนกับอารมณ์เขียน Markdown ทั่วๆ ไป&lt;/li&gt;
+  &lt;li&gt;สามารถใช้ร่วมกับ Markdown ได้ดีเลยครับ&lt;/li&gt;
+  &lt;li&gt;มี syntax blockquote แบบไว้แนบโค๊ดได้เลย ไม่ต้องไปฝากไว้ที่ gist ของ github&lt;/li&gt;
+  &lt;li&gt;สามารถเห็นรูปภาพในการเขียนโน๊ตได้เลยครับ ทำให้มองเห็นภาพได้เลยขณะพิมพ์ ไม่จำเป็นต้องกด preview ดูผลลัพธ์ครับ พูดง่ายๆ เป็น WYSIWYG ครับ&lt;/li&gt;
+  &lt;li&gt;เป็นแอพที่สามารถใช้งานร่วมกับแอพอื่นๆ หรือ platform อื่นๆ ได้ดีครับ คือสามารถ export ออกเป็นไฟล์ Markdown พร้อมกับมีโฟลเดอร์รูปภาพซึ่งสามารถไปใช้กับ Markdown editor ทั่วๆ ไปได้เลยครับ ( รูปแบบนี้ Bear เรียกว่า Text Bundle )&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;สุดท้ายที่ชอบมากๆ&lt;/strong&gt; คือ สามารถใส่แท็กแบบ inline ได้เลยแบบ ไม่ต้องไปกดปุ่มใดๆ เพิ่มเติมเลย และสามารถสร้างลิงค์ไปโน๊ตอันอื่นๆ ได้ด้วย ซึ่ง&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ส่วนข้อเสียก็มีแค่ให้ใช้ในตระกูลของ Apple เพียงอย่างเดียวครับ แต่สามารถ export เป็น Markdown ปกติได้ แบบนี้ให้อภัยได้&lt;/p&gt;
+
+&lt;h2 id=&quot;รูปภาพจะเก็บอย่างไร-&quot;&gt;รูปภาพจะเก็บอย่างไร ?&lt;/h2&gt;
+&lt;p&gt;ใน &lt;a href=&quot;http://mildronize.github.io&quot;&gt;blog ที่ใช้ Jekyll&lt;/a&gt; นั้นอัพโหลดรูปภาพเป็น ไฟล์ที่อยู่ static ของ git repo ครับ ซึ่งมันไม่สะดวกเอามากๆ และเกิดความลำบากในการย้ายบล็อกในอนาคต
+แล้ว git repo เองก็มีข้อจำกัดในเรื่องของ&lt;a href=&quot;https://help.github.com/articles/what-is-my-disk-quota/&quot;&gt;พื้นที่ที่สามารถใช้งานได้ประมาณ 1 GB&lt;/a&gt; ครับ&lt;/p&gt;
+
+&lt;p&gt;ต่อไปก็มองหาที่เก็บรูปภาพแบบถาวรที่สามารถเอาลิงค์ตรงมาใส่ใน html ได้ ซึ่งตอนแรกตั้งใจว่าจะเก็บใน imgur แต่ไม่แน่ใจว่าจะเก็บถาวรมั้ย จาก&lt;a href=&quot;https://www.quora.com/Imgur-How-long-are-the-images-stored-before-being-purged&quot;&gt;ที่เค้าคุยกันในกระทู้บอกว่า imgur จะเก็บถาวร&lt;/a&gt; และอีกอย่างคงจัดการได้ยาก&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ทางออกคือ Dropbox&lt;/strong&gt; เป็น cloud storage ชื่อดังเจ้าเดียวเท่าที่ผมรู้จัก ( Box, Google Drive, OneDrive และ iCloud ทำไม่ได้ครับ) ที่สามารถเข้าถึง direct link ของรูปภาพได้ โดยแค่เปลี่ยนคำลงท้าย url จาก &lt;code class=&quot;highlighter-rouge&quot;&gt;dl=0&lt;/code&gt; เป็น &lt;code class=&quot;highlighter-rouge&quot;&gt;raw=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;การบริหารจัดการโน๊ตใน-bear-สำหรับเขียนบล็อก&quot;&gt;การบริหารจัดการโน๊ตใน Bear สำหรับเขียนบล็อก&lt;/h3&gt;
+&lt;p&gt;ผมใช้ tag ทั้งสิ้น 3 แบบครับ&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;blog/draft&lt;/code&gt; สำหรับเขียนร่างบล็อก&lt;/li&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;blog/publish&lt;/code&gt; สำหรับ blog ที่เผยแพร่แล้ว&lt;/li&gt;
+  &lt;li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;blog/template&lt;/code&gt; สำหรับ template markdown ที่จะใช้ในการเขียน blog บน GatsbyJS ครับ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ส่วน template ที่ใช้ในการเขียนบล็อก
+
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/7dvcxre78kq2toi/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-1.jpeg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/7dvcxre78kq2toi/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-1.jpeg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+และเมื่อ export เป็น Text Bundle ที่เป็นภาษา Markdown ดังนี้ครับ&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# Template ชื่อบล็อก
+---
+&lt;/span&gt;title: &quot;เขียนบล็อกด้วยภาษา Markdown ด้วยแอพจดโน๊ต Bear บน iOS&quot;
+date: &quot;7/20/2018&quot;
+tags:
+&lt;span class=&quot;p&quot;&gt;	*&lt;/span&gt; Bear
+&lt;span class=&quot;p&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;gh&quot;&gt;#blog/draft&lt;/span&gt;
+
+&lt;span class=&quot;gs&quot;&gt;**Remove this tag**&lt;/span&gt; #blog/template
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ต่อไปประมวลผลไฟล์-และอัพโหลดรูปขึ้น-dropbox-ด้วยแอพ-workflow&quot;&gt;ต่อไปประมวลผลไฟล์ และอัพโหลดรูปขึ้น dropbox ด้วยแอพ Workflow&lt;/h2&gt;
+
+&lt;p&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;div class=&quot;placeholder&quot; data-large=&quot;https://www.dropbox.com/s/7dranoizgn7ph78/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-2.jpg?raw=1&quot;&gt;
+              &lt;img src=&quot;https://ce8be7dec.cloudimg.io/bound/100x100/q20/https://www.dropbox.com/s/7dranoizgn7ph78/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-2.jpg?raw=1&quot; class=&quot;placeholder-img-small&quot;&gt;
+              &lt;div class=&quot;placeholder-ratio&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;ตั้งแต่รู้จักกับแอพ workflow นี้รู้สึกชีวิตจะสะดวกสบายหลายอย่าง มันช่วยมันง่ายที่เราต้องทำซ้ำๆ บ่อยให้เรา ก็เหมือนกับการเขียนโปรแกรมนั่นแหละคับ แต่มันจะเป็นการลากบล็อก ( อารมณ์เหมือน module ที่มี input และ output ) มาเรียงต่อกันเป็นชุดคำสั่งครับ
+ทำให้เราสามารถทำ automation ง่ายๆ ได้ครับ&lt;/p&gt;
+
+&lt;h3 id=&quot;ใน-workflow-publish-bear-note-to-markdown-ทำอะไรบ้าง&quot;&gt;ใน Workflow: Publish bear note to markdown ทำอะไรบ้าง&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ขอสิทธิ์การเขียนไฟล์ลงบน Dropbox ในทีนี้ผมตั้งค่าให้เก็บไฟล์รูปที่ &lt;code class=&quot;highlighter-rouge&quot;&gt;/Public/blog&lt;/code&gt;
+&lt;/li&gt;
+  &lt;li&gt;ใส่ชื่อของโน๊ตลงไปใน &lt;code class=&quot;highlighter-rouge&quot;&gt;[POST_TITLE]&lt;/code&gt;
+&lt;/li&gt;
+  &lt;li&gt;ใส่วันที่ปัจจุบันลงไปใน &lt;code class=&quot;highlighter-rouge&quot;&gt;[TITLE]&lt;/code&gt;
+&lt;/li&gt;
+  &lt;li&gt;อัพโหลดรูปขึ้น dropbox ทุกรูป แล้วแก้ url ให้เป็น direct link&lt;/li&gt;
+  &lt;li&gt;จากนั้นแก้รูปแบบให้ตรงกับ yaml frontmatter เป็นอันเสร็จ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;ขั้นตอนการนำไปใช้&quot;&gt;ขั้นตอนการนำไปใช้&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;เตรียมแอพที่เกี่ยวข้อง Bear, Workflow, Git2Go และ account dropbox&lt;/li&gt;
+  &lt;li&gt;ดาวน์โหลด Workflow  &lt;a href=&quot;https://workflow.is/workflows/de83eed7d725415dac37d35b46ce946e&quot;&gt;publish bear note to markdown&lt;/a&gt; ไปใช้&lt;/li&gt;
+  &lt;li&gt;เขียน Blog ด้วย bear โดยใช้ template ข้างบน หรือกำหนด template เองก็ได้&lt;/li&gt;
+  &lt;li&gt;ลบข้อความ &lt;code class=&quot;highlighter-rouge&quot;&gt;**Remove this tag** &lt;/code&gt;
+&lt;/li&gt;
+  &lt;li&gt;กดไปที่ Export as ในเมนู แล้วเลือก Text Bundle&lt;/li&gt;
+  &lt;li&gt;เลือก Run as Workflow&lt;/li&gt;
+  &lt;li&gt;เลือก &lt;code class=&quot;highlighter-rouge&quot;&gt;Publish bear note to markdown &lt;/code&gt;
+&lt;/li&gt;
+  &lt;li&gt;เลือกแอพที่จะเผยแพร่ ในที่นี้ผมใช้ Git2Go ในการเผยแพร่คับ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Download &lt;a href=&quot;https://workflow.is/workflows/de83eed7d725415dac37d35b46ce946e&quot;&gt;publish bear note to markdown&lt;/a&gt;
+Read more at &lt;a href=&quot;https://gist.github.com/mildronize/1da2120b1d2f0a25a7ecc429c06d3dce&quot;&gt;my gist&lt;/a&gt;
+P.S. For English version, I will write later.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;Cross published at &lt;a href=&quot;https://medium.com/@mildronize/%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2-markdown-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95-bear-%E0%B8%9A%E0%B8%99-ios-d85908c2cea5&quot;&gt;Medium.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name>Thada Wangthammang</name><email>mildronize@gmail.com</email></author><category term="automate" /><category term="ios" /><category term="bear-writer" /><category term="dropbox" /><category term="workflow" /><summary type="html">ย้าย blog กลับมาใช้ Jekyll เหมือนเดิมแล้วคับ</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.dropbox.com/s/ctdl5fr7c7cplbb/2018-07-20-%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%20Markdown%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%81%E0%B8%AD%E0%B8%9E%E0%B8%88%E0%B8%94%E0%B9%82%E0%B8%99%E0%B9%8A%E0%B8%95%20Bear%20%E0%B8%9A%E0%B8%99%20iOS-0.jpg?raw=1" /></entry></feed>
