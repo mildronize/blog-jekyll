@@ -16,7 +16,7 @@ class Search extends React.Component {
     }
 
     async loadData() {
-        const res = await fetch('https://mildronize.com/search-data/index.html')
+        const res = await fetch('https://jekyll.mildronize.com/search-data/index.html')
         const dataJson = await res.json()
         return {
           data: dataJson.data
